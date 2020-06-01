@@ -22,7 +22,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
     "start": "webpack --watch --mode=development"
   },
   "repository": {
@@ -35,5 +35,9 @@
   "bugs": {
     "url": "https://github.com/ColtW27/Whilom-Halls/issues"
   },
-  "homepage": "https://github.com/ColtW27/Whilom-Halls#readme"
+  "homepage": "https://github.com/ColtW27/Whilom-Halls#readme",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  }
 }
