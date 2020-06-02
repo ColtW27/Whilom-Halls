@@ -32,7 +32,6 @@ export const login = (user) => {
         .then(currentUser => dispatch(receiveCurrentUser(currentUser)));
 }
 export const logout = () => {
-    debugger
     return (dispatch) => SessionAPIUtil.logout()
         .then(() => dispatch(logoutCurrentUser()));
 }
