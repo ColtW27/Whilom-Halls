@@ -20,7 +20,7 @@ class Greeting extends React.Component {
         let display;
         if (currentUser) {
            
-            display = <h1>Welcome {currentUser.username}</h1>; //[1] of current user
+            display = <h1>Welcome {currentUser.username}</h1>; //future: display profile pic of current user, shows a dropdown with contnet including logout
             button = <button onClick={this.handleLogout}>Logout</button>;
 
         } else {
