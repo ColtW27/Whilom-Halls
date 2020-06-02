@@ -7,8 +7,7 @@ class Greeting extends React.Component {
         this.handleLogout = this.handleLogout.bind(this);
     }
 
-    handleLogout(e) {
-        debugger
+    handleLogout() {
         this.props.logout()
     }
 
