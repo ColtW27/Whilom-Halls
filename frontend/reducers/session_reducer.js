@@ -7,7 +7,7 @@ const _nullSession = {
     id: null
 };
 
-export default (state = _nullSession, action) => {
+const sessionReducer = (state = _nullSession, action) => {
     // debugger
     Object.freeze(state);
     switch (action.type) {
@@ -20,3 +20,5 @@ export default (state = _nullSession, action) => {
             return state;
     }
 };
+
+export default sessionReducer;
