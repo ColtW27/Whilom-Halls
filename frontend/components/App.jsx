@@ -4,7 +4,7 @@ import GreetingContainer from './greeting_container';
 const App = () => (
     <div>
         <header>
-            <h1>Bench BnB</h1>
+            <h1>Whilom Halls</h1>
             < GreetingContainer />
         </header>
     </div>
