@@ -1,7 +1,7 @@
 import { React } from "react";
 import { Link } from 'react-router-dom'
-
-class SessionForm extends React.Component {
+ 
+class LoginForm extends React.Component {
     constructor(props) {
       super(props);
         this.state = {
@@ -26,10 +26,10 @@ class SessionForm extends React.Component {
     }
 
     render(){
-        const {formType} = this.props
+      
         return(
         <form onSubmit={this.handleSubmit}>
-          <h3>{formType}</h3>
+          <h3>Login</h3>
           <input
           type="text"
           onChange={this.handleChange('email')}
@@ -51,4 +51,4 @@ class SessionForm extends React.Component {
       )
     };  
 }
-export default SessionForm;
+export default LoginForm;
