@@ -19,12 +19,12 @@ class Greeting extends React.Component {
         let button;
         let display;
         if (currentUser) {
-            // debugger
+           
             display = <h1>Welcome {currentUser[1].username}</h1>;
             button = <button onClick={this.handleLogout}>Logout</button>;
 
         } else {
-            button = <Link to='/signup'>Signup</Link>;
+            button = <Link to='/signup'>Signup</Link>; // These will both be modified for optional renders under '/', since they will be modals.
             display = <Link to='/login'>Login</Link>;
         }
 
