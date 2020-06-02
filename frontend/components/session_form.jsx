@@ -1,4 +1,5 @@
 import { React } from "react";
+import { Link } from 'react-router-dom'
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -41,9 +42,11 @@ class SessionForm extends React.Component {
           />
           <button
           type="submit"
-          value={this.state}
+          value={formtype}
           >{formType}
           </button>
+
+          {/* <Link to={}></Link> add a link to either login or signup here */}
         </form>
       )
     };  
