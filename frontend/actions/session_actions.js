@@ -23,11 +23,13 @@ const receiveCurrentUser = currentUser => {
 }
 
 export const signup = (user) => (dispatch) => SessionAPIUtil.signup(user)
-    .then(Currentuser => dispatch(receiveCurrentUser(Currentuser)));
+    .then(Currentuser => dispatch(receiveCurrentUser(Currentuser)),
+        error => dispatch(receiveSessionErrors(error.responseJSON)));
 
 export const login = (user) => {
     return (dispatch) => SessionAPIUtil.login(user)
-        .then(currentUser => dispatch(receiveCurrentUser(currentUser)));
+        .then(currentUser => dispatch(receiveCurrentUser(currentUser)), 
+            error => dispatch(receiveSessionErrors(error.responseJSON)));
 }
 export const logout = () => {
     return (dispatch) => SessionAPIUtil.logout()

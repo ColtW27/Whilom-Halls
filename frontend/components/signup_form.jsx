@@ -1,14 +1,12 @@
-import { React } from "react";
+import  React  from "react";
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
 class SignupForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            username: "",
-            password: "",
-            email: ""
-        };
+        this.state = this.props.user;
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -23,7 +21,18 @@ class SignupForm extends React.Component {
     handleSubmit(e) { //calls dispatch with signup function w/ the current user state, then closes modal.
         e.preventDefault();
         const user = Object.assign({}, this.state)
-        this.props.signUpForm(user).then(this.props.closeModal)
+        this.props.signUpForm(user).then(this.props.modalClose)
+    }
+    showErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, x) => (
+                    <li key={`error-${x}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
     }
 
     render() {
@@ -36,19 +45,19 @@ class SignupForm extends React.Component {
                 <label >First Name
                     <input
                         type="text"
-                        onChange={this.handleChange('firstName')}
-                        value={this.state.firstName}
+                        onChange={this.handleChange('first_name')}
+                        value={this.state.first_name}
                     />
                 </label>
                 <label >Last Name
                     <input
                         type="text"
-                        onChange={this.handleChange('LastName')}
-                        value={this.state.LastName}
+                        onChange={this.handleChange('last_name')}
+                        value={this.state.last_name}
                     />Make sure it matches your god-given birthname.
                 </label>
                 <label>Birth Date 
-                    <input type="text"
+                    <input type="date"
                     />You must be at least 18, or able to touch the high ceilings to join.
                 </label>
                 <label>Email
@@ -65,6 +74,9 @@ class SignupForm extends React.Component {
                     value={this.state.password}
                 />
                     <p>We’ll send you torches, quils, inspiration, and powdered wigs via carrier pigeon.</p>
+                        <div>
+                            {this.showErrors()}
+                        </div>
                     <label>
                         <input type="checkbox"/>I do not want to receive marketing messages from Whilom Halls. I can also opt out of receiving these at any time via message in a bottle.
                     </label>
@@ -72,7 +84,7 @@ class SignupForm extends React.Component {
                 </label>
                 <button
                     type="submit"
-                    value='Sign up'
+                    value='signup'
                 >Agree and continue
                 </button>
 
@@ -82,4 +94,4 @@ class SignupForm extends React.Component {
         )
     };
 }
-export default SignupForm;
+export default withRouter(SignupForm);

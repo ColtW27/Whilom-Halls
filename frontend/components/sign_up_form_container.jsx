@@ -1,7 +1,8 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import { signup } from "../actions/session_actions"; 
 import SignupForm from './signup_form';
-
+import { modalClose } from '../actions/modal_actions';
 
 const mSTP = (state) => ({
     user: {
@@ -10,14 +11,14 @@ const mSTP = (state) => ({
         email: "",
         password: ""
     },
-    errors: Object.values(state.errors),
+    errors: Object.values(state.errors.session),
     formType: 'signup'
 })
 
 const mDTP = dispatch => ({
     signUpForm: (user) => dispatch(signup(user)),
      otherForm: (
-        <button onClick={() => dispatch(modelOpen('signup'))}>
+        <button onClick={() => dispatch(modalOpen('signup'))}>
             Signup
         </button>
     ),

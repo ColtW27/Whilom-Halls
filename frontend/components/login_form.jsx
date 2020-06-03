@@ -1,14 +1,11 @@
-import { React } from "react";
+import  React  from "react";
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
  
 class LoginForm extends React.Component {
     constructor(props) {
       super(props);
-        this.state = {
-            username: "",
-            password: "",
-            email: ""
-        };
+        this.state = this.props.user;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -23,7 +20,18 @@ class LoginForm extends React.Component {
     handleSubmit(e) { //calls dispatch with login function w/ the current user state, then closes modal.
         e.preventDefault();
         const user = Object.assign({}, this.state)
-        this.props.loginForm(user).then(this.props.closeModal)
+        this.props.loginForm(user).then(this.props.modalClose)
+    }
+    showErrors() {
+      return (
+        <ul>
+          {this.props.errors.map((error, x) => (
+            <li key={`error-${x}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
     }
 
     render(){
@@ -36,20 +44,27 @@ class LoginForm extends React.Component {
           <br/>
             <div onClick={this.props.modalClose} 
             className="close-x">X</div>
+          <label>Email
           <input
           type="text"
           onChange={this.handleChange('email')}
           value={this.state.email}
           />
+          </label>
+          <label>Password
           <input
           type="text"
           onChange={this.handleChange('password')}
           value={this.state.password}
           />
+          </label>
+          <div>
+            {this.showErrors()}
+          </div>
           <button
           type="submit"
-          value={formtype}
-          >{formType}
+          value='login'
+          >Login
           </button>
 
           {/* <Link to={}></Link> add a link to signup here */}
@@ -58,4 +73,4 @@ class LoginForm extends React.Component {
       )
     };  
 }
-export default LoginForm;
+export default withRouter(LoginForm);

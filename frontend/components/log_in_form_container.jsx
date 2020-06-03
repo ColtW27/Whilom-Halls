@@ -1,18 +1,25 @@
+import React from 'react'; 
 import { connect } from 'react-redux';
 import { login } from "../actions/session_actions";
 import LoginForm from './login_form';
-import { modelOpen } from '../actions/modal_actions';
+import { modalClose } from '../actions/modal_actions';
 
  
 const mSTP = (state, ownProps) => ({
+    user: {
+        first_name: "",
+        last_name: "",
+        email: "",
+        password: ""
+    },
     errors: Object.values(state.errors.session),
     formType: 'login'
 })
 
 const mDTP = dispatch => ({
-    loginform: (user)=> dispatch(login(user)),
+    loginForm: (user)=> dispatch(login(user)),
     otherForm: (
-        <button onClick={ () => dispatch(modelOpen('signup'))}>
+        <button onClick={ () => dispatch(Open('signup'))}>
             Signup
         </button>
     ),

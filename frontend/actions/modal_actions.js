@@ -1,11 +1,11 @@
 export const MODAL_OPEN = 'MODAL_OPEN';
 export const MODAL_CLOSE = 'MODAL_CLOSE';
 
-export const modelOpen = modal => ({
+export const modalOpen = modal => ({
     type: MODAL_OPEN,
     modal
 });
 
-export const modelClose = () => ({
+export const modalClose = () => ({
     type: MODAL_CLOSE
 })
