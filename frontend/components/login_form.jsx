@@ -20,16 +20,22 @@ class LoginForm extends React.Component {
         )
     };
 
-    handleSubmit(e) { //calls dispatch with whichever function in sttached to the processForm prop, w/ the current user state.
+    handleSubmit(e) { //calls dispatch with login function w/ the current user state, then closes modal.
         e.preventDefault();
-        this.props.processForm(this.state)
+        const user = Object.assign({}, this.state)
+        this.props.loginForm(user).then(this.props.closeModal)
     }
 
     render(){
       
-        return(
-        <form onSubmit={this.handleSubmit}>
-          <h3>Login</h3>
+      return(
+        <div className="session-form-container">
+        <form onSubmit={this.handleSubmit}
+            className="session-form-box">
+          <h3>Log in</h3>
+          <br/>
+            <div onClick={this.props.modalClose} 
+            className="close-x">X</div>
           <input
           type="text"
           onChange={this.handleChange('email')}
@@ -46,8 +52,9 @@ class LoginForm extends React.Component {
           >{formType}
           </button>
 
-          {/* <Link to={}></Link> add a link to either login or signup here */}
+          {/* <Link to={}></Link> add a link to signup here */}
         </form>
+        </div >
       )
     };  
 }
