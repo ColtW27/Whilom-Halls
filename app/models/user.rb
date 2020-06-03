@@ -1,7 +1,24 @@
+
 class User < ApplicationRecord
   validates :email, :password_digest, :session_token, presence: true
   validates :password, length: {minimum: 6, allow_nil: true}
   validates :email, uniqueness: true
+ 
+
+
+  def valid_email(str)
+    email = str.split("@")
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    
+    return false if email.length != 2
+    
+    email[0].each_char do |char|
+      return false if !alphabet.include?(char)
+    end
+    
+    return false if email[1].split(".").length != 2
+    true
+  end
   
   attr_reader :password 
   after_initialize :ensure_session_token

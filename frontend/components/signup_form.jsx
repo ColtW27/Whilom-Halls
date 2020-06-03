@@ -42,6 +42,9 @@ class SignupForm extends React.Component {
             <form onSubmit={this.handleSubmit}
                 className="session-form-box">
                 <h3>Sign up</h3>
+                    <br />
+                    <div onClick={this.props.modalClose}
+                        className="close-x">X</div>
                 <label >First Name
                     <input
                         type="text"
@@ -87,8 +90,8 @@ class SignupForm extends React.Component {
                     value='signup'
                 >Agree and continue
                 </button>
-
-                {/* <Link to={}></Link> add a link to login here */}
+                {this.props.otherForm} 
+                {/* Link to other switch to login form */}
             </form>
           </div>
         )

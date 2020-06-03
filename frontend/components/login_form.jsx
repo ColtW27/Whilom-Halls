@@ -66,8 +66,9 @@ class LoginForm extends React.Component {
           value='login'
           >Login
           </button>
-
-          {/* <Link to={}></Link> add a link to signup here */}
+            {this.props.otherForm}
+            {/* Link to other switch to signup form */}
+        
         </form>
         </div >
       )

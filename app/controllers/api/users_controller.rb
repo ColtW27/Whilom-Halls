@@ -7,7 +7,6 @@ class Api::UsersController < ApplicationController
       redirect_to api_user_url(@user)
     else
       render json: @user.errors.full_messages, status: 422
-      #  render json: [ "Invalid Credentials"], status: 422
     end
   end
 

@@ -8,7 +8,7 @@ const App = () => (
         < Modal />
         <header>
             <Link to='/'>
-              <h1>Whilom Halls</h1>
+              <h1 className='Logo'>Whilom Halls</h1>
             </Link>
             < GreetingContainer />
         </header>
