@@ -38,59 +38,88 @@ class SignupForm extends React.Component {
     render() {
        
         return (
-          <div className="session-form-container">
+          <div className="signup-form-container"
+          >
             <form onSubmit={this.handleSubmit}
-                className="session-form-box">
+                className="signup-form-box">
                 <h3>Sign up</h3>
                     <br />
                     <div onClick={this.props.modalClose}
                         className="close-x">X</div>
-                <label >First Name
+                <label 
+                  >
                     <input
                         type="text"
                         onChange={this.handleChange('first_name')}
                         value={this.state.first_name}
+                        placeholder="First Name"
+                        className="signup-input cnt-bot"
                     />
                 </label>
-                <label >Last Name
+                    <label className="text-between"
+                     >
                     <input
                         type="text"
                         onChange={this.handleChange('last_name')}
                         value={this.state.last_name}
+                        placeholder="Last Name"
+                        className="signup-input cnt-bot"
                     />Make sure it matches your god-given birthname.
                 </label>
-                <label>Birth Date 
+                <label
+                className="text-between"
+                >
                     <input type="date"
+                    placeholder="Birth Date"
+                    className="signup-input"
                     />You must be at least 18, or able to touch the high ceilings to join.
                 </label>
-                <label>Email
+                <label
+                 className="text-between"
+                 >
                 <input
                     type="text"
                     onChange={this.handleChange('email')}
                     value={this.state.email}
+                    placeholder="Email"
+                    className="signup-input"
                 />We will send you trip updates and payment confirmation. 
                 </label>
-                <label>Password
+                <label
+                 className="text-mid"
+                 >
                 <input
                     type="password"
                     onChange={this.handleChange('password')}
                     value={this.state.password}
+                    placeholder="Password"
+                    className="signup-input"
                 />
                     <p>We’ll send you torches, quils, inspiration, and powdered wigs via carrier pigeon.</p>
                         <div>
                             {this.showErrors()}
                         </div>
-                    <label>
-                        <input type="checkbox"/>I do not want to receive marketing messages from Whilom Halls. I can also opt out of receiving these at any time via message in a bottle.
+                    <label
+                    className="text-below signup-check-box"
+                     >
+                         <br/>
+                        <input type="checkbox"
+                        className="tc-checkbox"
+                        />I do not want to receive marketing messages from Whilom Halls. I can also opt out of receiving these at any time via message in a bottle.
                     </label>
-                    <p>By selecting Agree and continue below, I agree to Whilom Hall’s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.</p>
+                    <br/>
+                    <br/>
+                    <p
+                    className="text-below"
+                    >By selecting Agree and continue below, I agree to Whilom Hall’s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.</p>
                 </label>
                 <button
                     type="submit"
                     value='signup'
+                    className="signup-form-main-signup-button"
                 >Agree and continue
                 </button>
-                {this.props.otherForm} 
+                {/* {this.props.otherForm}  */}
                 {/* Link to other switch to login form */}
             </form>
           </div>

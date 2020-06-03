@@ -1,0 +1,85 @@
+
+.signup-form-container {
+    display: flex;
+    background-color:#fff;
+    border-radius: 12px;
+    padding: 10px;
+    width: 550px;
+    height: 686px;
+    
+}
+
+.session-form-box{
+    // display: flex;
+    
+}
+
+.signup-input {
+    display: flex;
+    border-radius: 8px;
+    padding: 19px;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    align-items: center;
+    width: 500px;   
+    border: 1px solid lightgray;
+    font-size: 16px;
+      
+}
+.text-between {
+    color: darkgray;
+    font-size: 13.8px;
+    font-size: 12px;
+    // flex-wrap: wrap;
+}
+.text-mid{
+    color: black;
+    font-size: 12px;
+    font-weight: 100;
+}
+.text-below{
+   color: black; 
+   font-size: 12px;
+}
+.signup-check-box{
+    margin: 2px;
+}
+.close-x{
+    align-self: flex-start;
+    margin: 10px;
+    // justify-content: right;
+}
+.login-signup {
+    // justify-content: right;
+    // align-items: end;
+}
+
+
+.signup-form-main-signup-button{
+ background-color:  rgb(218, 45, 88);
+ color: white;
+ border: .25px solid lightgray;
+ border-radius: 8px;
+ padding: 15px;
+ margin: 20px;
+ width: 500px;
+ font-size: 16px;
+}
+
+.tc-checkbox{
+    size: 15px;
+    margin: 5px 10px 5px 0px;
+    width: 22px;
+    height: 22px;
+    border-color: lightgray;
+    float: left;
+}
+.cnt-top {
+margin-bottom: 0px;
+// padding-bottom: 0px;
+border-radius: 0px 0px 0px 0px;
+}
+.cnt-bot {
+margin-top: 0px;
+// padding-top: 0px;
+}

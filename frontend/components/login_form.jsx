@@ -37,31 +37,34 @@ class LoginForm extends React.Component {
     render(){
       
       return(
-        <div className="session-form-container">
+        <div className="login-form-container">
         <form onSubmit={this.handleSubmit}
-            className="session-form-box">
+            className="login-form-box">
           <h3>Log in</h3>
           <br/>
             <div onClick={this.props.modalClose} 
             className="close-x">X</div>
-          <label>Email
+          <label>
           <input
           type="text"
           onChange={this.handleChange('email')}
           value={this.state.email}
+          placeholder="Email"
           />
           </label>
-          <label>Password
+          <label>
           <input
           type="text"
           onChange={this.handleChange('password')}
           value={this.state.password}
+          placeholder="Password"
           />
           </label>
           <div>
             {this.showErrors()}
           </div>
           <button
+          className="login-form-main-login-button"
           type="submit"
           value='login'
           >Login

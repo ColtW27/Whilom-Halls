@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 const App = () => (
     <div>
         < Modal />
-        <header>
-            <Link to='/'>
+        <header className= "header-in-app">
+            <Link to='/'
+                className="logo-link-home">
               <h1 className='Logo'>Whilom Halls</h1>
             </Link>
-            < GreetingContainer />
+            < GreetingContainer className="greeting-container"/>
         </header>
     </div>
 );
