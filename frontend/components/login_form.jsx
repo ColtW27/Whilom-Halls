@@ -40,31 +40,38 @@ class LoginForm extends React.Component {
         <div className="login-form-container">
         <form onSubmit={this.handleSubmit}
             className="login-form-box">
-          <div className="inside-form-div">
+          <div className="inside-form-div-login">
             <h3 className="log-in-label">Log in</h3>
             <br/>
               <div onClick={this.props.modalClose} 
-              className="close-x">✕</div>
-            <label>
-              {/* <div
-              className="session-form-header"></div> */}
-            <input
-            className="login-form-box top"
-            type="text"
-            onChange={this.handleChange('email')}
-            value={this.state.email}
-            placeholder="Email"
-            />
-            </label>
-            <label>
-            <input
-            className="login-form-box bottom"
-            type="password"
-            onChange={this.handleChange('password')}
-            value={this.state.password}
-            placeholder="Password"
-            />
-            </label>
+              className="login-close-x">✕</div>
+            <div className="field">
+              <label>
+              <input
+              className="floating-label"
+              className="login-form-box top"
+              type="text"
+              onChange={this.handleChange('email')}
+              value={this.state.email}
+              placeholder="Email"
+              />
+              </label>
+            </div>
+
+
+             
+            <div className="field">
+              <label>
+              <input
+              // className="floating-label"
+              className="login-form-box bottom"
+              type="password"
+              onChange={this.handleChange('password')}
+              value={this.state.password}
+              placeholder="Password"
+              />
+              </label>
+            </div>
             <div 
             className="login-form-errors">
               {this.showErrors()}

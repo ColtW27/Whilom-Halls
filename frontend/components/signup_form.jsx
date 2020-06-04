@@ -42,11 +42,11 @@ class SignupForm extends React.Component {
           >
             <form onSubmit={this.handleSubmit}
                 className="signup-form-box">
-              <div className="inside-form-div">
+              <div className="inside-form-div-signup">
                 <h3 className= "signup-not-button">Sign up</h3>
                     <br />
                     <div onClick={this.props.modalClose}
-                    className="close-x">✕</div>
+                    className="signup-close-x">✕</div>
                 <label 
                   >
                     <input
@@ -113,15 +113,15 @@ class SignupForm extends React.Component {
                     <br/>
                     <p
                     className="text-below"
-                            >By selecting Agree and continue below, I agree to Whilom Hall’s 
+                            >By selecting <span>Agree and continue</span> below, you acknowledge that
                             <Link to='/'
                             className="sign-in-links">
-                            Terms of Service</Link>
+                            This is too small</Link>
                             , <Link to='/'
-                            className="sign-in-links">Payments Terms of Service</Link>,
-                             <Link to='/'
-                             className="sign-in-links">Privacy Policy</Link>, and <Link to='/'
-                             className="sign-in-links">Nondiscrimination Policy</Link>.</p>
+                            className="sign-in-links">So is this</Link>, you  
+                              <Link to='/'
+                             className="sign-in-links"> would have to squint</Link> <Link to='/'
+                             className="sign-in-links">to even read this</Link>.</p>
                 </label>
                 <button
                     type="submit"

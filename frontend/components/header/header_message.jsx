@@ -7,7 +7,8 @@ const HeaderMessage = () => {
       <div 
       className="header-message">
         Get the lastest updates on world events.
-        <Link to='/'>Learn more</Link>
+        <Link to='/'
+          className="header-message-link">Learn more</Link>
       </div>
     </div>
   )

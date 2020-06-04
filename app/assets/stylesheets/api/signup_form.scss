@@ -8,14 +8,35 @@
     height: 686px;
     
 }
-.inside-form-div {
+.inside-form-div-signup {
     display: flex;
     flex-direction: column;
+
 }
-.inside-form-div > h3 {
- align-self: center;
+// .inside-form-div > h3 {
+//  align-self: center;
+//  width: 590px;
+// }
+.signup-not-button {
+    display: flex;
+    justify-content: center;
+padding-top: 30px;
+float: right;
+}
+.signup-close-x{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;  
+    height: 30px;
+    margin: 30px 30px 5px 10px;  
+    width: 30px; 
 }
 
+.signup-close-x:hover {
+    background-color: rgb(243, 243, 243);
+    border-radius: 30px;
+}
 
 .signup-input {
     display: flex;
@@ -61,11 +82,12 @@
 
 .tc-checkbox{
     size: 15px;
-    margin: 5px 10px 5px 0px;
+    margin: 5px 12px 9px 0px;
     width: 22px;
     height: 22px;
     border-color: lightgray;
     float: left;
+    background-color: black;
 }
 .cnt-top {
 margin-bottom: 0px;
@@ -87,4 +109,8 @@ margin-top: 0px;
 }
 .sign-in-links{
     color: blue;
+}
+.text-below span {
+    font-weight: bold;
+    color: rgb(58, 57, 57);
 }

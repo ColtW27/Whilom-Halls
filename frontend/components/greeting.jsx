@@ -68,10 +68,42 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
           <li>
          {introduction(currentUser, logout)}
           </li>
+          <li>{messages()}</li>
+          <li>{trips()}</li>
+          <li>{saved()}</li>
+          <li>{manageListings()}</li>
+
         </ul>
       </div>
     )
+    const messages = () => (
+      <button
+        className="profile-dropdown-button"
+      >Messages
+      </button>
+    )
 
+    const trips = () => (
+      <button
+        className="profile-dropdown-button"
+      >Trips
+      </button>
+    )
+
+    const saved = () => (
+      <button
+            className="profile-dropdown-button"
+        >Saved
+      </button>
+    )
+
+    const manageListings = () => (
+      <button
+            className="profile-dropdown-button"
+        >Manage Listings
+      </button>
+    )
+   
     
        if (currentUser) {
         return(
