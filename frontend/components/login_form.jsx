@@ -57,7 +57,7 @@ class LoginForm extends React.Component {
             <label>
             <input
             className="login-form-box bottom"
-            type="text"
+            type="password"
             onChange={this.handleChange('password')}
             value={this.state.password}
             placeholder="Password"

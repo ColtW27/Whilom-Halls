@@ -7,7 +7,7 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
         <nav className="login-signup">
             <button
             onClick={() => modalOpen('signup')}
-            className="main-page-signup-button"
+            className="main-page-header-button"
             >Signup</button>
         &nbsp;&nbsp;
             <button 
@@ -20,23 +20,31 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
        return (
         <hgroup>
             <h1>🖼</h1>; 
-            <button onClick={logout}>Logout</button>;
+            <button onClick={logout}
+            className="main-page-logout-button"
+            >Logout</button>;
         </hgroup>
        )
     }
     const hostAnExperience = () => {
         return(
-            <button>Host an experience</button>
+            <button
+            className="main-page-header-button"
+            >Host an experience</button>
         )
     }
     const switchToHosting = () =>{
         return(
-        <button>Switch to hosting</button>
+        <button
+        className="main-page-header-button"
+        >Switch to hosting</button>
         )
     }
     const help = () =>{
         return(
-            <button>Help</button>
+            <button
+            className="main-page-header-button"
+            >Help</button>
         )
     }
     const globeCurrency = () => {
@@ -46,7 +54,9 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
     }
     const hostYourHome = () => {
         return(
-            <button>Host your home</button>
+            <button
+            className="main-page-header-button"
+            >Host your home</button>
         )
     }
 
