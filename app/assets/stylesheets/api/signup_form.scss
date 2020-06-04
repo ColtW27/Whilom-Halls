@@ -11,6 +11,7 @@
 .inside-form-div-signup {
     display: flex;
     flex-direction: column;
+    width: 580px;
 
 }
 // .inside-form-div > h3 {
@@ -18,10 +19,12 @@
 //  width: 590px;
 // }
 .signup-not-button {
+    width: 580px;
     display: flex;
     justify-content: center;
 padding-top: 30px;
 float: right;
+border-bottom: 1px solid black;
 }
 .signup-close-x{
     display: flex;
@@ -60,6 +63,7 @@ float: right;
     color: black;
     font-size: 12px;
     font-weight: 100;
+    width: 540px;
 }
 .text-below{
    color: black; 
@@ -67,6 +71,7 @@ float: right;
 }
 .signup-check-box{
     margin: 2px;
+    width: 550px;
 }
 
 .signup-form-main-signup-button{
@@ -109,6 +114,7 @@ margin-top: 0px;
 }
 .sign-in-links{
     color: blue;
+    width: 560px;
 }
 .text-below span {
     font-weight: bold;
