@@ -19,7 +19,9 @@ const mSTP = (state, ownProps) => ({
 const mDTP = dispatch => ({
     loginForm: (user)=> dispatch(login(user)),
     otherForm: (
-        <button onClick={ () => dispatch(modalOpen('signup'))}>
+        <button 
+            className="switch-form-button"
+        onClick={ () => dispatch(modalOpen('signup'))}>
             Signup
         </button>
     ),

@@ -59,28 +59,35 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
             >Host your home</button>
         )
     }
+    const profileButton = () => (
+        <button onClick={logout}
+            className="main-page-logout-button"
+        >Logout</button>
     
+    )
 
     
        if (currentUser) {
         return(
-            <div>
-                {globeCurrency()}
-                {switchToHosting()}
-                {hostAnExperience() }
-                {help()}
-                {introduction(currentUser, logout)}
+            <div
+            className="main-page-header-button-container">
+                <li>{globeCurrency()}</li>
+                <li>{switchToHosting()}</li>
+                <li>{hostAnExperience() }</li>
+                <li>{help()}</li>
+                <li>{introduction(currentUser, logout)}</li>
             </div>
         )
        } else {
            return(
-               <div>
-                   {globeCurrency()}
-                   {hostYourHome()}
-                   {hostAnExperience()}
-                   {help()}
-                   {mainPageSignupButton()}
-                   {mainPageLoginButton()}
+               <div
+               className="main-page-header-button-container">
+                  <li>{globeCurrency()}</li>
+                  <li>{hostYourHome()}</li>
+                  <li>{hostAnExperience()}</li>
+                  <li>{help()}</li>
+                  <li>{mainPageSignupButton()}</li>
+                  <li>{mainPageLoginButton()}</li>
                </div>
            ) 
        }

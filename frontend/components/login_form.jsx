@@ -46,6 +46,8 @@ class LoginForm extends React.Component {
               <div onClick={this.props.modalClose} 
               className="close-x">✕</div>
             <label>
+              {/* <div
+              className="session-form-header"></div> */}
             <input
             className="login-form-box top"
             type="text"

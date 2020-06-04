@@ -29,9 +29,24 @@
 }
 
 .log-in-label{
-    align-self: center;
-    
+    // align-self: center;
+    // align-self: flex-start;
+    // float: right;
+    margin: 0px;
 }
+.close-x{
+    // align-self: flex-start;
+    margin: 0px 0px 10px 0px;  
+    // justify-content: right;
+}
+.session-form-header{
+ border-bottom: 1px solid;
+ margin: 10px 40px 15px 0px;
+ padding-right: 30px;
+ width: 600px;
+
+}
+
 .login-form-box {
     // border-radius: 10px;
     // border-color: darkgray;
@@ -83,4 +98,9 @@
 }
 .login-form-errors{
     color: rgb(214, 57, 96);
+}
+.switch-form-button{
+    text-decoration: underline;
+    border: none;
+    background-color: #fff;
 }
