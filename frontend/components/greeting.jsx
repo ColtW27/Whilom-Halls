@@ -3,27 +3,25 @@ import { Link } from 'react-router-dom';
 // import { logout } from '../util/session_api_util';
 const Greeting = ({currentUser, modalOpen, logout}) => {
 
-    const sessionLinks = () => (
-        <nav className="login-signup">
+    const mainPageSignupButton = () => (
             <button
             onClick={() => modalOpen('signup')}
             className="main-page-header-button"
             >Signup</button>
-        &nbsp;&nbsp;
+    )
+    const mainPageLoginButton = () => (
+    
             <button 
             onClick={() => modalOpen('login')}
             className="main-page-login-button"
             >Login</button>
-        </nav>
-    );
+    )
+   
     const introduction = () => {
        return (
-        <hgroup>
-            <h1>🖼</h1>; 
             <button onClick={logout}
             className="main-page-logout-button"
-            >Logout</button>;
-        </hgroup>
+            >Logout</button>
        )
     }
     const hostAnExperience = () => {
@@ -49,7 +47,9 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
     }
     const globeCurrency = () => {
         return(
-            <button>🌐˅</button>
+            <button
+            className="main-page-header-button"
+            >🌐  ˅</button>
         )
     }
     const hostYourHome = () => {
@@ -59,27 +59,28 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
             >Host your home</button>
         )
     }
+    
 
     
        if (currentUser) {
         return(
             <div>
-                {introduction(currentUser, logout)}
-                {help()}
-                {hostAnExperience() }
-                {switchToHosting()}
                 {globeCurrency()}
+                {switchToHosting()}
+                {hostAnExperience() }
+                {help()}
+                {introduction(currentUser, logout)}
             </div>
         )
        } else {
            return(
                <div>
-                   {sessionLinks()}
-                   {help()}
-                   {hostAnExperience()}
-                   {hostYourHome()}
                    {globeCurrency()}
-
+                   {hostYourHome()}
+                   {hostAnExperience()}
+                   {help()}
+                   {mainPageSignupButton()}
+                   {mainPageLoginButton()}
                </div>
            ) 
        }
