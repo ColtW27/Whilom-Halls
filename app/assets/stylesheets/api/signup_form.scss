@@ -82,3 +82,15 @@ border-radius: 0px 0px 0px 0px;
 margin-top: 0px;
 // padding-top: 0px;
 }
+.signup-input.cnt-top{
+    border-radius: 8px 8px 0px 0px;
+}
+.signup-input.cnt-bot{
+    border-radius: 0px 0px 8px 8px;
+}
+.signup-form-errors{
+ color: rgb(214, 57, 96);  
+}
+.sign-in-links{
+    color: blue;
+}

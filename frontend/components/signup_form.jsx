@@ -54,7 +54,7 @@ class SignupForm extends React.Component {
                         onChange={this.handleChange('first_name')}
                         value={this.state.first_name}
                         placeholder="First Name"
-                        className="signup-input cnt-bot"
+                        className="signup-input cnt-top"
                     />
                 </label>
                     <label className="text-between"
@@ -97,7 +97,8 @@ class SignupForm extends React.Component {
                     className="signup-input"
                 />
                     <p>We’ll send you torches, quils, inspiration, and powdered wigs via carrier pigeon.</p>
-                        <div>
+                        <div
+                        className="signup-form-errors">
                             {this.showErrors()}
                         </div>
                     <label
@@ -112,7 +113,15 @@ class SignupForm extends React.Component {
                     <br/>
                     <p
                     className="text-below"
-                            >By selecting Agree and continue below, I agree to Whilom Hall’s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.</p>
+                            >By selecting Agree and continue below, I agree to Whilom Hall’s 
+                            <Link to='/'
+                            className="sign-in-links">
+                            Terms of Service</Link>
+                            , <Link to='/'
+                            className="sign-in-links">Payments Terms of Service</Link>,
+                             <Link to='/'
+                             className="sign-in-links">Privacy Policy</Link>, and <Link to='/'
+                             className="sign-in-links">Nondiscrimination Policy</Link>.</p>
                 </label>
                 <button
                     type="submit"

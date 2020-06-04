@@ -63,7 +63,8 @@ class LoginForm extends React.Component {
             placeholder="Password"
             />
             </label>
-            <div>
+            <div 
+            className="login-form-errors">
               {this.showErrors()}
             </div>
             <button
