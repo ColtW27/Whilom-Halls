@@ -2,9 +2,10 @@ import React from "react";
 import GreetingContainer from './greeting_container';
 import Modal from './modal/modal'
 import { Link } from 'react-router-dom';
-
+import HeaderMessage from './header/header_message'
 const App = () => (
     <div>
+      <HeaderMessage />
       < Modal />
       <header className= "header-in-app">
           <Link to='/'
