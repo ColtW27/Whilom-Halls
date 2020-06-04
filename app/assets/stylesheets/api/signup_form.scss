@@ -8,11 +8,14 @@
     height: 686px;
     
 }
-
-.session-form-box{
-    // display: flex;
-    
+.inside-form-div {
+    display: flex;
+    flex-direction: column;
 }
+.inside-form-div > h3 {
+ align-self: center;
+}
+
 
 .signup-input {
     display: flex;
@@ -45,21 +48,17 @@
     margin: 2px;
 }
 .close-x{
-    align-self: flex-start;
+    // align-self: flex-start;
     margin: 10px;
+   
     // justify-content: right;
 }
-.login-signup {
-    // justify-content: right;
-    // align-items: end;
-}
-
 
 .signup-form-main-signup-button{
  background-color:  rgb(218, 45, 88);
  color: white;
  border: .25px solid lightgray;
- border-radius: 8px;
+ border-radius: 10px;
  padding: 15px;
  margin: 20px;
  width: 500px;

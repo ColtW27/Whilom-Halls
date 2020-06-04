@@ -42,10 +42,11 @@ class SignupForm extends React.Component {
           >
             <form onSubmit={this.handleSubmit}
                 className="signup-form-box">
-                <h3>Sign up</h3>
+              <div className="inside-form-div">
+                <h3 className= "signup-not-button">Sign up</h3>
                     <br />
                     <div onClick={this.props.modalClose}
-                        className="close-x">X</div>
+                    className="close-x">✕</div>
                 <label 
                   >
                     <input
@@ -111,7 +112,7 @@ class SignupForm extends React.Component {
                     <br/>
                     <p
                     className="text-below"
-                    >By selecting Agree and continue below, I agree to Whilom Hall’s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.</p>
+                            >By selecting Agree and continue below, I agree to Whilom Hall’s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.</p>
                 </label>
                 <button
                     type="submit"
@@ -121,6 +122,7 @@ class SignupForm extends React.Component {
                 </button>
                 {/* {this.props.otherForm}  */}
                 {/* Link to other switch to login form */}
+                </div>
             </form>
           </div>
         )

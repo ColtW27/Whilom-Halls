@@ -5,9 +5,15 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
 
     const sessionLinks = () => (
         <nav className="login-signup">
-            <button onClick={() => modalOpen('login')}>Login</button>
-        &nbsp;or&nbsp;
-            <button onClick={() => modalOpen('signup')}>Signup</button>
+            <button
+            onClick={() => modalOpen('signup')}
+            className="main-page-signup-button"
+            >Signup</button>
+        &nbsp;&nbsp;
+            <button 
+            onClick={() => modalOpen('login')}
+            className="main-page-login-button"
+            >Login</button>
         </nav>
     );
     const introduction = () => {
