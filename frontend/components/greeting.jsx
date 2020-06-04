@@ -60,10 +60,16 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
         )
     }
     const profileButton = () => (
-        <button onClick={logout}
-            className="main-page-logout-button"
-        >Logout</button>
-    
+      <div className="profile-dropdown">
+        <span className="main-page-login-button">
+        Profile
+        </span>
+        <ul className="profile-dropdown-content">
+          <li>
+         {introduction(currentUser, logout)}
+          </li>
+        </ul>
+      </div>
     )
 
     
@@ -75,7 +81,8 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
                 <li>{switchToHosting()}</li>
                 <li>{hostAnExperience() }</li>
                 <li>{help()}</li>
-                <li>{introduction(currentUser, logout)}</li>
+                {/* <li>{introduction(currentUser, logout)}</li> */}
+                <li>{profileButton()}</li>
             </div>
         )
        } else {
