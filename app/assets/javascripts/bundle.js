@@ -982,14 +982,7 @@ document.addEventListener("DOMContentLoaded", function () {
     delete window.currentUser;
   } else {
     store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  } //Testing Start 
-
-
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.login = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["login"];
-  window.logout = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["logout"];
-  window.signup = _actions_session_actions__WEBPACK_IMPORTED_MODULE_4__["signup"]; //Testing End
+  }
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
