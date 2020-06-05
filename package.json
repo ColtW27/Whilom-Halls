@@ -25,13 +25,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build",
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "start": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
