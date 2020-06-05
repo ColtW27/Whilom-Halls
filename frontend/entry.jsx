@@ -1,8 +1,40 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
+import Root from './components/root'
+import configureStore from './store/store';
 
+import { login, logout, signup } from './actions/session_actions'
+//  import { login } from './util/session_api_util' // for testing api util login
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
-    ReactDOM.render(<h1>This is Whilom Halls</h1>, root);
+
+    let store;
+    if (window.currentUser){
+      const initialState = {
+        entities: {
+          users: { [ window.currentUser.id]: window.currentUser }
+        },
+        session: { id: window.currentUser.id }
+      };
+      store = configureStore(initialState);
+      delete window.currentUser;
+    } else {
+      store = configureStore();
+    }
+
+
+
+
+
+
+  //Testing Start 
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    window.login = login;
+    window.logout = logout;
+    window.signup = signup;
+  //Testing End
+
+    ReactDOM.render(< Root store={store}/>, root);
 });

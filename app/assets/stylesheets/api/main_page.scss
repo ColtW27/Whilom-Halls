@@ -1,0 +1,16 @@
+.Logo {
+    color: rgb(218, 45, 88);
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.logo-link-home {
+    text-decoration: none;
+}
+.top-header{
+    // border-top: 1px solid rgb(197, 34, 34);
+    background-color: lime;
+}

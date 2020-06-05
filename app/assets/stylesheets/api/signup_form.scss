@@ -1,0 +1,122 @@
+
+.signup-form-container {
+    display: flex;
+    background-color:#fff;
+    border-radius: 12px;
+    padding: 10px;
+    width: 550px;
+    height: 686px;
+    
+}
+.inside-form-div-signup {
+    display: flex;
+    // position: relative;
+    flex-direction: column;
+    width: 540px;
+
+}
+
+.signup-not-button {
+    // position: relative;
+    width: 570px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;  
+    margin-bottom: 17px;
+   
+   
+}
+.signup-close-x{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;  
+    height: 30px;
+    margin: 10px 30px 5px 10px;  
+    width: 30px; 
+}
+
+.signup-close-x:hover {
+    background-color: rgb(243, 243, 243);
+    border-radius: 30px;
+}
+
+.signup-input {
+    display: flex;
+    border-radius: 8px;
+    padding: 19px;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    align-items: center;
+    width: 500px;   
+    border: 1px solid lightgray;
+    font-size: 16px;
+      
+}
+.text-between {
+    color: darkgray;
+    font-size: 13.8px;
+    font-size: 12px;
+    // flex-wrap: wrap;
+}
+.text-mid{
+    color: black;
+    font-size: 12px;
+    font-weight: 100;
+    width: 540px;
+}
+.text-below{
+   color: black; 
+   font-size: 12px;
+}
+.signup-check-box{
+    margin: 2px;
+    width: 550px;
+}
+
+.signup-form-main-signup-button{
+ background-color:  rgb(218, 45, 88);
+ color: white;
+ border: .25px solid lightgray;
+ border-radius: 10px;
+ padding: 15px;
+ margin: 20px;
+ width: 500px;
+ font-size: 16px;
+}
+
+.tc-checkbox{
+    size: 15px;
+    margin: 5px 12px 9px 0px;
+    width: 22px;
+    height: 22px;
+    border-color: lightgray;
+    float: left;
+    background-color: black;
+}
+.cnt-top {
+margin-bottom: 0px;
+// padding-bottom: 0px;
+border-radius: 0px 0px 0px 0px;
+}
+.cnt-bot {
+margin-top: 0px;
+// padding-top: 0px;
+}
+.signup-input.cnt-top{
+    border-radius: 8px 8px 0px 0px;
+}
+.signup-input.cnt-bot{
+    border-radius: 0px 0px 8px 8px;
+}
+.signup-form-errors{
+ color: rgb(214, 57, 96);  
+}
+.sign-in-links{
+    color: blue;
+    width: 560px;
+}
+.text-below span {
+    font-weight: bold;
+    color: rgb(58, 57, 57);
+}

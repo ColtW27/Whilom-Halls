@@ -1,0 +1,131 @@
+// Place all the styles related to the api/sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.modal-background {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 10;
+ }
+
+ .modal-child {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+.login-form-container {
+    display: flex;
+    justify-content: left;
+    background-color:#fff;
+    border-radius: 13px;
+    // padding: 10px;
+    width: 550px;
+    height: 430px;
+    padding-left: 20px;
+}
+.login-form-box {
+    display: flex;
+    // padding: 19px;
+    justify-content: right;
+    width: 493px;
+}
+.inside-form-div-login {
+    display: flex;
+    flex-direction: column;
+    // justify-self: center;
+    width: 500px;
+}
+.top{
+    border-color: .5px solid rgb(226, 225, 225);
+    
+    border-bottom: none;
+    padding: 19px;
+    border-radius: 10px 10px 0px 0px;
+}
+.bottom{
+    border-color: 1px solid rgb(226, 225, 225);
+    border-radius: 0px 0px 10px 10px;
+    padding: 19px;
+}
+
+
+.log-in-label{
+    display: flex;
+    justify-content: center;
+    // margin: 0px;
+    // margin-left: 30px;
+    padding-top: 15px;
+    margin-bottom: 40px;
+    padding-left: 0px;
+    // padding-bottom: 20px;
+    width: 560px;
+    // border-bottom: 1px solid black;
+}
+.login-close-x{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;  
+    height: 30px;
+    margin: 12px 30px 5px 0px;  
+    width: 30px; 
+}
+.login-close-x:hover {
+    background-color: rgb(243, 243, 243);
+    border-radius: 30px;
+}
+.session-form-header{
+ border-bottom: 1px solid;
+ margin: 10px 40px 15px 0px;
+ padding-right: 30px;
+ width: 600px;
+
+}
+
+
+.header-in-app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 20px;
+   
+}
+.greeting-container {
+    // align-items: flex-end;
+    // justify-content: right;
+    // align-self: right;
+}
+
+.login-form-main-login-button{
+ background-color:  rgb(214, 57, 96);
+ color: white;
+ font-weight: 400;
+ font-size: 16px;
+ border-radius: 10px;
+ padding: 15px;
+ margin: 15px 5px 10px 0px;
+ width: 535px;
+}
+.base-link{
+    font-size: 14px;
+    color: black;
+    // padding-left: 18px;;
+}
+.base-word{
+    font-size: 14px;
+}
+.login-form-errors{
+    color: rgb(214, 57, 96);
+}
+.switch-form-button{
+    text-decoration: underline;
+    border: none;
+    background-color: #fff;
+}
