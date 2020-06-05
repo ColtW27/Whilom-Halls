@@ -22,7 +22,9 @@ function Modal({ modal, modalClose }) {
 
     return (
       <div className='modal-background' onClick={modalClose}>
+           
           <div className="modal-child" onClick={e => e.stopPropagation()}>
+                <div className="signup-top-line"></div>
               { component }
           </div>
       </div>

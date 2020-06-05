@@ -40,10 +40,11 @@ class SignupForm extends React.Component {
         return (
           <div className="signup-form-container"
           >
+           
             <form onSubmit={this.handleSubmit}
                 className="signup-form-box">
               <div className="inside-form-div-signup">
-                <h3 className= "signup-not-button">Sign up</h3>
+                <h3 className= "signup-not-button">Finish signing up</h3>
                     <br />
                     <div onClick={this.props.modalClose}
                     className="signup-close-x">✕</div>
@@ -73,7 +74,7 @@ class SignupForm extends React.Component {
                     <input type="date"
                     placeholder="Birth Date"
                     className="signup-input"
-                    />You must be at least 18, or able to touch the high ceilings to join.
+                    />You must be at least 18, or able to touch the high ceilings to join. Your birthday will not be saved. 
                 </label>
                 <label
                  className="text-between"

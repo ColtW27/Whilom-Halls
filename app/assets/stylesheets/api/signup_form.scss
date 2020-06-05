@@ -10,21 +10,32 @@
 }
 .inside-form-div-signup {
     display: flex;
+    // position: relative;
     flex-direction: column;
-    width: 580px;
+    width: 540px;
 
 }
 // .inside-form-div > h3 {
 //  align-self: center;
 //  width: 590px;
 // }
+// .signup-top-line {
+//     display: flex;
+
+//     position: absolute;
+//     border-bottom: 1px solid black;
+//     height: 50px;
+//     width: 540px;
+// }
 .signup-not-button {
-    width: 580px;
+    // position: relative;
+    width: 570px;
     display: flex;
     justify-content: center;
-padding-top: 30px;
-float: right;
-border-bottom: 1px solid black;
+    padding-top: 10px;  
+    margin-bottom: 17px;
+   
+   
 }
 .signup-close-x{
     display: flex;
@@ -32,7 +43,7 @@ border-bottom: 1px solid black;
     justify-content: center;
     align-items: center;  
     height: 30px;
-    margin: 30px 30px 5px 10px;  
+    margin: 10px 30px 5px 10px;  
     width: 30px; 
 }
 
