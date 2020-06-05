@@ -21,26 +21,50 @@
 
 .login-form-container {
     display: flex;
+    justify-content: left;
     background-color:#fff;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 13px;
+    // padding: 10px;
     width: 550px;
     height: 430px;
+    padding-left: 20px;
+}
+.login-form-box {
+    display: flex;
+    // padding: 19px;
+    justify-content: right;
+    width: 493px;
 }
 .inside-form-div-login {
     display: flex;
     flex-direction: column;
-
+    // justify-self: center;
+    width: 500px;
 }
+.top{
+    border-color: .5px solid rgb(226, 225, 225);
+    
+    border-bottom: none;
+    padding: 19px;
+    border-radius: 10px 10px 0px 0px;
+}
+.bottom{
+    border-color: 1px solid rgb(226, 225, 225);
+    border-radius: 0px 0px 10px 10px;
+    padding: 19px;
+}
+
+
 .log-in-label{
     display: flex;
     justify-content: center;
     // margin: 0px;
     // margin-left: 30px;
+    padding-top: 15px;
     margin-bottom: 40px;
     padding-left: 0px;
-    padding-bottom: 30px;
-    width: 590px;
+    // padding-bottom: 20px;
+    width: 560px;
     // border-bottom: 1px solid black;
 }
 .login-close-x{
@@ -49,7 +73,7 @@
     justify-content: center;
     align-items: center;  
     height: 30px;
-    margin: 0px 30px 5px 10px;  
+    margin: 12px 30px 5px 0px;  
     width: 30px; 
 }
 .login-close-x:hover {
@@ -64,20 +88,6 @@
 
 }
 
-.login-form-box {
-    padding: 19px;
-    justify-content: center;
-    width: 493px;
-}
-.top{
-    border-color: darkgray;
-    border-bottom: none;
-    border-radius: 10px 10px 0px 0px;
-}
-.bottom{
-    border-color: darkgray;
-    border-radius: 0px 0px 10px 10px;
-}
 
 .header-in-app {
     display: flex;
