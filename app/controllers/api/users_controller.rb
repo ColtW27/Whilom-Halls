@@ -1,20 +1,12 @@
 class Api::UsersController < ApplicationController
 
-<<<<<<< HEAD
-  def create
-=======
   def create 
->>>>>>> auth
     @user = User.new(user_params)
     if @user.save
       login!(@user)
       redirect_to api_user_url(@user)
     else
-<<<<<<< HEAD
-      render json: @user.errors.full_messages
-=======
       render json: @user.errors.full_messages, status: 422
->>>>>>> auth
     end
   end
 
