@@ -1336,13 +1336,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var FooterMessage = function FooterMessage() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header-message-container"
+    className: "footer-message-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header-message"
-  }, "Get the lastest updates on world events.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/",
-    className: "header-message-link"
-  }, "Learn more")));
+    className: "footer-message"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Whilom Halls is not a real business, but rather a portfolio piece."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "2020, Colton Wilmouth")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FooterMessage);

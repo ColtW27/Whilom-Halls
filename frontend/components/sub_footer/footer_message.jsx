@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 const FooterMessage = () => {
     return (
         <div
-            className="header-message-container">
+            className="footer-message-container">
             <div
-                className="header-message">
-                Get the lastest updates on world events.
-        <Link to='/'
-                    className="header-message-link">Learn more</Link>
+              className="footer-message">
+                <p>Whilom Halls is not a real business, but rather a portfolio piece.</p>
+                <p>2020, Colton Wilmouth</p>
+            {/* <Link to='/'
+              className="footer-message-link">
+              Learn more
+            </Link> */}
             </div>
         </div>
     )
