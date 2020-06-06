@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class SupportContainer extends React.Component {
     render() {
         return (
-            <div>
+            <div className="individual-footer-component">
                 <h6>Support</h6>
                 <ul>
                     <li><Link to="/">Supporting walls</Link></li>

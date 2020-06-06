@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 class AboutContainer extends React.Component {
     render() {
       return (
-        <div>
+        <div className="individual-footer-component">
             <h6>About</h6>
-          <ul>
+          <ul >
            <li><Link to="/">Belonging & Diversity</Link></li>     
            <li><Link to="/">Accessibility</Link></li>     
            <li><Link to="/">Safety & Trust</Link></li>     
