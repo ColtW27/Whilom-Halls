@@ -8,6 +8,7 @@ const App = () => (
     <div>
       <HeaderMessage />
       < Modal />
+      <FooterContainer />
       <header className= "header-in-app">
           <Link to='/'
                 className="logo-link-home">
@@ -15,7 +16,7 @@ const App = () => (
                     {/* 𝒲𝒽𝒾𝓁𝓸𝓂 ℋ𝒶𝓁𝓁𝓈 */}
           </Link>
           < NavBarContainer className="greeting-container"/>
-          <FooterContainer/>
+          
       </header>
     </div>
 );

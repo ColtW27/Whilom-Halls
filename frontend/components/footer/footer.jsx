@@ -5,11 +5,11 @@ import HostContainer from "./host_container"
 import SupportContainer from "./support_container"
 const Footer = () => {
     return (
-      <div>
+      <div className = "footer-container">
         <AboutContainer />
-        {/* <CommunityContainer />
+        <CommunityContainer />
         <HostContainer />
-        <SupportContainer /> */}
+        <SupportContainer />
       </div>
     )
 }
