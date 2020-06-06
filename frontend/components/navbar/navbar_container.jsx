@@ -1,8 +1,8 @@
 import React from 'react';
-import { logout } from '../actions/session_actions';
+import { logout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
-import Greeting from './greeting';
-import { modalOpen } from '../actions/modal_actions'
+import NavBar from './navbar';
+import { modalOpen } from '../../actions/modal_actions'
 
 
 
@@ -18,4 +18,4 @@ const mDTP = dispatch => ({
     modalOpen: modal => dispatch(modalOpen(modal))
 })
 
-export default connect(mSTP, mDTP)(Greeting)
+export default connect(mSTP, mDTP)(NavBar)

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import { logout } from '../util/session_api_util';
-const Greeting = ({currentUser, modalOpen, logout}) => {
+const NavBar = ({currentUser, modalOpen, logout}) => {
 
     const mainPageSignupButton = () => (
             <button
@@ -132,4 +132,4 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
        }   
 }
 
-export default Greeting;
+export default NavBar;
