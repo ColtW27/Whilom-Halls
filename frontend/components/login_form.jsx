@@ -5,14 +5,16 @@ import { withRouter } from 'react-router-dom';
 class LoginForm extends React.Component {
     constructor(props) {
       super(props);
-        this.state = this.props.user;
+        this.state = { user: this.props.user, errors: this.props.errors };
+        // this.state = this.props.user;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(field){ //this keeps the state updated for every keystroke
         return (e)=> (
             this.setState(
-                { [field]: e.currentTarget.value }
+                // { [field]: e.currentTarget.value }
+                { user: {[field]: e.currentTarget.value } }
             )
         )
     };
@@ -25,13 +27,18 @@ class LoginForm extends React.Component {
     showErrors() {
       return (
         <ul>
-          {this.props.errors.map((error, x) => (
-            <li key={`error-${x}`}>
+          {this.props.errors.map((error, idx) => (
+            <li key={`error-${idx}`}>
               {error}
             </li>
           ))}
         </ul>
       );
+    }
+    renderErrors() {
+      return (
+          { errors: this.props.errors }
+        )
     }
 
     render(){
@@ -74,7 +81,11 @@ class LoginForm extends React.Component {
             </div>
             <div 
             className="login-form-errors">
-              {this.showErrors()}
+              {/* {this.showErrors()} */}
+           
+          
+              {this.state.password}
+            
             </div>
             <button
             className="login-form-main-login-button"

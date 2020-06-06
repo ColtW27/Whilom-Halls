@@ -19,7 +19,7 @@ const receiveCurrentUser = currentUser => {
     return {
         type: RECEIVE_SESSION_ERRORS,
         errors
-    }
+    } 
 }
 
 export const signup = (user) => (dispatch) => SessionAPIUtil.signup(user)
