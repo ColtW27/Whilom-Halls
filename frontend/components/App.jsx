@@ -5,6 +5,7 @@ import Modal from './modal/modal'
 import NavBarContainer from './navbar/navbar_container';
 import FooterContainer from "./footer/footer_container";
 import FooterMessage from "./sub_footer/footer_message"
+import FutureDestinationsContainer from "./future_dests_bar/future_destinations_container";
 const App = () => (
     <div>
       <HeaderMessage />
@@ -18,7 +19,7 @@ const App = () => (
           </Link>
       < NavBarContainer className="greeting-container"/>  
       </header>
-
+      <FutureDestinationsContainer />
       <FooterContainer />
       <FooterMessage />
     </div>
