@@ -129,13 +129,7 @@ const Greeting = ({currentUser, modalOpen, logout}) => {
                   <li>{mainPageLoginButton()}</li>
                </div>
            ) 
-       }
-    
-        
-        
-
-    
-    
+       }   
 }
 
 export default Greeting;

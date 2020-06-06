@@ -1,8 +1,9 @@
 import React from "react";
-import GreetingContainer from './greeting_container';
-import Modal from './modal/modal'
 import { Link } from 'react-router-dom';
 import HeaderMessage from './header/header_message'
+import Modal from './modal/modal'
+import GreetingContainer from './greeting_container';
+import FooterContainer from "./footer/footer_conainer";
 const App = () => (
     <div>
       <HeaderMessage />
@@ -14,6 +15,7 @@ const App = () => (
                     {/* 𝒲𝒽𝒾𝓁𝓸𝓂 ℋ𝒶𝓁𝓁𝓈 */}
           </Link>
           < GreetingContainer className="greeting-container"/>
+          <FooterContainer/>
       </header>
     </div>
 );
