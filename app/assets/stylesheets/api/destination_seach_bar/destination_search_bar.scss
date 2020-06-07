@@ -1,6 +1,7 @@
 .destination-search-bar-container{
     display: flex;
     justify-content: center;
+    padding: 0px 20px;
 }
 .destination-search-bar-container input{
     width: 380px;
@@ -14,20 +15,37 @@
 .destination-search-bar-form{
     display: flex;
 }  
-.destination-search-left{
-    border-radius: 8px 0px 0px 8px;
+.destination-search {
+  border: none;
+  box-shadow: 1px 3px rgba(230, 227, 227, 0.349);;
+//   transition: box-shadow 0.2s ease-in-out;
+  -webkit-box-shadow: -1px -1px 16px -12px rgba(0, 0, 0, 0.842);
+  -moz-box-shadow: -1px -1px 16px -12px rgba(0, 0, 0, 0.829);
+  box-shadow: -1px -1px 16px -12px rgba(0, 0, 0, 0.829);
 }
-.destination-search-center{
+.destination-search:hover{
+     box-shadow: 1px 3px rgba(230, 227, 227, 0.349);;
+//   transition: box-shadow 0.2s ease-in-out;
+  -webkit-box-shadow: -1px -1px 16px -12px rgba(0, 0, 0, 0.842);
+  -moz-box-shadow: -1px -1px 16px -12px rgba(0, 0, 0, 0.829);
+  box-shadow: -1px -1px 16px -12px rgba(0, 0, 0, 0.829);
+}
+.destination-search.left{
+    // border-radius: 8px 20px 20px 8px;
+    border-right: 1px solid grey;
+    
+}
+.destination-search.center{
 
 }
-.destination-search-right{
+.destination-search.right{
     // border-radius: 0px 8px 8px 0px;
 }
 
-.destination-search-submit-background{
+.destination-search.submit-background{
     display: flex;
     align-items: center;
-    border: 1px solid black;
+    // border: 1px solid black;
     border-radius: 0px 8px 8px 0px;
 }
 .destination-search-bar-form button {
@@ -36,4 +54,7 @@
     border-radius: 8px;
     margin-right: 13px;
     margin-left: 13px;
+    background-color: rgb(218, 45, 88);
+    color: ghostwhite;
+    font-size: 14px;
 }

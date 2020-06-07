@@ -7,24 +7,24 @@ const DestinationSearchBar = () =>{
       id="searchform">
         <div
         className="destination-search-left-container">
-          <input type="text"
-          className="destination-search-left"/>
+          <input type="search"
+          className="destination-search left"/>
         </div>
 
         <div
         className="destination-search-left-container">
-          <input type="text"
-          className="destination-search-center"/>
+          <input type="search"
+          className="destination-search center"/>
         </div>
         
         <div
         className="destination-search-left-container">
-          <input type="text"
-          className="destination-search-right"/>
+          <input type="search"
+          className="destination-search right"/>
         </div>
 
         <div
-        className="destination-search-submit-background">
+        className="destination-search submit-background">
         <button type="submit"
          value=""
          form="searchform"
