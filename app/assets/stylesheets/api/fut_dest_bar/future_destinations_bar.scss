@@ -1,17 +1,18 @@
 .future-destinations-container{
   display: flex;
+//   flex-direction: column;
   align-items: center;
-  padding: 10px 0px;
+//   padding: 10px 0px;
   width: 100%;
-  height: 331px;
+  height: 278px;
 //   margin-left: 60px;
 //   background-color: rgb(253, 250, 250);
 //   border-top: 1px solid rgb(219, 215, 215);
 }   
 .top-destination-header {
     display: flex;
-    position: absolute;
-    margin: 20px 15px 15px 82px;
+    // position: absolute;
+    margin: 20px 15px 0px 82px;
     // font-weight: bold;
     font-size: 23px;
     top: 160px;

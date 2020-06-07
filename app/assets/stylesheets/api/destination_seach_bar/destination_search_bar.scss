@@ -1,0 +1,22 @@
+.destination-search-bar-container{
+    display: flex;
+    justify-content: center;
+}
+.destination-search-bar-container input{
+    width: 380px;
+    height: 50px;
+    padding: 10px;
+   
+}  
+.destination-search-bar-container:hover{
+    // border: ;
+}  
+.destination-search-left{
+    border-radius: 8px 0px 0px 8px;
+}
+.destination-search-center{
+
+}
+.destination-search-right{
+    border-radius: 0px 8px 8px 0px;
+}

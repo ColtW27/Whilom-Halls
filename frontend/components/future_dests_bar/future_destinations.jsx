@@ -3,11 +3,12 @@ import { Link } from "react-router-dom"
 const FutureDestinations = () => {
   return (
     <div>
-      <div className="future-destinations-container">
-        <div
+      <div
         className="top-destination-header">
-          <p>Top Destinations</p>
-        </div>
+        <p>Top Destinations</p>
+      </div>
+      <div className="future-destinations-container">
+       
           
         <ul className="individual-dest left" >
             <li><Link to="/">Lawrence, Kansas</Link></li>

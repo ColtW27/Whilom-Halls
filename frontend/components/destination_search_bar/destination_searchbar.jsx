@@ -3,11 +3,14 @@ import React from 'react';
 const DestinationSearchBar = () =>{
   return (
     <div className= "destination-search-bar-container">
-      <form action="">
+      <form >
 
-        <input type="text"/>
-        <input type="text"/>
-        <input type="text"/>
+        <input type="text"
+        className="destination-search-left"/>
+        <input type="text"
+        className="destination-search-center"/>
+        <input type="text"
+        className="destination-search-right"/>
         <button type="submit" value=""> 🔍 Search</button>
       </form>
     </div>
