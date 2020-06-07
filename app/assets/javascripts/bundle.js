@@ -894,12 +894,9 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
 
     _classCallCheck(this, LoginForm);
 
-    _this = _super.call(this, props);
-    _this.state = {
-      user: _this.props.user,
-      errors: _this.props.errors
-    }; // this.state = this.props.user;
+    _this = _super.call(this, props); // this.state = { user: this.props.user, errors: this.props.errors };
 
+    _this.state = _this.props.user;
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -911,10 +908,8 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
 
       //this keeps the state updated for every keystroke
       return function (e) {
-        return _this2.setState( // { [field]: e.currentTarget.value }
-        {
-          user: _defineProperty({}, field, e.currentTarget.value)
-        });
+        return _this2.setState(_defineProperty({}, field, e.currentTarget.value) // { user: {[field]: e.currentTarget.value } }
+        );
       };
     }
   }, {
@@ -933,14 +928,12 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
           key: "error-".concat(idx)
         }, error);
       }));
-    }
-  }, {
-    key: "renderErrors",
-    value: function renderErrors() {
-      return {
-        errors: this.props.errors
-      };
-    }
+    } // renderErrors() {
+    //   return (
+    //       { errors: this.props.errors }
+    //     )
+    // }
+
   }, {
     key: "render",
     value: function render() {
@@ -973,7 +966,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         placeholder: "Password"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-form-errors"
-      }, this.state.password), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, this.showErrors()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "login-form-main-login-button",
         type: "submit",
         value: "login"
