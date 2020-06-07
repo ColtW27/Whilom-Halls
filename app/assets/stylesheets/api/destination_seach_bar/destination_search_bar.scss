@@ -10,6 +10,9 @@
 }  
 .destination-search-bar-container:hover{
     // border: ;
+}
+.destination-search-bar-form{
+    display: flex;
 }  
 .destination-search-left{
     border-radius: 8px 0px 0px 8px;
@@ -18,5 +21,19 @@
 
 }
 .destination-search-right{
+    // border-radius: 0px 8px 8px 0px;
+}
+
+.destination-search-submit-background{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
     border-radius: 0px 8px 8px 0px;
+}
+.destination-search-bar-form button {
+    height: 48px;
+    width: 111px;
+    border-radius: 8px;
+    margin-right: 13px;
+    margin-left: 13px;
 }

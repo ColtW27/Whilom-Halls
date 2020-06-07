@@ -3,15 +3,33 @@ import React from 'react';
 const DestinationSearchBar = () =>{
   return (
     <div className= "destination-search-bar-container">
-      <form >
+      <form className= "destination-search-bar-form"
+      id="searchform">
+        <div
+        className="destination-search-left-container">
+          <input type="text"
+          className="destination-search-left"/>
+        </div>
 
-        <input type="text"
-        className="destination-search-left"/>
-        <input type="text"
-        className="destination-search-center"/>
-        <input type="text"
-        className="destination-search-right"/>
-        <button type="submit" value=""> 🔍 Search</button>
+        <div
+        className="destination-search-left-container">
+          <input type="text"
+          className="destination-search-center"/>
+        </div>
+        
+        <div
+        className="destination-search-left-container">
+          <input type="text"
+          className="destination-search-right"/>
+        </div>
+
+        <div
+        className="destination-search-submit-background">
+        <button type="submit"
+         value=""
+         form="searchform"
+         > 🔍 Search</button>
+        </div>
       </form>
     </div>
   )
