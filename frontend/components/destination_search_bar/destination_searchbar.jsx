@@ -8,7 +8,7 @@ const DestinationSearchBar = () =>{
         <div
         className="destination-search left">
           <div
-            className="">LOCATION
+            className="dest-search-left-inner-div-1">LOCATION
           </div>  
           <input type="search"
             placeholder="Where are you going?"
@@ -30,11 +30,11 @@ const DestinationSearchBar = () =>{
         <button
         className="destination-search right">
           <div
-          className="">
+          className="dest-search-right-inner-div-1">
             GUESTS
           </div>
           <div
-          className="">
+          className="dest-search-right-inner-div-2">
             Add Guests
           </div>
         </button>
