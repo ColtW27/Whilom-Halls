@@ -3,10 +3,6 @@ import { Link } from "react-router-dom"
 const FutureDestinations = () => {
   return (
     <div>
-      {/* <div
-        className="top-destination-header">
-          <p>Top Destinations</p>
-      </div> */}
       <div className="future-destinations-container">
         <div
         className="top-destination-header">

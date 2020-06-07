@@ -6,6 +6,7 @@ import NavBarContainer from './navbar/navbar_container';
 import FooterContainer from "./footer/footer_container";
 import FooterMessage from "./sub_footer/footer_message"
 import FutureDestinationsContainer from "./future_dests_bar/future_destinations_container";
+import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
 const App = () => (
     <div>
       <HeaderMessage />
@@ -19,6 +20,7 @@ const App = () => (
           </Link>
       < NavBarContainer className="greeting-container"/>  
       </header>
+      <DestinationSearchBarContainer />
       <FutureDestinationsContainer />
       <FooterContainer />
       <FooterMessage />

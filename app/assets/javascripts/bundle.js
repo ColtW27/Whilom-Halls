@@ -202,6 +202,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _footer_footer_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./footer/footer_container */ "./frontend/components/footer/footer_container.jsx");
 /* harmony import */ var _sub_footer_footer_message__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sub_footer/footer_message */ "./frontend/components/sub_footer/footer_message.jsx");
 /* harmony import */ var _future_dests_bar_future_destinations_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./future_dests_bar/future_destinations_container */ "./frontend/components/future_dests_bar/future_destinations_container.jsx");
+/* harmony import */ var _destination_search_bar_destination_searchbar_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./destination_search_bar/destination_searchbar_container */ "./frontend/components/destination_search_bar/destination_searchbar_container.jsx");
+
 
 
 
@@ -221,10 +223,71 @@ var App = function App() {
     className: "Logo"
   }, "\u3004 Whil\uD835\uDD60m H\uD835\uDD52lls  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "greeting-container"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_future_dests_bar_future_destinations_container__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer_container__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sub_footer_footer_message__WEBPACK_IMPORTED_MODULE_6__["default"], null));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_destination_searchbar_container__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_future_dests_bar_future_destinations_container__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer_container__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sub_footer_footer_message__WEBPACK_IMPORTED_MODULE_6__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./frontend/components/destination_search_bar/destination_searchbar.jsx":
+/*!******************************************************************************!*\
+  !*** ./frontend/components/destination_search_bar/destination_searchbar.jsx ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var DestinationSearchBar = function DestinationSearchBar() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    action: ""
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    value: ""
+  }, " \uD83D\uDD0D Search")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DestinationSearchBar);
+
+/***/ }),
+
+/***/ "./frontend/components/destination_search_bar/destination_searchbar_container.jsx":
+/*!****************************************************************************************!*\
+  !*** ./frontend/components/destination_search_bar/destination_searchbar_container.jsx ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _destination_searchbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./destination_searchbar */ "./frontend/components/destination_search_bar/destination_searchbar.jsx");
+
+
+
+
+var mSTP = function mSTP(state) {
+  return {};
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_destination_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
@@ -672,7 +735,7 @@ var mDTP = function mDTP(dispatch) {
   return {};
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_future_destinations__WEBPACK_IMPORTED_MODULE_2__["default"])); // export default FooterContainer;
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_future_destinations__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
