@@ -109,7 +109,9 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
         return(
             <div
             className="main-page-header-button-container">
-                <li>{globeCurrency()}</li>
+                <li 
+                id="main-page-globe-logo">
+                  {globeCurrency()}</li>
                 <li>{switchToHosting()}</li>
                 <li>{hostAnExperience() }</li>
                 <li>{help()}</li>

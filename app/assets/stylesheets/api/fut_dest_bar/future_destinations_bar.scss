@@ -1,0 +1,46 @@
+.future-destinations-container{
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  width: 100%;
+  height: 331px;
+//   margin-left: 60px;
+//   background-color: rgb(253, 250, 250);
+  border-top: 1px solid rgb(219, 215, 215);
+}
+.top-destination-header {
+    display: flex;
+    position: absolute;
+    margin: 20px 15px 15px 82px;
+    // font-weight: bold;
+    font-size: 23px;
+    top: 160px;
+}
+
+.individual-dest{
+    display: flex;
+    // justify-content: center;
+    flex-wrap: wrap;
+    // margin: 30px 120px 0px 70px;
+    height: 200px;
+    width: 325px;
+}
+.individual-dest.left{
+    margin-left: 82px;
+}
+.individual-dest li {
+    // position: relative;
+    width: 310px;
+    height: 50px;
+    font-weight: bold;
+
+    border-bottom: 1px solid rgb(219, 215, 215);
+}
+.individual-dest li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.individual-dest li a:hover {
+    text-decoration: underline;
+}
