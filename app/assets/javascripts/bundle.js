@@ -1014,7 +1014,7 @@ var NavBar = function NavBar(_ref) {
         return modalOpen('signup');
       },
       className: "main-page-header-button"
-    }, "Signup");
+    }, "Sign up");
   };
 
   var mainPageLoginButton = function mainPageLoginButton() {
@@ -1023,7 +1023,7 @@ var NavBar = function NavBar(_ref) {
         return modalOpen('login');
       },
       className: "main-page-login-button"
-    }, "Login");
+    }, "Log in");
   };
 
   var introduction = function introduction() {
@@ -1100,9 +1100,7 @@ var NavBar = function NavBar(_ref) {
   if (currentUser) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "main-page-header-button-container"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      id: "main-page-globe-logo"
-    }, globeCurrency()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, switchToHosting()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, hostAnExperience()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, help()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, profileButton()));
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, globeCurrency()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, switchToHosting()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, hostAnExperience()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, help()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, profileButton()));
   } else {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "main-page-header-button-container"

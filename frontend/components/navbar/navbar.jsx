@@ -7,14 +7,14 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
             <button
             onClick={() => modalOpen('signup')}
             className="main-page-header-button"
-            >Signup</button>
+            >Sign up</button>
     )
     const mainPageLoginButton = () => (
     
             <button 
             onClick={() => modalOpen('login')}
             className="main-page-login-button"
-            >Login</button>
+            >Log in</button>
     )
    
     const introduction = () => {
@@ -110,7 +110,7 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
             <div
             className="main-page-header-button-container">
                 <li 
-                id="main-page-globe-logo">
+                >
                   {globeCurrency()}</li>
                 <li>{switchToHosting()}</li>
                 <li>{hostAnExperience() }</li>
