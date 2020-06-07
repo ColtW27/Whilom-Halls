@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { signup } from "../actions/session_actions"; 
-import SignupForm from './signup_form';
-import { modalClose, modalOpen } from '../actions/modal_actions';
+import { signup } from "../../actions/session_actions"; 
+import SignupForm from "./signup_form";
+import { modalClose, modalOpen } from '../../actions/modal_actions';
 
 const mSTP = (state) => ({
     user: {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const DestinationSearchBar = () =>{
   return (
-    <div>
+    <div className= "destination-search-bar-container">
       <form action="">
 
         <input type="text"/>
