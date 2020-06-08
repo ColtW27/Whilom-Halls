@@ -5,13 +5,13 @@ class HostContainer extends React.Component {
     render() {
         return (
             <div className="individual-footer-component">
-                <h6>Host</h6>
+                <h6>ghost</h6>
                 <ul>
-                    <li><Link to="/">Host your Home</Link></li>
-                    <li><Link to="/">Host an Escapade</Link></li>
-                    <li><Link to="/">Sustainable Hosting</Link></li>
-                    <li><Link to="/">Tours & Walk Throughs</Link></li>
-                    <li><Link to="/">Resources</Link></li>
+                    <li><a href=""></a>Ghost your Home</li>
+                    <li><a href=""></a>Ghost an Escapade</li>
+                    <li><a href="">Sustainable Ghosting</a></li>
+                    <li><a href="https://www.countryliving.com/life/travel/g22855332/ghost-tours-near-me/"></a>Tours & Walk Throughs</li>
+                    <li><a href="https://schloss-post.com/how-to-become-a-ghost/"></a>Resources for Future Ghosts</li>
                 </ul>
             </div>
         )

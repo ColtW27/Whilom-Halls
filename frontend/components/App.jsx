@@ -9,7 +9,7 @@ import FutureDestinationsContainer from "./future_dests_bar/future_destinations_
 import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
 const App = () => (
     <div>
-      <HeaderMessage />
+      {/* <HeaderMessage /> */}
       < Modal />
       
       <header className= "header-in-app">
