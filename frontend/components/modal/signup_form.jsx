@@ -17,29 +17,30 @@ class SignupForm extends React.Component {
             )
         )
     };
+    validEmail(str) {
+        let email = str.split("@");
+        let alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+        if (email.length != 2) return false;
+        email[0].split("").forEach(char => {
+            if (!alphabet.includes(char)) return false;
+        })
+        if (email[1].split(".").length !== 2) return false;
+        return true;
+    }
 
     handleSubmit(e) { //calls dispatch with signup function w/ the current user state, then closes modal.
         e.preventDefault();
         const user = Object.assign({}, this.state)
-        if ( validEmail(user.email)) {
-            this.setState( { errors: [] })
+        if ( this.validEmail(user.email)) {
+            // this.setState( { errors: [] })
             this.props.signUpForm(user).then(this.props.modalClose)
         } else {
-            this.setState({ errors:  })
-            render 
+            const nextState = Object.assign({}, this.state, { errors: "Not a valid email adress."}); 
+            this.setState(nextState);
         }
 
-       const validEmail = (str) => {
-          let email = str.split("@");
-          let alphabet = "abcdefghijklmnopqrstuvwxyz";
-
-           if (email.length != 2) return false;
-           email[0].split("").forEach(char => {
-              if(!alphabet.includes(char))return false;
-           })
-           if (email[1].split(".").length !== 2) return false;
-           return true;
-       }
+       
     }
     showErrors() {
         return (
