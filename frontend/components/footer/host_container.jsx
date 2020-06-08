@@ -7,11 +7,15 @@ class HostContainer extends React.Component {
             <div className="individual-footer-component">
                 <h6>ghost</h6>
                 <ul>
-                    <li><a href=""></a>Ghost your Home</li>
-                    <li><a href=""></a>Ghost an Escapade</li>
-                    <li><a href="">Sustainable Ghosting</a></li>
-                    <li><a href="https://www.countryliving.com/life/travel/g22855332/ghost-tours-near-me/"></a>Tours & Walk Throughs</li>
-                    <li><a href="https://schloss-post.com/how-to-become-a-ghost/"></a>Resources for Future Ghosts</li>
+                    <li><a href="https://www.allure.com/story/is-my-house-haunted-supernatural-signs" target="_blank">Ghost your Home</a></li>
+
+                    <li><a href="https://www.youtube.com/results?search_query=ghost+escapades" target="_blank">Ghost an Escapade</a></li>
+
+                    <li><a href="https://www.sciencenewsforstudents.org/article/science-ghosts" target="_blank">Sustainable Ghosting</a></li>
+
+                    <li><a href="https://www.countryliving.com/life/travel/g22855332/ghost-tours-near-me/" target="_blank">Tours & Walk Throughs</a></li>
+
+                    <li><a href="https://schloss-post.com/how-to-become-a-ghost/" target="_blank">Resources for Future Ghosts</a></li>
                 </ul>
             </div>
         )
