@@ -32,13 +32,12 @@ class SignupForm extends React.Component {
     handleSubmit(e) { //calls dispatch with signup function w/ the current user state, then closes modal.
         e.preventDefault();
         const user = Object.assign({}, this.state)
-        if ( this.validEmail(user.email)) {
-            // this.setState( { errors: [] })
-            this.props.signUpForm(user).then(this.props.modalClose)
-        } else {
-            const nextState = Object.assign({}, this.state, { errors: "Not a valid email adress."}); 
-            this.setState(nextState);
+        if (!this.validEmail(user.email)) {
+    
+        const nextState = Object.assign({}, this.state, { errors: "Not a valid email adress."}); 
+        this.setState(nextState);
         }
+        this.props.signUpForm(user).then(this.props.modalClose)
 
        
     }

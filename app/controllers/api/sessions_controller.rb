@@ -1,7 +1,8 @@
 class Api::SessionsController < ApplicationController
     def create
-        
+        # debugger
         @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
+        
         if @user && login!(@user)
           redirect_to api_user_url(@user)
         else

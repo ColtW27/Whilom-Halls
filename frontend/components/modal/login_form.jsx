@@ -13,7 +13,7 @@ class LoginForm extends React.Component {
     handleChange(field){ //this keeps the state updated for every keystroke
         return (e)=> (
             this.setState(
-                { [field]: e.currentTarget.value }
+                { [field]: e.currentTarget.value } 
                 // { user: {[field]: e.currentTarget.value } }
             )
         )
@@ -83,8 +83,8 @@ class LoginForm extends React.Component {
             className="login-form-errors">
               {this.showErrors()}
            
-          
-              {/* {this.state.password} */}
+              {/* {this.state.user.email} */}
+              
             
             </div>
             <button

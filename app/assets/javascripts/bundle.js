@@ -1218,15 +1218,14 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
       e.preventDefault();
       var user = Object.assign({}, this.state);
 
-      if (this.validEmail(user.email)) {
-        // this.setState( { errors: [] })
-        this.props.signUpForm(user).then(this.props.modalClose);
-      } else {
+      if (!this.validEmail(user.email)) {
         var nextState = Object.assign({}, this.state, {
           errors: "Not a valid email adress."
         });
         this.setState(nextState);
       }
+
+      this.props.signUpForm(user).then(this.props.modalClose);
     }
   }, {
     key: "showErrors",
