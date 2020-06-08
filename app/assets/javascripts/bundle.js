@@ -921,6 +921,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       //this keeps the state updated for every keystroke
+      // field = {...this.state.field}
       return function (e) {
         return _this2.setState(_defineProperty({}, field, e.currentTarget.value) // { user: {[field]: e.currentTarget.value } }
         );

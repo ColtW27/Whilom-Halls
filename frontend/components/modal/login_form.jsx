@@ -11,7 +11,8 @@ class LoginForm extends React.Component {
     }
 
     handleChange(field){ //this keeps the state updated for every keystroke
-        return (e)=> (
+      // field = {...this.state.field}
+      return (e)=> (  
             this.setState(
                 { [field]: e.currentTarget.value } 
                 // { user: {[field]: e.currentTarget.value } }
