@@ -14,6 +14,7 @@
 }
 .main-page-header-button:hover{
  background-color: ghostwhite;
+ cursor: pointer;
 }
 .main-page-login-button{
  font-weight: 550;
@@ -29,6 +30,7 @@
   -webkit-box-shadow: -1px -1px 16px -12px rgba(0,0,0,0.72);
   -moz-box-shadow: -1px -1px 16px -12px rgba(0,0,0,0.72);
   box-shadow: -1px -1px 16px -12px rgba(0,0,0,0.72);
+  cursor: pointer;
 }
 
 
@@ -52,6 +54,7 @@
 }
 .profile-dropdown:hover .profile-dropdown-content{
   display: block;
+  cursor: pointer;
 }
 
 .profile-dropdown-button{
@@ -64,4 +67,5 @@
 }
 .profile-dropdown-button:hover{
  background-color: ghostwhite;
+ cursor: pointer;
 }

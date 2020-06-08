@@ -453,7 +453,7 @@ var CommunityContainer = /*#__PURE__*/function (_React$Component) {
       }, "Great Halls")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://www.google.com/search?q=extravagent+hall&tbm=isch&ved=2ahUKEwiB-ZSpuvLpAhXHHd8KHRIVCAcQ2-cCegQIABAA&oq=extravagent+hall&gs_lcp=CgNpbWcQAzoECAAQQzoCCAA6BggAEAcQHjoICAAQCBAHEB46BggAEAgQHlDcsAFY1s0BYMrRAWgAcAB4AIABU4gB2wWSAQIxMZgBAKABAaoBC2d3cy13aXotaW1n&sclient=img&ei=wE7eXoGZEMe7_AaSqqA4&bih=789&biw=1440",
         target: "_blank"
-      }, "extravagent Halls")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "Extravagent Halls")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://www.google.com/search?q=Dark+hallways&tbm=isch&ved=2ahUKEwiVnMbZuvLpAhWnAd8KHRQnCH0Q2-cCegQIABAA&oq=Dark+hallways&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeUN2SAViUmAFglJwBaABwAHgAgAFCiAH9AZIBATSYAQCgAQGqAQtnd3Mtd2l6LWltZw&sclient=img&ei=JU_eXtX1LKeD_AaUzqDoBw&bih=789&biw=1440",
         target: "_blank"
       }, "Dark Halls"))));
@@ -581,7 +581,7 @@ var HostContainer = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "individual-footer-component"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "ghost"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Ghost"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://www.allure.com/story/is-my-house-haunted-supernatural-signs",
         target: "_blank"
       }, "Ghost your Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -662,13 +662,17 @@ var SupportContainer = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "individual-footer-component"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Support"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://www.google.com/search?q=old+wall+supports&sxsrf=ALeKk01zbruCpN2RGxdny1dFu4sbxuKIkw:1591629294109&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiF1MGVwfLpAhVwlHIEHVZ7DOcQ_AUoAXoECA0QAw&biw=1440&bih=789"
-      }, "Supporting walls")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/"
-      }, "Supporting ceiling")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/"
-      }, "Supporting lights")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/"
+        href: "https://www.google.com/search?q=buttresses&tbm=isch&ved=2ahUKEwjNlOPcwfLpAhUVZDABHTNDAogQ2-cCegQIABAA&oq=buttre&gs_lcp=CgNpbWcQARgBMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADoECCMQJzoFCAAQsQM6BAgAEEM6BwgAELEDEEM6BwgjEOoCECdQk6cBWIm8AWCNygFoBHAAeACAAUiIAf4CkgEBNpgBAKABAaoBC2d3cy13aXotaW1nsAEK&sclient=img&ei=g1beXo3HIZXIwbkPs4aJwAg&bih=789&biw=1440",
+        target: "_blank"
+      }, "Supporting walls")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.google.com/search?q=old+rafters&tbm=isch&ved=2ahUKEwis5f-HwvLpAhVuRDABHY8NAk8Q2-cCegQIABAA&oq=old+rafters&gs_lcp=CgNpbWcQAzICCAAyBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHlDnGVjMG2D1HGgAcAB4AIABO4gBcJIBATKYAQCgAQGqAQtnd3Mtd2l6LWltZw&sclient=img&ei=3lbeXqz-C-6IwbkPj5uI-AQ&bih=789&biw=1440",
+        target: "_blank"
+      }, "Supporting ceilings")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.google.com/search?q=victorian+banister&tbm=isch&ved=2ahUKEwiStvm7xfLpAhWodt8KHZcdCW8Q2-cCegQIABAA&oq=victorian+banister&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIECAAQGDIECAAQGFCzIFiPOGC1OmgAcAB4AYABqwKIAaEIkgEFNy4xLjKYAQCgAQGqAQtnd3Mtd2l6LWltZw&sclient=img&ei=cFreXpK-G6jt_QaXu6T4Bg&bih=789&biw=1440",
+        target: "_blank"
+      }, "Supporting banisters")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.google.com/search?q=old+home+with+columns&tbm=isch&ved=2ahUKEwjF6M_IwvLpAhVcgHIEHeBuAYkQ2-cCegQIABAA&oq=old+home+with+columns&gs_lcp=CgNpbWcQAzoGCAAQBxAeOgIIAFDZS1i3W2DxXmgAcAB4AIABTogB7wWSAQIxM5gBAKABAaoBC2d3cy13aXotaW1n&sclient=img&ei=ZVfeXoWiLNyAytMP4N2FyAg&bih=789&biw=1440",
+        target: "_blank"
       }, "Support columns"))));
     }
   }]);

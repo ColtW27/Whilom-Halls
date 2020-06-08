@@ -79,6 +79,7 @@
 .login-close-x:hover {
     background-color: rgb(243, 243, 243);
     border-radius: 30px;
+    cursor: pointer;
 }
 .session-form-header{
  border-bottom: 1px solid;
@@ -90,11 +91,13 @@
 
 
 .header-in-app {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 30px 30px 30px;
-    padding: 0px 50px;
+    background-color: white;
+    padding: 20px 80px 30px 80px;
    
 }
 

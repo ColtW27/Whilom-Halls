@@ -5,7 +5,7 @@ class HostContainer extends React.Component {
     render() {
         return (
             <div className="individual-footer-component">
-                <h6>ghost</h6>
+                <h6>Ghost</h6>
                 <ul>
                     <li><a href="https://www.allure.com/story/is-my-house-haunted-supernatural-signs" target="_blank">Ghost your Home</a></li>
 
