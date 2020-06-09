@@ -16,13 +16,13 @@ class Api::ListingsController < ApplicationController
     end
  
     def show
-      @listing = Listing.find_by(id: params[:id])
+      @listing = Listing.with_attached_photos.find(params[:id])
       render :show
     end
 
     private
 
     def listing_params
-      params.require(:listing).permit(:name, :latitude, :longitude, :size, :bedrooms, :bathrooms, :pricing, :description, :max_num_guests)
+      params.require(:listing).permit(:name, :latitude, :longitude, :size, :bedrooms, :bathrooms, :pricing, :description, :max_num_guests, listing_photos: [])
     end
 end
