@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   # validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
  
-has_one_attached :profile_picture
+  has_one_attached :profile_picture
 
   def valid_email(str)
     email = str.split("@")
