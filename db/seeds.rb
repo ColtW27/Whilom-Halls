@@ -16,15 +16,15 @@ demo_user2 = User.create(email: "linziemirth31@user.com", password: "123456", fi
 file0 = open('https://whilomhalls-seeds.s3.amazonaws.com/8a3e608b4b94a19c2c33c2f4b5937dc8.jpg')
 demo_user2.profile_picture.attach(io: file0, filename: '8a3e608b4b94a19c2c33c2f4b5937dc8.jpg')
 
-demo_user3 = User.create(email: "Allisterprim86@user.com", :password: "123456", first_name: "Allister", last_name: "Prim")
+demo_user3 = User.create(email: "Allisterprim86@user.com", password: "123456", first_name: "Allister", last_name: "Prim")
 file01 = open('https://whilomhalls-seeds.s3.amazonaws.com/victorian_man_1.jpg')
 demo_user3.profile_picture.attach(io: file01, filename: 'victorian_man_1.jpg')
 
-User.create(email: "Forestlarks9@user.com", :password: "123456", first_name: "Forest", last_name: "Larks")
+demo_user4 = User.create(email: "Forestlarks9@user.com", password: "123456", first_name: "Forest", last_name: "Larks")
 file02 = open('https://whilomhalls-seeds.s3.amazonaws.com/victorian_man_beard.jpg')
 demo_user4.profile_picture.attach(io: file02, filename: 'victorian_man_beard.jpg')
 
-User.create(email: "edgarmoralez22@user.com", :password: "123456", first_name: "Edgar", last_name: "Moralez")
+demo_user5 = User.create(email: "edgarmoralez22@user.com", password: "123456", first_name: "Edgar", last_name: "Moralez")
 file03 = open('https://whilomhalls-seeds.s3.amazonaws.com/victorian_man_3.jpg')
 demo_user5.profile_picture.attach(io: file03, filename: 'victorian_man_3.jpg')
 
