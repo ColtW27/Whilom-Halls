@@ -86,6 +86,54 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/listings_actions.js":
+/*!**********************************************!*\
+  !*** ./frontend/actions/listings_actions.js ***!
+  \**********************************************/
+/*! exports provided: RECEIVE_LISTINGS, RECEIVE_LISTING, receiveListings, receiveListing, fetchListings, fetchListing */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_LISTINGS", function() { return RECEIVE_LISTINGS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_LISTING", function() { return RECEIVE_LISTING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveListings", function() { return receiveListings; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveListing", function() { return receiveListing; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchListings", function() { return fetchListings; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchListing", function() { return fetchListing; });
+/* harmony import */ var _util_listing_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/listing_api_util */ "./frontend/util/listing_api_util.js");
+
+var RECEIVE_LISTINGS = 'RECEIVE_LISTINGS';
+var RECEIVE_LISTING = 'RECEIVE_LISTING';
+var receiveListings = function receiveListings(listings) {
+  return {
+    type: RECEIVE_LISTINGS,
+    listings: listings
+  };
+};
+var receiveListing = function receiveListing(listingId) {
+  return {
+    type: RECEIVE_LISTING,
+    listingId: listingId
+  };
+};
+var fetchListings = function fetchListings() {
+  return function (dispatch) {
+    return _util_listing_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchListings"]().then(function (listings) {
+      return dispatch(receiveListings(listings));
+    });
+  };
+};
+var fetchListing = function fetchListing(listingId) {
+  return function (dispatch) {
+    return _util_listing_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchListing"](listingId).then(function (retListing) {
+      return dispatch(receiveListing(retListing.id));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/modal_actions.js":
 /*!*******************************************!*\
   !*** ./frontend/actions/modal_actions.js ***!
@@ -1565,7 +1613,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
-/* harmony import */ var _util_listing_api_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util/listing_api_util */ "./frontend/util/listing_api_util.js");
+/* harmony import */ var _actions_listings_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/listings_actions */ "./frontend/actions/listings_actions.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/session_actions */ "./frontend/actions/session_actions.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -1593,11 +1641,12 @@ document.addEventListener("DOMContentLoaded", function () {
     delete window.currentUser;
   } else {
     store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  } //testing
+  } //testing start
 
 
-  window.fetchListings = _util_listing_api_util__WEBPACK_IMPORTED_MODULE_4__["fetchListings"];
-  window.fetchListing = _util_listing_api_util__WEBPACK_IMPORTED_MODULE_4__["fetchListing"];
+  window.fetchListings = _actions_listings_actions__WEBPACK_IMPORTED_MODULE_4__["fetchListings"];
+  window.fetchListing = _actions_listings_actions__WEBPACK_IMPORTED_MODULE_4__["fetchListing"]; //testing end
+
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
   }), root);

@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from './components/root'
 import configureStore from './store/store';
-import { fetchListings, fetchListing} from "./util/listing_api_util"
+import { fetchListings, fetchListing} from "./actions/listings_actions"
 import { login, logout, signup } from './actions/session_actions'
 //  import { login } from './util/session_api_util' // for testing api util login
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,8 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
       store = configureStore();
     }
 
-//testing
+//testing start
 window.fetchListings = fetchListings;
 window.fetchListing = fetchListing;
+//testing end
     ReactDOM.render(< Root store={store}/>, root);
 });
