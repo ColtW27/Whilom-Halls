@@ -8,7 +8,6 @@ import { modalOpen } from '../../actions/modal_actions'
 
 const mSTP = state => {
     
-    // debugger
     return {
         currentUser: state.entities.users[state.session.id]
     }

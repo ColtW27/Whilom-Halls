@@ -18,6 +18,9 @@
 }
 .main-page-login-button{
  font-weight: 550;
+ display: flex;
+//  position: absolute;
+ justify-content: center;
  font-size: 13px;
  background-color: #fff;
  border-radius: 25px;
@@ -37,6 +40,7 @@
 .profile-dropdown{
  position: relative;
  display: inline-block;
+//  justify-content: center;
  top: 12px;
 }
 .profile-dropdown-content{
@@ -68,4 +72,11 @@
 .profile-dropdown-button:hover{
  background-color: ghostwhite;
  cursor: pointer;
+}
+
+.profile-dropdown img {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 29px;
 }

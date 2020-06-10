@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import { logout } from '../util/session_api_util';
 const NavBar = ({currentUser, modalOpen, logout}) => {
-  // debugger
+ 
     const mainPageSignupButton = () => (
             <button
             onClick={() => modalOpen('signup')}
@@ -61,9 +61,10 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
     }
     const profileButton = () => (
       <div className="profile-dropdown">
-        <img src={currentUser.photoUrl} alt="profile"/>
+        
         <span className="main-page-login-button">
-        Profile
+          Profile
+        <img src={currentUser.photoUrl} alt="profile pic" />
         </span>
         <ul className="profile-dropdown-content">
           <li>
