@@ -4,6 +4,7 @@ const ListingsIndexItem = ({listing}) => {
     return (
       <li className= "listing-index-item">
           <h3>{listing.name}</h3>
+          <img src={listing.photoUrls[1]} alt=""/>
             <div className = "inner-index-item-div">
               <p>{listing.max_num_guests}</p>
               <p>{listing.bedrooms} </p>

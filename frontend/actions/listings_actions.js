@@ -9,11 +9,11 @@ export const receiveListings = (listings) => ({
     listings
 });
 
-export const receiveListing = (listingId) => ({
+export const receiveListing = (listing) => ({
     type: RECEIVE_LISTING,
-    listingId
+    listing
 })
 
 export const fetchListings = () => (dispatch) => ListingAPIUtil.fetchListings().then(listings => dispatch(receiveListings(listings)));
    
-export const fetchListing = (listingId) => dispatch => ListingAPIUtil.fetchListing(listingId).then(retListing => dispatch(receiveListing(retListing.id)))
+export const fetchListing = (listingId) => dispatch => ListingAPIUtil.fetchListing(listingId).then(retListing => dispatch(receiveListing(retListing)))

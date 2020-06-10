@@ -111,10 +111,10 @@ var receiveListings = function receiveListings(listings) {
     listings: listings
   };
 };
-var receiveListing = function receiveListing(listingId) {
+var receiveListing = function receiveListing(listing) {
   return {
     type: RECEIVE_LISTING,
-    listingId: listingId
+    listing: listing
   };
 };
 var fetchListings = function fetchListings() {
@@ -127,7 +127,7 @@ var fetchListings = function fetchListings() {
 var fetchListing = function fetchListing(listingId) {
   return function (dispatch) {
     return _util_listing_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchListing"](listingId).then(function (retListing) {
-      return dispatch(receiveListing(retListing.id));
+      return dispatch(receiveListing(retListing));
     });
   };
 };
@@ -989,7 +989,10 @@ var ListingsIndexItem = function ListingsIndexItem(_ref) {
   var listing = _ref.listing;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "listing-index-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, listing.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, listing.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: listing.photoUrls[1],
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "inner-index-item-div"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.max_num_guests), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.bedrooms, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.bathrooms)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "inner-index-item-div-price"
@@ -1863,14 +1866,17 @@ __webpack_require__.r(__webpack_exports__);
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
+  var nextState = Object.assign({}, state);
 
   switch (action.type) {
     case _actions_listings_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_LISTINGS"]:
       return action.listings;
 
     case _actions_listings_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_LISTING"]:
-      var nextState = Object.assign({}, state, action.listingId);
-      return nextState;
+      // debugger
+      // nextState[action.listing.id] = action.listing
+      return action.listing.id = action.listing;
+    // return nextState;
 
     default:
       return state;
