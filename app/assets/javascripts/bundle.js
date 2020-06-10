@@ -1644,6 +1644,8 @@ document.addEventListener("DOMContentLoaded", function () {
   } //testing start
 
 
+  window.dispatch = store.dispatch;
+  window.getState = store.dispatch;
   window.fetchListings = _actions_listings_actions__WEBPACK_IMPORTED_MODULE_4__["fetchListings"];
   window.fetchListing = _actions_listings_actions__WEBPACK_IMPORTED_MODULE_4__["fetchListing"]; //testing end
 
@@ -1665,10 +1667,13 @@ document.addEventListener("DOMContentLoaded", function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+/* harmony import */ var _listings_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./listings_reducer */ "./frontend/reducers/listings_reducer.jsx");
+
 
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  listings: _listings_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -1691,6 +1696,37 @@ var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"]
   session: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/listings_reducer.jsx":
+/*!************************************************!*\
+  !*** ./frontend/reducers/listings_reducer.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_listings_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/listings_actions */ "./frontend/actions/listings_actions.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_listings_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_LISTINGS"]:
+      return action.listings;
+
+    case _actions_listings_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_LISTING"]:
+      var nextState = Object.assign({}, state, action.listingId);
+      return nextState;
+
+    default:
+      return state;
+  }
+});
 
 /***/ }),
 

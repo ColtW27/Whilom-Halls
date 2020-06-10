@@ -24,8 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 //testing start
-window.fetchListings = fetchListings;
-window.fetchListing = fetchListing;
+  window.dispatch = store.dispatch;
+  window.getState = store.dispatch;
+  window.fetchListings = fetchListings;
+  window.fetchListing = fetchListing;
 //testing end
     ReactDOM.render(< Root store={store}/>, root);
 });
