@@ -32,17 +32,17 @@ const ListingsIndexItem = ({listing}) => {
                   <a href="#one">➡️</a> 
               </div>
           </div>
-
-          <h3>{listing.name}</h3>
+          <div className="listing-text">
+          <p className="title">{listing.name}</p>
             <div className = "inner-index-item-div">
-              <p>{listing.max_num_guests}</p>
-              <p>{listing.bedrooms} </p>
-              <p>{listing.bathrooms}</p>
+              <p>{listing.max_num_guests}  guests</p>
+              <p>{listing.bedrooms}  bedrooms</p>
+              <p>{listing.bathrooms}  baths</p>
             </div>
             <div className="inner-index-item-div-price">
-              <p>${listing.pricing}</p>
+              <p>${listing.pricing}  per night</p>
             </div>
-
+          </div>
           {/* <img src={listing.photoUrl} alt="listing-pictures"/> */}
       </li>
   )
