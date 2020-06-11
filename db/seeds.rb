@@ -116,9 +116,17 @@ listing1.listing_photo.attach(io: file8, filename: 'Wuthering_heights_4.jpg')
 file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Wuthering_heights_5.jpg') 
 listing1.listing_photo.attach(io: file8, filename: 'Wuthering_heights_5.jpg')
 
-# Listing.create(name: "Maiden Spire", latitude: 50.137318 , longitude: -5.377226, size: 9088, bedrooms: 10, bathrooms: 6, pricing: 703, description: "Maiden Spire, known for its single tower that stretches toward the sky, sits in the southwest tip of England. The house is lovely but we don't get a lot of visitors, we are hopign this will bring new people into our lives. The only person that comes around now is a young rapscallion that claims royal blood. He won't let us be. We get a lot of jokes about our 'Rapunzel' tower, but we assure you, we cut our daughter's hair to prevent any mishaps.",max_num_guests: 18 )
-# file8 = open('') 
-# listing1.listing_photo.attach(io: file8, filename: '')
+Listing.create(name: "Maiden Spire", latitude: 50.137318 , longitude: -5.377226, size: 9088, bedrooms: 10, bathrooms: 6, pricing: 703, description: "Maiden Spire, known for its single tower that stretches toward the sky, sits in the southwest tip of England. The house is lovely but we don't get a lot of visitors, we are hopign this will bring new people into our lives. The only person that comes around now is a young rapscallion that claims royal blood. He won't let us be. We get a lot of jokes about our 'Rapunzel' tower, but we assure you, we cut our daughter's hair to prevent any mishaps.",max_num_guests: 18 )
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Maiden_spire_1.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Maiden_spire_1.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Maiden_spire_2.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Maiden_spire_2.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Maiden_spire_3.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Maiden_spire_3.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Maiden_spire_4.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Maiden_spire_4.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Maiden_spire_5.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Maiden_spire_5.jpg')
 
 
 
