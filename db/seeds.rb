@@ -128,7 +128,21 @@ listing1.listing_photo.attach(io: file8, filename: 'Maiden_spire_4.jpg')
 file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Maiden_spire_5.jpg') 
 listing1.listing_photo.attach(io: file8, filename: 'Maiden_spire_5.jpg')
 
-
+Listing.create(name: "Gardencourt", latitude:  , longitude: , size: 12666, bedrooms: 16, bathrooms: 8, pricing: 380, description: "Named from the many gardens on the massive grounds, but namely for the private garden of Lady Elling, situated in the center courtyard. Filled with a rare breed of rose that flourish here.",max_num_guests: 30 )
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Gardencourt_1.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Gardencourt_1.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Gardencourt_2.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Gardencourt_2.jpg
+')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Gardencourt_3.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Gardencourt_3.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Gardencourt_4.jpg
+') 
+listing1.listing_photo.attach(io: file8, filename: 'Gardencourt_4.jpg
+')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Gardencourt_5.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Gardencourt_5.jpg
+')
 
 # Listing.create(name: "Bride's Head Castle", latitude: 42.669995 , longitude: -70.636305, size: 8130, bedrooms: 6, bathrooms: 4, pricing: 327, description: "",max_num_guests: 12 )
 # file8 = open('') 
@@ -138,10 +152,6 @@ listing1.listing_photo.attach(io: file8, filename: 'Maiden_spire_5.jpg')
 # file8 = open('') 
 # listing1.listing_photo.attach(io: file8, filename: '')
 
-
-# Listing.create(name: "Gardencourt", latitude:  , longitude: , size: 12666, bedrooms: 16, bathrooms: 8, pricing: 380, description: "Named from the many gardens on the massive grounds, but namely for the private garden of Lady Elling, situated in the center courtyard. Filled with a rare breed of rose that flourish here.",max_num_guests: 30 )
-# file8 = open('') 
-# listing1.listing_photo.attach(io: file8, filename: '')
 
 # Listing.create(name: "The Castellated Abbey", latitude:  , longitude: , size: 12666, bedrooms: 16, bathrooms: 8, pricing: 380, description: "",max_num_guests: 30 )
 # file8 = open('') 

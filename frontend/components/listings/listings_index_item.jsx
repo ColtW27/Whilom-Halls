@@ -6,26 +6,27 @@ const ListingsIndexItem = ({listing}) => {
         
 
           <div className="slider">
-              <div className="slide" id="one">1<img src={listing.photoUrls[0]} alt="" />
+              <div className="slide" id="one"><img src={listing.photoUrls[0]} alt="" />
                   <a href="#five">⬅️</a>
                   <a href="#two">➡️</a>
              
               </div>
 
-              <div className="slide" id="two">2<img src={listing.photoUrls[1]} alt="" />
+              <div className="slide" id="two"><img src={listing.photoUrls[1]} alt="" />
                   <a href="#one">⬅️</a>
                   <a href="#three">➡️</a>
                
               </div>
-              <div className="slide" id="three">3<img src={listing.photoUrls[2]} alt="" />
+              <div className="slide" id="three"><img src={listing.photoUrls[2]} alt="" />
                   <a href="#two">⬅️</a>
                   <a href="#four">➡️</a>
              
               </div>
-              <div className="slide" id="four">4<img src={listing.photoUrls[3]} alt="" />
+              <div className="slide" id="four"><img src={listing.photoUrls[3]} alt="" />
                   <a href="#three">⬅️</a>
                   <a href="#five">➡️</a>
               </div>
+
               <div className="slide" id="five"><img src={listing.photoUrls[4]} alt="" />
                   <a href="#four">⬅️</a>
                   <a href="#one">➡️</a> 
