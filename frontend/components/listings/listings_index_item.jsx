@@ -38,6 +38,7 @@ const ListingsIndexItem = ({listing}) => {
               <p>{listing.max_num_guests}  guests</p>
               <p>{listing.bedrooms}  bedrooms</p>
               <p>{listing.bathrooms}  baths</p>
+              {/* <p>{listing.description}</p> */}
             </div>
             <div className="inner-index-item-div-price">
               <p>${listing.pricing}  per night</p>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import { logout } from '../util/session_api_util';
 const NavBar = ({currentUser, modalOpen, logout}) => {
- 
+  
     const mainPageSignupButton = () => (
             <button
             onClick={() => modalOpen('signup')}
@@ -20,7 +20,7 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
     const introduction = () => {
        return (
             <button onClick={logout}
-            className="main-page-logout-button"
+           className="profile-dropdown-button"
             >Logout</button>
        )
     }
@@ -62,9 +62,8 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
     const profileButton = () => (
       <div className="profile-dropdown">
         
-        <span className="main-page-login-button">
-          Profile
-        <img src={currentUser.photoUrl} alt="profile pic" />
+        <span className="main-page-login-button profile">Profile
+        <img src={currentUser.photoUrl} alt="" />
         </span>
         <ul className="profile-dropdown-content">
           <li>
@@ -117,8 +116,8 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
                 <li>{switchToHosting()}</li>
                 <li>{hostAnExperience() }</li>
                 <li>{help()}</li>
+                <li className="outer-li-profile">{profileButton()}</li>
                 {/* <li>{introduction(currentUser, logout)}</li> */}
-                <li>{profileButton()}</li>
             </div>
         )
        } else {

@@ -1,5 +1,6 @@
 .main-page-header-button-container{
   display: flex;
+  
 }
 .main-page-header-button-container > li {
   list-style: none;
@@ -19,6 +20,7 @@
 .main-page-login-button{
  font-weight: 550;
  display: flex;
+ 
 //  position: absolute;
  justify-content: center;
  font-size: 13px;
@@ -35,7 +37,11 @@
   box-shadow: -1px -1px 16px -12px rgba(0,0,0,0.72);
   cursor: pointer;
 }
-
+.main-page-login-button.profile{
+  padding: 3.5px 5px;
+  display: flex;
+  align-items: center;
+}
 
 .profile-dropdown{
  position: relative;
@@ -79,4 +85,11 @@
   height: 30px;
   border: 1px solid white;
   border-radius: 29px;
+}
+
+.outer-li-profile{
+  display: flex;
+  align-items: left;
+  position: relative;
+  top: -10px;
 }
