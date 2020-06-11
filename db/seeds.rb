@@ -67,6 +67,19 @@ listing1.listing_photo.attach(io: file8, filename: 'Clairemore_4.jpg')
 file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Clairemore_5.jpg') 
 listing1.listing_photo.attach(io: file8, filename: 'Clairemore_5.jpg')
 
+
+Listing.create(name: "Hill House", latitude: 44.771720 , longitude: -70.364897, size: 5400, bedrooms: 6, bathrooms: 5, pricing: 420, description: "The guests never really leave Hill House. Quaint, charming, if only one knew why the tragedies kept occuring. One family after the other, year after year. Hill house love's it's families. But that should't deter you, we limit stays to a week, day 8 is when it starts.",max_num_guests: 8 )
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Hill_house_1.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Hill_house_1.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Hill_house_2.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Hill_house_2.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Hill_house_3.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Hill_house_3.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Hill_house_4.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Hill_house_4.jpg')
+file8 = open('https://whilomhalls-seeds.s3.amazonaws.com/Hill_house_5.jpg') 
+listing1.listing_photo.attach(io: file8, filename: 'Hill_house_5.jpg')
+
 # Listing.create(name: "Wuthering Heights", latitude: 51.641389 , longitude: -4.704266, size: 6735, bedrooms: 9, bathrooms: 5, pricing: 355, description: "Wuthering Heights, the windy and looming home of Mr. Heathecliff. Perched on a cliffside in rural England, Wuthering Heights has a gorgous view over the water. Just be cautious, as the dogs have a tendency to be a bit snippy. Also, bring your coat but leave your umbrella, as the winds can be quite strong and the house a bit drafty at times.", max_num_guests: 19 )
 # file8 = open('') 
 # listing1.listing_photo.attach(io: file8, filename: '')
@@ -90,10 +103,6 @@ listing1.listing_photo.attach(io: file8, filename: 'Clairemore_5.jpg')
 
 
 # Listing.create(name: "Thrushcross Grange", latitude: 51.571607 , longitude: -2.782845, size: 3400, bedrooms: 6, bathrooms: 4, pricing: 180, description: "Although the size pales in comparison to most of the estates on our list, the elaborate woodwork and winding hallways make Thrushcross Grange feel much larger than it is. Some report getting lost for days, swearing to the home's vast size. Delusion is a popular theme. We hope you'll come join us...",max_num_guests: 12 )
-# file8 = open('') 
-# listing1.listing_photo.attach(io: file8, filename: '')
-
-# Listing.create(name: "Hill House", latitude: 44.771720 , longitude: -70.364897, size: 5400, bedrooms: 6, bathrooms: 5, pricing: 420, description: "The guests never really leave Hill House. Quaint, charming, if only one knew why the tragedies kept occuring. One family after the other, year after year. Hill house love's it's families. But that should't deter you, we limit stays to a week, day 8 is when it starts.",max_num_guests: 8 )
 # file8 = open('') 
 # listing1.listing_photo.attach(io: file8, filename: '')
 
