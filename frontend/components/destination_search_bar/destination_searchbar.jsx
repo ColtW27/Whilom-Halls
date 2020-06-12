@@ -1,21 +1,7 @@
 import React from 'react';
 import DatePicker from "react-datepicker";
 
-class DestinationSearchBar extends React.Component{
-  constructor(props){
-    super(props)
-    this.state = { //start of calendar to select dates
-      startDate: new Date()
-    }
-  }
-  // handleDate = date =>{
-  //   this.setState({
-  //     startDate: date
-  //   })
-
-  // }
-
-  render() {
+const DestinationSearchBar = () => {
     return (
       <div className= "destination-search-bar-container">
         <form className= "destination-search-bar-form"
@@ -29,10 +15,7 @@ class DestinationSearchBar extends React.Component{
               placeholder="Where are you going?"
             />
           </div>
-          <DatePicker
-            selected={this.state.startDate}
-            onChange={this.handleDate}
-          />
+       
           <button
             className="destination-search center">
             <div
@@ -68,7 +51,7 @@ class DestinationSearchBar extends React.Component{
         </form>
       </div>
     )
-  }
+
 }
 
 
