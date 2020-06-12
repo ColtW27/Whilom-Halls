@@ -29,10 +29,15 @@ https://whilom-halls.herokuapp.com/?#/
 ### Features
 #### User Authentication
 * This feature allows users to safely create a profile in order to interact with the application personally. User information is safely stored in a database. The user's password is also hashed and salted before being stored - this encryption means that even we do not have access to passwords. Users will be able to create bookings at locations and access them through their user profile.
-#### Listings
+#### Listings Index
 * This feature allows any number of listings to be placed in the database, storing information from price to bed and bath counts, as well as pictures so that the user knows what to expect from a booking.
 
 ### Future direction
-###
+#### Listing Show Pages
+* Implementation will allow users to view individual listings in detail, with larger pictures and ammenities unique to a stay. Bookings will also be available from this page, as will reviews and the ability to contact hosts.
+#### Destination Search
+* The destination search feature will make filtering listings simple. Filters will include location, price, size, etc. 
+#### Reviews
+* Implementation will allow users to leave reviews on stays, giving future guests a more rounded view of what to expect form a stay.
 
 
