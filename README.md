@@ -1,6 +1,6 @@
 #      𝒲𝒽𝒾𝓁𝓸𝓂 ℋ𝒶𝓁𝓁𝓈
 
-### Whilom Halls is an Airbnb clone that features only large and antiquated manors, mansions, and statehomes. Many of these homes are recognizable from popular films, literature, and other lore.
+### Whilom Halls is an Airbnb clone that features only large and antiquated manors, mansions, and state homes. Many of these homes are recognizable from popular films, literature, and other lore.
 
 #### Whilom Halls gives users the ability to:
 * Signup for an account.
@@ -24,7 +24,7 @@ https://whilom-halls.herokuapp.com/?#/
 #### Frontend
 * Javascript - Language that allows our logic to be embedded in our views.
 * React - Javascript library that allows the application to update and rerender only the new information, making for a faster application with less frequent server requests and a more fluid user experience.
-* Redux - Javascript library that allows the app to contain and manage fron end state in a predictable and efficient manner.
+* Redux - Javascript library that allows the app to contain and manage front end state in a predictable and efficient manner.
 
 ### Features
 #### User Authentication
