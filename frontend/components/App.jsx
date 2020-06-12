@@ -9,11 +9,12 @@ import FutureDestinationsContainer from "./future_dests_bar/future_destinations_
 import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
 import ListingsIndexContainer from './listings/listing_index_container'
 import { Route } from "react-router-dom";
+
 const App = () => (
     <div>
       {/* <HeaderMessage /> */}
       < Modal />
-      
+  
       <header className= "header-in-app">
           <Link to='/'
                 className="logo-link-home">

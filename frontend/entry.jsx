@@ -5,6 +5,7 @@ import Root from './components/root'
 import configureStore from './store/store';
 import { fetchListings, fetchListing} from "./actions/listings_actions"
 import { login, logout, signup } from './actions/session_actions'
+
 //  import { login } from './util/session_api_util' // for testing api util login
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");

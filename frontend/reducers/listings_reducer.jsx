@@ -4,7 +4,7 @@ export default (state = {}, action ) => {
     Object.freeze(state)
     const nextState = Object.assign({}, state)
 
-    switch (action.type) {
+    switch (action.type) { 
         case RECEIVE_LISTINGS:
             return action.listings
         case RECEIVE_LISTING:
