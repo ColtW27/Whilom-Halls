@@ -8,7 +8,7 @@ class ListingsIndex extends React.Component {
     }
 
     render(){
-        const { listings } = this.props;
+        const { listings } = this.props; 
 
       return (
           <div>

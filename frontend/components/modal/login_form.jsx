@@ -84,8 +84,7 @@ class LoginForm extends React.Component {
             className="login-form-errors">
               {this.showErrors()}
            
-              {/* {this.state.user.email} */}
-              
+          
             
             </div>
             <button
