@@ -7,19 +7,19 @@ class User < ApplicationRecord
  
   has_one_attached :profile_picture
 
-  def valid_email(str)
-    email = str.split("@")
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+  # def valid_email(str)
+  #   email = str.split("@")
+  #   alphabet = "abcdefghijklmnopqrstuvwxyz"
     
-    return false if email.length != 2
+  #   return false if email.length != 2
     
-    email[0].each_char do |char|
-      return false if !alphabet.include?(char)
-    end
+  #   email[0].each_char do |char|
+  #     return false if !alphabet.include?(char)
+  #   end
     
-    return false if email[1].split(".").length != 2
-    true
-  end
+  #   return false if email[1].split(".").length != 2
+  #   true
+  # end
   
   attr_reader :password 
   after_initialize :ensure_session_token

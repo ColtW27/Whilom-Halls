@@ -215,8 +215,8 @@ var signup = function signup(user) {
 };
 var login = function login(user) {
   return function (dispatch) {
-    return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["login"](user).then(function (currentUser) {
-      return dispatch(receiveCurrentUser(currentUser));
+    return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["login"](user).then(function (CurrentUser) {
+      return dispatch(receiveCurrentUser(CurrentUser));
     }, function (error) {
       return dispatch(receiveSessionErrors(error.responseJSON));
     });
@@ -2033,12 +2033,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SessionErrorsReducer = function SessionErrorsReducer() {
-  var errors = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SESSION_ERRORS"]:
+      debugger;
       return action.errors;
+      return {
+        errors: action.errors
+      };
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
       return [];
@@ -2047,7 +2052,7 @@ var SessionErrorsReducer = function SessionErrorsReducer() {
       return [];
 
     default:
-      return errors;
+      return state;
   }
 };
 
