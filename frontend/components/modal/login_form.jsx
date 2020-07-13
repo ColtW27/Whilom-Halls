@@ -8,6 +8,7 @@ class LoginForm extends React.Component {
         // this.state = { user: this.props.user, errors: this.props.errors };
         this.state = this.props.user;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
     }
 
     handleChange(field){ //this keeps the state updated for every keystroke
@@ -19,6 +20,14 @@ class LoginForm extends React.Component {
             )
         )
     };
+    handleDemoLogin(e) {
+      e.preventDefault();
+      const user = {
+        email: 'linziemirth31@user.com',
+        password: '123456'
+      }
+      this.props.loginForm(user).then(this.props.modalClose)
+    }
 
     handleSubmit(e) { //calls dispatch with login function w/ the current user state, then closes modal.
         e.preventDefault();
@@ -100,9 +109,10 @@ class LoginForm extends React.Component {
               className="base-link">Forgot Password?</Link>
             <br/>
             <br/>
-              <Link
-               to="/"
-               className="base-link">More login options</Link>
+              <a
+               onClick={this.handleDemoLogin}
+               className="base-link">Demo User Login
+              </a>
             <br/>
             <br/>
             <label 
