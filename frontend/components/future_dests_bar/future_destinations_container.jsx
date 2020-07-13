@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import FutureDestinations from "./future_destinations"
 
 
-const mSTP = state => ({
-
+const mSTP = (state, ownProps) => ({
+   
 });
 
 const mDTP = dispatch => ({

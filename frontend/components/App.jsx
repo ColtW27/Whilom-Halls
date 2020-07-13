@@ -6,7 +6,7 @@ import NavBarContainer from './navbar/navbar_container';
 import FooterContainer from "./footer/footer_container";
 import FooterMessage from "./sub_footer/footer_message"
 import FutureDestinationsContainer from "./future_dests_bar/future_destinations_container";
-import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
+// import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
 import ListingsIndexContainer from './listings/listing_index_container'
 import { Route } from "react-router-dom";
 
@@ -23,7 +23,7 @@ const App = () => (
           </Link>
       < NavBarContainer className="greeting-container"/>  
       </header>
-      <DestinationSearchBarContainer />
+      {/* <DestinationSearchBarContainer /> */}
     {/* <Route exact path="/" component={ListingsIndexContainer} /> */}
     <ListingsIndexContainer />
       <FutureDestinationsContainer />

@@ -1,7 +1,22 @@
 import React from 'react';
 import DatePicker from "react-datepicker";
 
-const DestinationSearchBar = () => {
+class DestinationSearchBar extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      listingQuery: ""
+    }
+    this.onSearch = this.onSearch.bind(this);
+    this.updateSearch = this.updateSearch.bind(this);
+  }
+  updateSearch(key) {
+    console.log(this.state);
+    return e => this.setState({
+      [key]: e.target.value
+    })
+  }
+  render(){
     return (
       <div className= "destination-search-bar-container">
         <form className= "destination-search-bar-form"
@@ -51,7 +66,7 @@ const DestinationSearchBar = () => {
         </form>
       </div>
     )
-
+  }
 }
 
 
