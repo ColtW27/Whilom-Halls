@@ -59,11 +59,14 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
             >Host your home</button>
         )
     }
+  
     const profileButton = () => (
       <div className="profile-dropdown">
         
         <span className="main-page-login-button profile">Profile
+         
         <img src={currentUser.photoUrl} alt="" />
+          
         </span>
         <ul className="profile-dropdown-content">
           <li>

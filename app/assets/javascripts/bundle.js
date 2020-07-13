@@ -427,7 +427,9 @@ var AboutContainer = /*#__PURE__*/function (_React$Component) {
       }, "Whilom Halls Repo.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://www.linkedin.com/in/colton-wilmouth-80b507132/",
         target: "_blank"
-      }, "Linked In"))));
+      }, "Linked In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://angel.co/u/colton-wilmouth"
+      }, "My AngelList"))));
     }
   }]);
 
@@ -2041,9 +2043,7 @@ var SessionErrorsReducer = function SessionErrorsReducer() {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SESSION_ERRORS"]:
       debugger;
       return action.errors;
-      return {
-        errors: action.errors
-      };
+    // return { errors: action.errors};
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
       return [];
