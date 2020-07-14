@@ -25,12 +25,28 @@ class ListingsIndex extends React.Component {
       }
     }
 
+    componentDidUpdate(prevProps, prevState){
+      if(prevState.searchTerm !== this.state.searchTerm) {
+        this.setState( {listings: this.props.listings.filter(listing => listing.name
+          .toLowerCase()
+          .includes(this.state.searchTerm
+          .toLowerCase()))})
+      }
+      if (prevProps.listings !== this.state.listings){
+        this.setState( {listings: this.props.listings.filter(listing => listing.name
+          .toLowerCase()
+          .includes(this.state.searchTerm
+          .toLowerCase()))})
+      }
+    }
+
     render(){
       if (this.state.listings.length === 0) return null;
       const listings = this.state.listings.map(listing =>
         < ListingsIndexItem
           listing={listing}
           key={listing.id}
+          fetchListings={this.props.fetchListings}
       />)
 
       return (

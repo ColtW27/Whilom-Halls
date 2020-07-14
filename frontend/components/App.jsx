@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom'
+import { Switch } from 'react-router-dom';
 import HeaderMessage from './header/header_message'
 import Modal from './modal/modal'
 import NavBarContainer from './navbar/navbar_container';
@@ -8,7 +10,7 @@ import FooterMessage from "./sub_footer/footer_message"
 import FutureDestinationsContainer from "./future_dests_bar/future_destinations_container";
 // import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
 import ListingsIndexContainer from './listings/listing_index_container'
-import { Route } from "react-router-dom";
+
 
 const App = () => (
     <div>
@@ -24,11 +26,17 @@ const App = () => (
       < NavBarContainer className="greeting-container"/>  
       </header>
       {/* <DestinationSearchBarContainer /> */}
-    {/* <Route exact path="/" component={ListingsIndexContainer} /> */}
-    <ListingsIndexContainer />
-      <FutureDestinationsContainer />
-      <FooterContainer />
-      <FooterMessage />
+      {/* <Switch> */}
+
+        <Route exact path="/" component={ListingsIndexContainer} />
+        {/* <ListingsIndexContainer /> */}
+      <Route exact path="/" component={FutureDestinationsContainer } />
+      <Route exact path="/" component={FooterContainer} />
+      <Route exact path="/" component={FooterMessage} />
+          {/* <FutureDestinationsContainer />
+          <FooterContainer />
+          <FooterMessage /> */}
+      {/* </Switch> */}
     </div>
 );
 

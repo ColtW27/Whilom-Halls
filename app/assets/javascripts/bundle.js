@@ -258,8 +258,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
 
+
+ // import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
 
 
 
@@ -273,7 +274,23 @@ var App = function App() {
     className: "Logo"
   }, "\u3004 Whil\uD835\uDD60m H\uD835\uDD52lls  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "greeting-container"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_listing_index_container__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_future_dests_bar_future_destinations_container__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer_container__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sub_footer_footer_message__WEBPACK_IMPORTED_MODULE_6__["default"], null));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/",
+    component: _listings_listing_index_container__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/",
+    component: _future_dests_bar_future_destinations_container__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/",
+    component: _footer_footer_container__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/",
+    component: _sub_footer_footer_message__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -1006,13 +1023,37 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
       };
     }
   }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      var _this3 = this;
+
+      if (prevState.searchTerm !== this.state.searchTerm) {
+        this.setState({
+          listings: this.props.listings.filter(function (listing) {
+            return listing.name.toLowerCase().includes(_this3.state.searchTerm.toLowerCase());
+          })
+        });
+      }
+
+      if (prevProps.listings !== this.state.listings) {
+        this.setState({
+          listings: this.props.listings.filter(function (listing) {
+            return listing.name.toLowerCase().includes(_this3.state.searchTerm.toLowerCase());
+          })
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this4 = this;
+
       if (this.state.listings.length === 0) return null;
       var listings = this.state.listings.map(function (listing) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           listing: listing,
-          key: listing.id
+          key: listing.id,
+          fetchListings: _this4.props.fetchListings
         });
       });
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
