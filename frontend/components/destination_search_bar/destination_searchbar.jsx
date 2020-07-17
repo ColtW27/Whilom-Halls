@@ -1,5 +1,5 @@
 import React from 'react';
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 
 class DestinationSearchBar extends React.Component {
   constructor(props){

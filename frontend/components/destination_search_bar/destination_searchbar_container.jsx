@@ -1,6 +1,7 @@
-import React from 'react';
+// import React from 'react';
 import { connect } from 'react-redux';
 import DestinationSearchBar from "./destination_searchbar"
+
 const mSTP = state => ({
     listing: state.listings[ownProps.match.params.id]
 });
