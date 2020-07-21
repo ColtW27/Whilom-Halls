@@ -350,7 +350,8 @@ var DestinationSearchBar = /*#__PURE__*/function (_React$Component) {
     value: function updateSearch(key) {
       var _this2 = this;
 
-      console.log(this.state);
+      console.log(this.state); // debugger
+
       return function (e) {
         return _this2.setState(_defineProperty({}, key, e.target.value));
       };
@@ -370,6 +371,8 @@ var DestinationSearchBar = /*#__PURE__*/function (_React$Component) {
         className: "dest-search-left-inner-div-1"
       }, "LOCATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "search",
+        value: this.state.listingQuery,
+        onChange: this.updateSearch('listingQuery'),
         placeholder: "Where are you going?"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "destination-search center"
@@ -971,29 +974,38 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       return function (e) {
+        // debugger
         e.preventDefault();
 
         _this2.setState({
           searchTerm: query
+        }, function () {
+          console.log(_this2.state.searchTerm);
         });
       };
-    } // componentDidUpdate(prevProps, prevState){
-    //   if(prevState.searchTerm !== this.state.searchTerm) {
-    //     this.setState( {listings: this.props.listings.filter(listing => listing.name
-    //       .toLowerCase()
-    //       .includes(this.state.searchTerm
-    //       .toLowerCase()))})
-    //       return
-    //   }
-    //   if (prevProps.listings !== this.state.listings){
-    //     this.setState( {listings: this.props.listings.filter(listing => listing.name
-    //       .toLowerCase()
-    //       .includes(this.state.searchTerm
-    //       .toLowerCase()))})
-    //       return
-    //   }
-    // }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      var _this3 = this;
 
+      if (prevState.searchTerm !== this.state.searchTerm) {
+        this.setState({
+          listings: this.props.listings.filter(function (listing) {
+            return listing.name.toLowerCase().includes(_this3.state.searchTerm.toLowerCase());
+          })
+        });
+        return;
+      } // if (prevProps.listings !== this.state.listings){
+      //   debugger
+      //   this.setState( {listings: this.props.listings.filter(listing => listing.name
+      //     .toLowerCase()
+      //     .includes(this.state.searchTerm
+      //     .toLowerCase()))})
+      //     return
+      // }
+
+    }
   }, {
     key: "noResults",
     value: function noResults() {
@@ -1006,16 +1018,16 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
-      if (this.state.listings.length === 0) return this.noResults();
       var listings = this.state.listings.map(function (listing) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
           listing: listing,
           key: listing.id,
-          fetchListings: _this3.props.fetchListings
+          fetchListings: _this4.props.fetchListings
         });
       });
+      if (this.state.listings.length === 0) return this.noResults();
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: ""
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_destination_searchbar__WEBPACK_IMPORTED_MODULE_3__["default"], {

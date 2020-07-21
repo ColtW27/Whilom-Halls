@@ -12,6 +12,7 @@ class DestinationSearchBar extends React.Component {
   }
   updateSearch(key) {
     console.log(this.state);
+    // debugger
     return e => this.setState({
       [key]: e.target.value
     })
@@ -29,6 +30,8 @@ class DestinationSearchBar extends React.Component {
               className="dest-search-left-inner-div-1">LOCATION
             </div>  
             <input type="search"
+              value={this.state.listingQuery}
+              onChange={this.updateSearch('listingQuery')}
               placeholder="Where are you going?"
             />
           </div>

@@ -20,28 +20,33 @@ class ListingsIndex extends React.Component {
 
     handleQuery(query){
       return (e)=> {
+        // debugger
         e.preventDefault();
-        this.setState({searchTerm: query})
+        this.setState({searchTerm: query}, ()=> {
+          console.log(this.state.searchTerm)
+        })
       }
     }
 
-    // componentDidUpdate(prevProps, prevState){
+    componentDidUpdate(prevProps, prevState){
 
-    //   if(prevState.searchTerm !== this.state.searchTerm) {
-    //     this.setState( {listings: this.props.listings.filter(listing => listing.name
-    //       .toLowerCase()
-    //       .includes(this.state.searchTerm
-    //       .toLowerCase()))})
-    //       return
-    //   }
-    //   if (prevProps.listings !== this.state.listings){
-    //     this.setState( {listings: this.props.listings.filter(listing => listing.name
-    //       .toLowerCase()
-    //       .includes(this.state.searchTerm
-    //       .toLowerCase()))})
-    //       return
-    //   }
-    // }
+      if(prevState.searchTerm !== this.state.searchTerm) {
+      
+        this.setState( {listings: this.props.listings.filter(listing => listing.name
+          .toLowerCase()
+          .includes(this.state.searchTerm
+          .toLowerCase()))})
+          return
+      }
+      // if (prevProps.listings !== this.state.listings){
+      //   debugger
+      //   this.setState( {listings: this.props.listings.filter(listing => listing.name
+      //     .toLowerCase()
+      //     .includes(this.state.searchTerm
+      //     .toLowerCase()))})
+      //     return
+      // }
+    }
     noResults () {
       return (
         <div className="">
@@ -58,13 +63,13 @@ class ListingsIndex extends React.Component {
     }
 
     render(){
-      if (this.state.listings.length === 0) return this.noResults();
       const listings = this.state.listings.map(listing =>
         < ListingsIndexItem
-          listing={listing}
-          key={listing.id}
-          fetchListings={this.props.fetchListings}
-      />)
+        listing={listing}
+        key={listing.id}
+        fetchListings={this.props.fetchListings}
+        />)
+        if (this.state.listings.length === 0) return this.noResults();
 
       return (
         <div className="">
