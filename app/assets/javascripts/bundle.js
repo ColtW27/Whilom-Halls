@@ -990,7 +990,6 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
       var _this3 = this;
 
       if (prevState.searchTerm !== this.state.searchTerm) {
-        debugger;
         this.setState({
           listings: this.props.listings.filter(function (listing) {
             return listing.name.toLowerCase().includes(_this3.state.searchTerm.toLowerCase());
@@ -1000,7 +999,6 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
       }
 
       if (prevProps.listings !== this.props.listings) {
-        debugger;
         this.setState({
           listings: this.props.listings.filter(function (listing) {
             return listing.name.toLowerCase().includes(_this3.state.searchTerm.toLowerCase());
@@ -1021,6 +1019,15 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
       }, "Sorry, but there are no homes matching \"", this.state.searchTerm, "\""));
     }
   }, {
+    key: "resultsFor",
+    value: function resultsFor(searchTerm) {
+      if (searchTerm.length === 0) {
+        return null;
+      } else {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Showing you results for \"", searchTerm, "\"");
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this4 = this;
@@ -1039,7 +1046,7 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
         handleQuery: this.handleQuery
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "results-for"
-      }, "Showing you results for \"", this.state.searchTerm, "\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listings));
+      }, this.resultsFor(this.state.searchTerm)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listings));
     }
   }]);
 

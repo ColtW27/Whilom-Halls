@@ -31,7 +31,6 @@ class ListingsIndex extends React.Component {
     componentDidUpdate(prevProps, prevState){
 
       if(prevState.searchTerm !== this.state.searchTerm) {
-        debugger
         this.setState( {listings: this.props.listings.filter(listing => listing.name
           .toLowerCase()
           .includes(this.state.searchTerm
@@ -39,7 +38,7 @@ class ListingsIndex extends React.Component {
           return
       }
       if (prevProps.listings !== this.props.listings){
-        debugger
+
         this.setState( {listings: this.props.listings.filter(listing => listing.name
           .toLowerCase()
           .includes(this.state.searchTerm
@@ -61,7 +60,15 @@ class ListingsIndex extends React.Component {
       )
     
     }
-
+    resultsFor(searchTerm) {
+      if (searchTerm.length === 0 ) {
+        return null;
+      } else {
+        return (
+          <div>Showing you results for "{searchTerm}"</div>
+        )
+      }
+    }
     render(){
       const listings = this.state.listings.map(listing =>
         < ListingsIndexItem
@@ -77,7 +84,8 @@ class ListingsIndex extends React.Component {
             <SearchBar handleQuery={this.handleQuery}/>
           </div>
           <div className="results-for">
-            Showing you results for "{this.state.searchTerm}"
+            {this.resultsFor(this.state.searchTerm)}
+            {/* Showing you results for "{this.state.searchTerm}" */}
           </div>
           <div>
            {listings}
