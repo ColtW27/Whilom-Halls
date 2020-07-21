@@ -25,23 +25,40 @@ class ListingsIndex extends React.Component {
       }
     }
 
-    componentDidUpdate(prevProps, prevState){
-      if(prevState.searchTerm !== this.state.searchTerm) {
-        this.setState( {listings: this.props.listings.filter(listing => listing.name
-          .toLowerCase()
-          .includes(this.state.searchTerm
-          .toLowerCase()))})
-      }
-      if (prevProps.listings !== this.state.listings){
-        this.setState( {listings: this.props.listings.filter(listing => listing.name
-          .toLowerCase()
-          .includes(this.state.searchTerm
-          .toLowerCase()))})
-      }
+    // componentDidUpdate(prevProps, prevState){
+
+    //   if(prevState.searchTerm !== this.state.searchTerm) {
+    //     this.setState( {listings: this.props.listings.filter(listing => listing.name
+    //       .toLowerCase()
+    //       .includes(this.state.searchTerm
+    //       .toLowerCase()))})
+    //       return
+    //   }
+    //   if (prevProps.listings !== this.state.listings){
+    //     this.setState( {listings: this.props.listings.filter(listing => listing.name
+    //       .toLowerCase()
+    //       .includes(this.state.searchTerm
+    //       .toLowerCase()))})
+    //       return
+    //   }
+    // }
+    noResults () {
+      return (
+        <div className="">
+          <div>
+            <SearchBar handleQuery={this.handleQuery} />
+          </div>
+          <div>
+            Sorry, but there are no homes matching {this.state.searchTerm}
+          </div>
+        
+        </div>
+      )
+    
     }
 
     render(){
-      if (this.state.listings.length === 0) return null;
+      if (this.state.listings.length === 0) return this.noResults();
       const listings = this.state.listings.map(listing =>
         < ListingsIndexItem
           listing={listing}

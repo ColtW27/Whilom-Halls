@@ -7,7 +7,7 @@ class DestinationSearchBar extends React.Component {
     this.state = {
       listingQuery: ""
     }
-    this.onSearch = this.onSearch.bind(this);
+
     this.updateSearch = this.updateSearch.bind(this);
   }
   updateSearch(key) {
@@ -16,11 +16,13 @@ class DestinationSearchBar extends React.Component {
       [key]: e.target.value
     })
   }
+
   render(){
     return (
       <div className= "destination-search-bar-container">
         <form className= "destination-search-bar-form"
-        id="searchform">
+        id="searchform"
+        onSubmit={this.props.handleQuery(this.state.listingQuery)}>
           <div
           className="destination-search left">
             <div
