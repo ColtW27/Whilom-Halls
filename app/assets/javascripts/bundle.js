@@ -1013,7 +1013,9 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
         className: ""
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_destination_searchbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
         handleQuery: this.handleQuery
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Sorry, but there are no homes matching ", this.state.searchTerm));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "results-for"
+      }, "Sorry, but there are no homes matching ", this.state.searchTerm));
     }
   }, {
     key: "render",
@@ -1032,7 +1034,9 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
         className: ""
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_destination_searchbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
         handleQuery: this.handleQuery
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listings));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "results-for"
+      }, "Showing you results for \"", this.state.searchTerm, "\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listings));
     }
   }]);
 
@@ -2123,7 +2127,7 @@ var SessionErrorsReducer = function SessionErrorsReducer() {
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SESSION_ERRORS"]:
-      debugger;
+      // debugger
       return action.errors;
     // return { errors: action.errors};
 

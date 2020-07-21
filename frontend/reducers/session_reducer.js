@@ -16,7 +16,6 @@ const sessionReducer = (state = _nullSession, action) => {
             return { id: action.currentUser.id } 
         case LOGOUT_CURRENT_USER:
             return _nullSession;
-    
         default:
             return state;
     }

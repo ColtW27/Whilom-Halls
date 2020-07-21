@@ -53,7 +53,7 @@ class ListingsIndex extends React.Component {
           <div>
             <SearchBar handleQuery={this.handleQuery} />
           </div>
-          <div>
+          <div className="results-for">
             Sorry, but there are no homes matching {this.state.searchTerm}
           </div>
         
@@ -76,7 +76,9 @@ class ListingsIndex extends React.Component {
           <div>
             <SearchBar handleQuery={this.handleQuery}/>
           </div>
-
+          <div className="results-for">
+            Showing you results for "{this.state.searchTerm}"
+          </div>
           <div>
            {listings}
           </div>
