@@ -28,11 +28,11 @@ const App = () => (
       {/* <DestinationSearchBarContainer /> */}
       {/* <Switch> */}
 
-        <Route exact path="/" component={ListingsIndexContainer} />
+      <Route path="/" component={ListingsIndexContainer} />
         {/* <ListingsIndexContainer /> */}
-      <Route exact path="/" component={FutureDestinationsContainer } />
-      <Route exact path="/" component={FooterContainer} />
-      <Route exact path="/" component={FooterMessage} />
+      <Route path="/" component={FutureDestinationsContainer } />
+      <Route path="/" component={FooterContainer} />
+      <Route path="/" component={FooterMessage} />
           {/* <FutureDestinationsContainer />
           <FooterContainer />
           <FooterMessage /> */}
