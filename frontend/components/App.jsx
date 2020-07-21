@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import { Route } from 'react-router-dom'
-import { Switch } from 'react-router-dom';
-import HeaderMessage from './header/header_message'
+import { Link, Route, Switch} from 'react-router-dom';
+// import HeaderMessage from './header/header_message'
 import Modal from './modal/modal'
 import NavBarContainer from './navbar/navbar_container';
 import FooterContainer from "./footer/footer_container";
@@ -13,7 +11,7 @@ import ListingsIndexContainer from './listings/listing_index_container'
 
 
 const App = () => (
-    <div>
+  <div>
       {/* <HeaderMessage /> */}
       < Modal />
   
@@ -37,7 +35,7 @@ const App = () => (
           <FooterContainer />
           <FooterMessage /> */}
       {/* </Switch> */}
-    </div>
+  </div>
 );
 
 export default App;
