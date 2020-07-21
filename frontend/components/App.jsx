@@ -4,11 +4,11 @@ import { Link, Route, Switch} from 'react-router-dom';
 import Modal from './modal/modal'
 import NavBarContainer from './navbar/navbar_container';
 import FooterContainer from "./footer/footer_container";
-import FooterMessage from "./sub_footer/footer_message"
+import FooterMessage from "./sub_footer/footer_message";
 import FutureDestinationsContainer from "./future_dests_bar/future_destinations_container";
 // import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
-import ListingsIndexContainer from './listings/listing_index_container'
-
+import ListingsIndexContainer from './listings/listing_index_container';
+import ListingShowContainer from './listings/listing_show_container';
 
 const App = () => (
   <div>
@@ -31,6 +31,7 @@ const App = () => (
       <Route path="/" component={FutureDestinationsContainer } />
       <Route path="/" component={FooterContainer} />
       <Route path="/" component={FooterMessage} />
+       <Route path="/listings/:id" component={ListingShowContainer}/>
           {/* <FutureDestinationsContainer />
           <FooterContainer />
           <FooterMessage /> */}

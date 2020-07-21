@@ -1,6 +1,6 @@
 import React from 'react';
 // import { fetchListings } from '../../util/listing_api_util';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import ListingsIndexItem from './listings_index_item';
 import SearchBar from "../destination_search_bar/destination_searchbar"
 
@@ -65,6 +65,7 @@ class ListingsIndex extends React.Component {
     }
     render(){
       const listings = this.state.listings.map(listing =>
+        
         < ListingsIndexItem
         listing={listing}
         key={listing.id}

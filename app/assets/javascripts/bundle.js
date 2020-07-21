@@ -250,6 +250,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sub_footer_footer_message__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sub_footer/footer_message */ "./frontend/components/sub_footer/footer_message.jsx");
 /* harmony import */ var _future_dests_bar_future_destinations_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./future_dests_bar/future_destinations_container */ "./frontend/components/future_dests_bar/future_destinations_container.jsx");
 /* harmony import */ var _listings_listing_index_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./listings/listing_index_container */ "./frontend/components/listings/listing_index_container.js");
+/* harmony import */ var _listings_listing_show_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./listings/listing_show_container */ "./frontend/components/listings/listing_show_container.js");
 
  // import HeaderMessage from './header/header_message'
 
@@ -258,6 +259,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
+
 
 
 
@@ -283,6 +285,9 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/",
     component: _sub_footer_footer_message__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/listings/:id",
+    component: _listings_listing_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }));
 };
 
@@ -902,6 +907,77 @@ var mDTP = function mDTP(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/components/listings/listing_show_container.js":
+/*!****************************************************************!*\
+  !*** ./frontend/components/listings/listing_show_container.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _listings_listing_show_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../listings/listing_show_page */ "./frontend/components/listings/listing_show_page.jsx");
+/* harmony import */ var _util_listing_api_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/listing_api_util */ "./frontend/util/listing_api_util.js");
+
+
+
+
+
+var mSTP = function mSTP(state, ownProps) {
+  debugger;
+  return {
+    listing: state.listings[ownProps.match.params.id]
+  };
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {
+    fetchListing: function fetchListing(id) {
+      return dispatch(Object(_util_listing_api_util__WEBPACK_IMPORTED_MODULE_3__["fetchListing"])(id));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_listings_listing_show_page__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/listings/listing_show_page.jsx":
+/*!************************************************************!*\
+  !*** ./frontend/components/listings/listing_show_page.jsx ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _this = undefined;
+
+
+
+var ListingShowPage = function ListingShowPage() {
+  /*#__PURE__*/
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I am listing number ", _this.props.listing.id);
+}; // class ListingShowPage extends React.Component {
+//     render(){
+//         return(
+//         <div>
+//          I am listing number {this.props.listing.id}
+//         </div>
+//         )
+//     }
+// }
+
+
+/* harmony default export */ __webpack_exports__["default"] = (ListingShowPage);
+
+/***/ }),
+
 /***/ "./frontend/components/listings/listings_index.jsx":
 /*!*********************************************************!*\
   !*** ./frontend/components/listings/listings_index.jsx ***!
@@ -1069,7 +1145,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var ListingsIndexItem = function ListingsIndexItem(_ref) {
   var listing = _ref.listing;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "listings/".concat(listing.id)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "listing-index-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "slider"
@@ -1111,7 +1189,7 @@ var ListingsIndexItem = function ListingsIndexItem(_ref) {
     className: "inner-index-item-div"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.max_num_guests, "  guests"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.bedrooms, "  bedrooms"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.bathrooms, "  baths")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "inner-index-item-div-price"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "$", listing.pricing, "  per night"))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "$", listing.pricing, "  per night")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ListingsIndexItem); // <div id="image-slider">
