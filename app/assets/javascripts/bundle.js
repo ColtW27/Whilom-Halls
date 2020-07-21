@@ -990,21 +990,24 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
       var _this3 = this;
 
       if (prevState.searchTerm !== this.state.searchTerm) {
+        debugger;
         this.setState({
           listings: this.props.listings.filter(function (listing) {
             return listing.name.toLowerCase().includes(_this3.state.searchTerm.toLowerCase());
           })
         });
         return;
-      } // if (prevProps.listings !== this.state.listings){
-      //   debugger
-      //   this.setState( {listings: this.props.listings.filter(listing => listing.name
-      //     .toLowerCase()
-      //     .includes(this.state.searchTerm
-      //     .toLowerCase()))})
-      //     return
-      // }
+      }
 
+      if (prevProps.listings !== this.props.listings) {
+        debugger;
+        this.setState({
+          listings: this.props.listings.filter(function (listing) {
+            return listing.name.toLowerCase().includes(_this3.state.searchTerm.toLowerCase());
+          })
+        });
+        return;
+      }
     }
   }, {
     key: "noResults",
@@ -1015,7 +1018,7 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
         handleQuery: this.handleQuery
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "results-for"
-      }, "Sorry, but there are no homes matching ", this.state.searchTerm));
+      }, "Sorry, but there are no homes matching \"", this.state.searchTerm, "\""));
     }
   }, {
     key: "render",

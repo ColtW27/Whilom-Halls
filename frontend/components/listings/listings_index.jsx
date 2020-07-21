@@ -31,21 +31,21 @@ class ListingsIndex extends React.Component {
     componentDidUpdate(prevProps, prevState){
 
       if(prevState.searchTerm !== this.state.searchTerm) {
-      
+        debugger
         this.setState( {listings: this.props.listings.filter(listing => listing.name
           .toLowerCase()
           .includes(this.state.searchTerm
           .toLowerCase()))})
           return
       }
-      // if (prevProps.listings !== this.state.listings){
-      //   debugger
-      //   this.setState( {listings: this.props.listings.filter(listing => listing.name
-      //     .toLowerCase()
-      //     .includes(this.state.searchTerm
-      //     .toLowerCase()))})
-      //     return
-      // }
+      if (prevProps.listings !== this.props.listings){
+        debugger
+        this.setState( {listings: this.props.listings.filter(listing => listing.name
+          .toLowerCase()
+          .includes(this.state.searchTerm
+          .toLowerCase()))})
+          return
+      }
     }
     noResults () {
       return (
@@ -54,7 +54,7 @@ class ListingsIndex extends React.Component {
             <SearchBar handleQuery={this.handleQuery} />
           </div>
           <div className="results-for">
-            Sorry, but there are no homes matching {this.state.searchTerm}
+            Sorry, but there are no homes matching "{this.state.searchTerm}"
           </div>
         
         </div>
