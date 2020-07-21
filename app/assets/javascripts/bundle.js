@@ -1008,19 +1008,14 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
       }
     }
   }, {
-    key: "noResults",
-    value: function noResults() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: ""
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_destination_searchbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        handleQuery: this.handleQuery
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "results-for"
-      }, "Sorry, but there are no homes matching \"", this.state.searchTerm, "\""));
-    }
-  }, {
     key: "resultsFor",
-    value: function resultsFor(searchTerm) {
+    value: function resultsFor(searchTerm, listings) {
+      if (listings.length === 0) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "results-for"
+        }, "Sorry, but there are no homes matching \"", this.state.searchTerm, "\"");
+      }
+
       if (searchTerm.length === 0) {
         return null;
       } else {
@@ -1039,14 +1034,13 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
           fetchListings: _this4.props.fetchListings
         });
       });
-      if (this.state.listings.length === 0) return this.noResults();
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: ""
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_destination_searchbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
         handleQuery: this.handleQuery
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "results-for"
-      }, this.resultsFor(this.state.searchTerm)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listings));
+      }, this.resultsFor(this.state.searchTerm, listings)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listings));
     }
   }]);
 

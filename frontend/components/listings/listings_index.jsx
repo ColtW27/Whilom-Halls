@@ -46,21 +46,15 @@ class ListingsIndex extends React.Component {
           return
       }
     }
-    noResults () {
-      return (
-        <div className="">
-          <div>
-            <SearchBar handleQuery={this.handleQuery} />
-          </div>
+  
+    resultsFor(searchTerm, listings) {
+      if (listings.length === 0) {
+        return(
           <div className="results-for">
             Sorry, but there are no homes matching "{this.state.searchTerm}"
           </div>
-        
-        </div>
-      )
-    
-    }
-    resultsFor(searchTerm) {
+          )
+      }
       if (searchTerm.length === 0 ) {
         return null;
       } else {
@@ -76,7 +70,6 @@ class ListingsIndex extends React.Component {
         key={listing.id}
         fetchListings={this.props.fetchListings}
         />)
-        if (this.state.listings.length === 0) return this.noResults();
 
       return (
         <div className="">
@@ -84,8 +77,9 @@ class ListingsIndex extends React.Component {
             <SearchBar handleQuery={this.handleQuery}/>
           </div>
           <div className="results-for">
-            {this.resultsFor(this.state.searchTerm)}
-            {/* Showing you results for "{this.state.searchTerm}" */}
+            {this.resultsFor(this.state.searchTerm, listings)}
+           
+            
           </div>
           <div>
            {listings}
