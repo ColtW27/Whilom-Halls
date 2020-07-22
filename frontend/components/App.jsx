@@ -24,18 +24,18 @@ const App = () => (
       < NavBarContainer className="greeting-container"/>  
       </header>
       {/* <DestinationSearchBarContainer /> */}
-      {/* <Switch> */}
+      <Switch>
 
+       <Route path="/listings/:id" component={ListingShowContainer}/>
       <Route path="/" component={ListingsIndexContainer} />
         {/* <ListingsIndexContainer /> */}
       <Route path="/" component={FutureDestinationsContainer } />
       <Route path="/" component={FooterContainer} />
       <Route path="/" component={FooterMessage} />
-       <Route path="/listings/:id" component={ListingShowContainer}/>
           {/* <FutureDestinationsContainer />
           <FooterContainer />
           <FooterMessage /> */}
-      {/* </Switch> */}
+      </Switch>
   </div>
 );
 

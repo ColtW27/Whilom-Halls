@@ -8,7 +8,7 @@ const mSTP = (state, ownProps) => {
     debugger
     return (
 
-       { listing: state.listings[ownProps.match.params.id] }
+       { listing: state.entities.listings[ownProps.match.params.id] }
     )
 };
 
