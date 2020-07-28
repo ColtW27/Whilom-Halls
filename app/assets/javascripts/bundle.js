@@ -126,8 +126,8 @@ var fetchListings = function fetchListings() {
 };
 var fetchListing = function fetchListing(listingId) {
   return function (dispatch) {
-    return _util_listing_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchListing"](listingId).then(function (retListing) {
-      return dispatch(receiveListing(retListing));
+    return _util_listing_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchListing"](listingId).then(function (listing) {
+      return dispatch(receiveListing(listing));
     });
   };
 };
@@ -916,32 +916,29 @@ var mDTP = function mDTP(dispatch) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _listings_listing_show_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../listings/listing_show_page */ "./frontend/components/listings/listing_show_page.jsx");
-/* harmony import */ var _util_listing_api_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/listing_api_util */ "./frontend/util/listing_api_util.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _listings_listing_show_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../listings/listing_show_page */ "./frontend/components/listings/listing_show_page.jsx");
+/* harmony import */ var _actions_listings_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/listings_actions */ "./frontend/actions/listings_actions.js");
 
 
 
 
-
-var mSTP = function mSTP(state, ownProps) {
-  debugger;
-  return {
-    listing: state.entities.listings[ownProps.match.params.id]
-  };
+var mSTP = function mSTP(state, ownProps) {// debugger
+  // return {
+  //    listing: state.entities.listings[ownProps.match.params.id] 
+  // }
 };
 
 var mDTP = function mDTP(dispatch) {
   return {
     fetchListing: function fetchListing(id) {
-      return dispatch(Object(_util_listing_api_util__WEBPACK_IMPORTED_MODULE_3__["fetchListing"])(id));
-    }
+      return dispatch(Object(_actions_listings_actions__WEBPACK_IMPORTED_MODULE_2__["fetchListing"])(id));
+    } // fetchListings: () => dispatch(fetchListings())
+
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_listings_listing_show_page__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(null, mDTP)(_listings_listing_show_page__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -956,6 +953,7 @@ var mDTP = function mDTP(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -980,35 +978,54 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var ListingShowPage = /*#__PURE__*/function (_React$Component) {
   _inherits(ListingShowPage, _React$Component);
 
   var _super = _createSuper(ListingShowPage);
 
-  function ListingShowPage() {
+  function ListingShowPage(props) {
+    var _this;
+
     _classCallCheck(this, ListingShowPage);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {
+      listing: _this.props.listing,
+      isLoading: false
+    };
+    _this.id = parseInt(_this.props.match.params.id);
+    return _this;
   }
 
   _createClass(ListingShowPage, [{
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(newState) {
-      this.setState({
-        listing: newState.listing
-      });
-    }
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchListing(this.id); // this.props.fetchListings();
+    } // componentWillReceiveProps(newState) {
+    //     this.setState({ listing: newState.listing });
+    // }
+
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I am listing number ", this.props.listing.id);
+      // const listing = this.state.listing
+      var listing = this.props.listing;
+
+      if (!listing) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "i'm empty");
+      } else {
+        // console.log(this.props)
+        // console.log({listing})
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listing.name, listing.id, listing.description);
+      }
     }
   }]);
 
   return ListingShowPage;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (ListingShowPage);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ListingShowPage));
 
 /***/ }),
 
@@ -2146,10 +2163,8 @@ __webpack_require__.r(__webpack_exports__);
       return action.listings;
 
     case _actions_listings_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_LISTING"]:
-      // debugger
       // nextState[action.listing.id] = action.listing
-      return action.listing.id = action.listing;
-    // return nextState;
+      return action.listing;
 
     default:
       return state;

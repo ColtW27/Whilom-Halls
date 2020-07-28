@@ -1,19 +1,18 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import ListingShowPage from '../listings/listing_show_page'
-import { fetchListing } from '../../util/listing_api_util';
+import  ListingShowPage  from '../listings/listing_show_page'
+import { fetchListing, fetchListings } from '../../actions/listings_actions';
 
 
 const mSTP = (state, ownProps) => {
-    debugger
-    return (
-
-       { listing: state.entities.listings[ownProps.match.params.id] }
-    )
+    // debugger
+    // return {
+    //    listing: state.entities.listings[ownProps.match.params.id] 
+    // }
 };
 
 const mDTP = dispatch => ({
-    fetchListing: id => dispatch(fetchListing(id))
+    fetchListing: id => dispatch(fetchListing(id)),
+    // fetchListings: () => dispatch(fetchListings())
 });
 
-export default connect(mSTP, mDTP)(ListingShowPage)
+export default connect(null, mDTP)(ListingShowPage)

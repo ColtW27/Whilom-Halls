@@ -12,8 +12,15 @@ export const receiveListings = (listings) => ({
 export const receiveListing = (listing) => ({
     type: RECEIVE_LISTING,
     listing
-})
+});
 
-export const fetchListings = () => (dispatch) => ListingAPIUtil.fetchListings().then(listings => dispatch(receiveListings(listings)));
+export const fetchListings = () => (dispatch) => (
+    ListingAPIUtil.fetchListings().then(listings => (
+        dispatch(receiveListings(listings))
+        ))
+);
    
-export const fetchListing = (listingId) => dispatch => ListingAPIUtil.fetchListing(listingId).then(retListing => dispatch(receiveListing(retListing)))
+export const fetchListing = (listingId) => dispatch => (
+    ListingAPIUtil.fetchListing(listingId).then(listing => (
+        dispatch(receiveListing(listing))))
+);
