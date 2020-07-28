@@ -1,16 +1,5 @@
 import React from 'react';
 
-// const ListingShowPage = () => {
-
-//   componentWillReceiveProps(newState){
-//     this.setState({ listing: newState.listing });
-//   }
-//     return(
-//     <div>
-//         I am listing number {this.props.listing.id}
-//     </div>
-//     )
-// }
 
 class ListingShowPage extends React.Component {
 

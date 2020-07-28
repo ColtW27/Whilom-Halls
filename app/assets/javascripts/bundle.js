@@ -978,16 +978,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
- // const ListingShowPage = () => {
-//   componentWillReceiveProps(newState){
-//     this.setState({ listing: newState.listing });
-//   }
-//     return(
-//     <div>
-//         I am listing number {this.props.listing.id}
-//     </div>
-//     )
-// }
+
 
 var ListingShowPage = /*#__PURE__*/function (_React$Component) {
   _inherits(ListingShowPage, _React$Component);
