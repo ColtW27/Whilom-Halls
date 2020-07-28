@@ -1013,10 +1013,11 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
       var listing = this.props.listing;
 
       if (!listing) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "i'm empty");
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
       } else {
-        // console.log(this.props)
-        // console.log({listing})
+        console.log({
+          listing: listing
+        });
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listing.name, listing.id, listing.description);
       }
     }

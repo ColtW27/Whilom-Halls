@@ -23,12 +23,9 @@ class ListingShowPage extends React.Component {
         // const listing = this.state.listing
         const listing = this.props.listing
         if (!listing){
-            return <div>i'm empty</div>
+            return <div>Loading...</div>
         } else {
-
-        
-        // console.log(this.props)
-        // console.log({listing})
+        console.log({listing})
         return(
         <div>
             {/* <div>{this.props.listing.name}</div> */}
