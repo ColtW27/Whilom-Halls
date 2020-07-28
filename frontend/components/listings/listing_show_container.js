@@ -5,9 +5,9 @@ import { fetchListing, fetchListings } from '../../actions/listings_actions';
 
 const mSTP = (state, ownProps) => {
     // debugger
-    // return {
-    //    listing: state.entities.listings[ownProps.match.params.id] 
-    // }
+    return {
+       listing: state.entities.listings[ownProps.match.params.id] 
+    }
 };
 
 const mDTP = dispatch => ({
@@ -15,4 +15,4 @@ const mDTP = dispatch => ({
     // fetchListings: () => dispatch(fetchListings())
 });
 
-export default connect(null, mDTP)(ListingShowPage)
+export default connect(mSTP, mDTP)(ListingShowPage)

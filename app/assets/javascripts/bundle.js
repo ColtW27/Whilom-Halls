@@ -923,10 +923,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var mSTP = function mSTP(state, ownProps) {// debugger
-  // return {
-  //    listing: state.entities.listings[ownProps.match.params.id] 
-  // }
+var mSTP = function mSTP(state, ownProps) {
+  // debugger
+  return {
+    listing: state.entities.listings[ownProps.match.params.id]
+  };
 };
 
 var mDTP = function mDTP(dispatch) {
@@ -938,7 +939,7 @@ var mDTP = function mDTP(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(null, mDTP)(_listings_listing_show_page__WEBPACK_IMPORTED_MODULE_1__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_listings_listing_show_page__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -1002,6 +1003,8 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchListing(this.id); // this.props.fetchListings();
+      // this.setState({listing: false})
+      // console.log(this.state)
     } // componentWillReceiveProps(newState) {
     //     this.setState({ listing: newState.listing });
     // }
@@ -1010,7 +1013,9 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       // const listing = this.state.listing
+      // debugger
       var listing = this.props.listing;
+      console.log(listing);
 
       if (!listing) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
@@ -1018,7 +1023,7 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
         console.log({
           listing: listing
         });
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listing.name, listing.id, listing.description);
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I am listing number ", listing.id, listing.name, listing.id, listing.description);
       }
     }
   }]);

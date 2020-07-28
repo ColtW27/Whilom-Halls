@@ -14,6 +14,9 @@ class ListingShowPage extends React.Component {
     componentDidMount() {
         this.props.fetchListing(this.id);
         // this.props.fetchListings();
+       
+        // this.setState({listing: false})
+        // console.log(this.state)
     }
     // componentWillReceiveProps(newState) {
     //     this.setState({ listing: newState.listing });
@@ -21,7 +24,9 @@ class ListingShowPage extends React.Component {
 
     render(){
         // const listing = this.state.listing
+        // debugger
         const listing = this.props.listing
+        console.log(listing)
         if (!listing){
             return <div>Loading...</div>
         } else {
@@ -29,7 +34,7 @@ class ListingShowPage extends React.Component {
         return(
         <div>
             {/* <div>{this.props.listing.name}</div> */}
-         {/* I am listing number {listing.id} */}
+         I am listing number {listing.id}
          {listing.name}
          {listing.id}
          {listing.description}
