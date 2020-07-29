@@ -1,17 +1,17 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import HeaderMessage from './header/header_message'
+import { Link, Route, Switch} from 'react-router-dom';
+// import HeaderMessage from './header/header_message'
 import Modal from './modal/modal'
 import NavBarContainer from './navbar/navbar_container';
 import FooterContainer from "./footer/footer_container";
-import FooterMessage from "./sub_footer/footer_message"
+import FooterMessage from "./sub_footer/footer_message";
 import FutureDestinationsContainer from "./future_dests_bar/future_destinations_container";
-import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
-import ListingsIndexContainer from './listings/listing_index_container'
-import { Route } from "react-router-dom";
+// import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
+import ListingsIndexContainer from './listings/listing_index_container';
+import ListingShowContainer from './listings/listing_show_container';
 
 const App = () => (
-    <div>
+  <div>
       {/* <HeaderMessage /> */}
       < Modal />
   
@@ -23,13 +23,20 @@ const App = () => (
           </Link>
       < NavBarContainer className="greeting-container"/>  
       </header>
-      <DestinationSearchBarContainer />
-    {/* <Route exact path="/" component={ListingsIndexContainer} /> */}
-    <ListingsIndexContainer />
-      <FutureDestinationsContainer />
-      <FooterContainer />
-      <FooterMessage />
-    </div>
+      {/* <DestinationSearchBarContainer /> */}
+      <Switch>
+
+       <Route path="/listings/:id" component={ListingShowContainer}/>
+      <Route path="/" component={ListingsIndexContainer} />
+        {/* <ListingsIndexContainer /> */}
+      <Route path="/" component={FutureDestinationsContainer } />
+      <Route path="/" component={FooterContainer} />
+      <Route path="/" component={FooterMessage} />
+          {/* <FutureDestinationsContainer />
+          <FooterContainer />
+          <FooterMessage /> */}
+      </Switch>
+  </div>
 );
 
 export default App;

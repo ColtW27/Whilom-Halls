@@ -8,10 +8,8 @@ export default (state = {}, action ) => {
         case RECEIVE_LISTINGS:
             return action.listings
         case RECEIVE_LISTING:
-            // debugger
-            // nextState[action.listing.id] = action.listing
-            return action.listing.id = action.listing
-            // return nextState;
+            nextState[action.listing.id] = action.listing
+            return action.listing
         default:
             return state;
     }

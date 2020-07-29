@@ -2,7 +2,7 @@ class Api::ListingsController < ApplicationController
 
     
     def create
-        @listing = Listing.new(listing_params)
+      @listing = Listing.new(listing_params)
         if @listing.save
         
         else
@@ -11,8 +11,8 @@ class Api::ListingsController < ApplicationController
     end
 
     def index
-        @listings = Listing.all
-        render :index
+      @listings = Listing.all
+      render :index
     end
  
     def show
