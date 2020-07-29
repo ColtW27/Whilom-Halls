@@ -992,30 +992,33 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      listing: _this.props.listing,
-      isLoading: false
-    };
-    _this.id = parseInt(_this.props.match.params.id);
+      listing: _this.props.listing
+    }; // this.id = parseInt(this.props.match.params.id)
+
     return _this;
   }
 
   _createClass(ListingShowPage, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchListing(this.id); // this.props.fetchListings();
-      // this.setState({listing: false})
-      // console.log(this.state)
-    } // componentWillReceiveProps(newState) {
-    //     this.setState({ listing: newState.listing });
-    // }
+      var _this2 = this;
 
+      console.log(this.state);
+      console.log(this.props);
+      this.props.fetchListing(parseInt(this.props.match.params.id)).then(function (response) {
+        console.log(response);
+
+        _this2.setState({
+          listing: response.listing
+        });
+      });
+    }
   }, {
     key: "render",
     value: function render() {
-      // const listing = this.state.listing
       // debugger
-      var listing = this.props.listing;
-      console.log(listing);
+      // const listing = this.state.listing
+      var listing = this.state.listing; // console.log(listing)
 
       if (!listing) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
@@ -2169,7 +2172,7 @@ __webpack_require__.r(__webpack_exports__);
       return action.listings;
 
     case _actions_listings_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_LISTING"]:
-      // nextState[action.listing.id] = action.listing
+      nextState[action.listing.id] = action.listing;
       return action.listing;
 
     default:

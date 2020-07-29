@@ -5,35 +5,32 @@ class ListingShowPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            listing: this.props.listing,
-            isLoading: false
+            listing: this.props.listing
         }
-        this.id = parseInt(this.props.match.params.id)
+        // this.id = parseInt(this.props.match.params.id)
     }
     
     componentDidMount() {
-        this.props.fetchListing(this.id);
-        // this.props.fetchListings();
-       
-        // this.setState({listing: false})
-        // console.log(this.state)
+        console.log(this.state)
+        console.log(this.props)
+        this.props.fetchListing(parseInt(this.props.match.params.id))
+        .then( response => {
+        console.log(response)
+        this.setState({listing: response.listing});
+        });
     }
-    // componentWillReceiveProps(newState) {
-    //     this.setState({ listing: newState.listing });
-    // }
-
+    
     render(){
+    // debugger
         // const listing = this.state.listing
-        // debugger
-        const listing = this.props.listing
-        console.log(listing)
+        const listing = this.state.listing
+        // console.log(listing)
         if (!listing){
             return <div>Loading...</div>
         } else {
         console.log({listing})
         return(
         <div>
-            {/* <div>{this.props.listing.name}</div> */}
          I am listing number {listing.id}
          {listing.name}
          {listing.id}
