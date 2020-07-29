@@ -2,7 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 const ListingsIndexItem = ({listing}) => {
   return (
-    <Link to ={`listings/${listing.id}`}>
+    <Link to ={`listings/${
+      listing.id}`}> 
       <li className= "listing-index-item">
         
 

@@ -993,8 +993,8 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.state = {
       listing: _this.props.listing
-    }; // this.id = parseInt(this.props.match.params.id)
-
+    };
+    _this.id = parseInt(_this.props.match.params.id);
     return _this;
   }
 
@@ -1003,11 +1003,7 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log(this.state);
-      console.log(this.props);
-      this.props.fetchListing(parseInt(this.props.match.params.id)).then(function (response) {
-        console.log(response);
-
+      this.props.fetchListing(parseInt(this.id)).then(function (response) {
         _this2.setState({
           listing: response.listing
         });
@@ -1016,17 +1012,22 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // debugger
-      // const listing = this.state.listing
-      var listing = this.state.listing; // console.log(listing)
+      var listing = this.state.listing;
 
       if (!listing) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
       } else {
-        console.log({
-          listing: listing
-        });
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I am listing number ", listing.id, listing.name, listing.id, listing.description);
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, listing.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "first-listing-photo",
+          src: listing.photoUrls[1],
+          alt: "listing"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, listing.photoUrls.forEach(function (photo) {
+          /*#__PURE__*/
+          react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+            src: photo,
+            alt: "listing"
+          }));
+        }))), listing.description);
       }
     }
   }]);

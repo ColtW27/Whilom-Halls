@@ -7,33 +7,31 @@ class ListingShowPage extends React.Component {
         this.state = {
             listing: this.props.listing
         }
-        // this.id = parseInt(this.props.match.params.id)
+        this.id = parseInt(this.props.match.params.id);
     }
     
     componentDidMount() {
-        console.log(this.state)
-        console.log(this.props)
-        this.props.fetchListing(parseInt(this.props.match.params.id))
+        this.props.fetchListing(parseInt(this.id))
         .then( response => {
-        console.log(response)
-        this.setState({listing: response.listing});
+          this.setState({listing: response.listing});
         });
     }
     
     render(){
-    // debugger
-        // const listing = this.state.listing
         const listing = this.state.listing
-        // console.log(listing)
         if (!listing){
             return <div>Loading...</div>
         } else {
-        console.log({listing})
         return(
         <div>
-         I am listing number {listing.id}
-         {listing.name}
-         {listing.id}
+         <h1>{listing.name}</h1>
+        <img className="first-listing-photo" src={listing.photoUrls[1]} alt="listing"/>
+        <div>
+            <ul>{listing.photoUrls.forEach(photo => {
+            <li><img src={photo} alt="listing"/></li>
+        })}
+            </ul>
+        </div>
          {listing.description}
         </div>
         )
