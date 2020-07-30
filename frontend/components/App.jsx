@@ -29,13 +29,10 @@ const App = () => (
        <Route path="/listings/:id" component={ListingShowContainer}/>
       <Route path="/" component={ListingsIndexContainer} />
         {/* <ListingsIndexContainer /> */}
+      </Switch>
       <Route path="/" component={FutureDestinationsContainer } />
       <Route path="/" component={FooterContainer} />
       <Route path="/" component={FooterMessage} />
-          {/* <FutureDestinationsContainer />
-          <FooterContainer />
-          <FooterMessage /> */}
-      </Switch>
   </div>
 );
 

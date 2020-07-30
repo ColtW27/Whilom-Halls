@@ -2,9 +2,17 @@
 
     h1 {
         padding-left: 12%;
-        padding-bottom: 5%;
+        padding-bottom: 2%;
         font-size: 30px;
         font-weight: 600;
+        border-top: 1px solid gray;
+        padding-top: 1%;
+    }
+    h2 {
+        padding: 2% 0% 2% 12%;
+        font-size:25px;
+        font-weight: 600;
+
     }
 }
 .listing-show-photo-container{
@@ -12,22 +20,42 @@
 }
 .first-listing-photo {
     width: 40vw;
-    height: 47vh;
-    padding-left: 12%;
-    border-radius: 8% 0% 0% 8%;
+    height: 52.75vh;
+    margin-left: 12%;
+    border-radius: 10px 0px 0px 10px;
 }
 .listing-show-page-4-main-photos {
+    // width: 40vw;
     ul {
         display: flex;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         width: 40vw;
    }
-   li {
-    //   padding: 2%;    
+   li:nth-child(2) img  {
+      padding-bottom: 1%;  
+      border-radius: 0px 10px 0px 0px;  
+   }
+   li:nth-child(3) img  {
+      padding-bottom: 1%;    
+   }
+   li:last-child img  {
+      padding-bottom: 1%; 
+      border-radius: 0px 0px 10px 0px;     
    }
     img {
-        width: 20vw;
-        height: 23.5vh;
-        // padding: 5%;
+        width: 19vw;
+        height: 26vh;
+        // padding-left: 1%;
+        // margin-top: 3%;
+    }
+}
+.bottom-content {
+    ul li {
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        width: 60vw;
+        padding: 2% 0% 2% 12%;
+       
     }
 }

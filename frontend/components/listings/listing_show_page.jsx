@@ -24,7 +24,7 @@ class ListingShowPage extends React.Component {
         return <div>Loading...</div>
     } else {
         let listingPhotosArr = [];
-        for (let i = 0; i < 4; i++){
+        for (let i = 1; i < 5; i++){
            let photo = listing.photoUrls[i]
             listingPhotosArr.push(<li key={i}><img src={photo} alt="listing" /></li>)
         }
@@ -32,14 +32,19 @@ class ListingShowPage extends React.Component {
             <div className="outer-listing-show-container">
          <h1>{listing.name}</h1>
          <div className="listing-show-photo-container"> 
-          <img className="first-listing-photo" src={listing.photoUrls[1]} alt="listing"/>
+          <img className="first-listing-photo" src={listing.photoUrls[0]} alt="listing"/>
           <div className="listing-show-page-4-main-photos">
               <ul className="">
                   {listingPhotosArr}
               </ul>
           </div>
         </div>
-         {listing.description}
+        <h2>Entire Home</h2>
+        <div className="bottom-content">
+          <ul>
+            <li>{listing.description}</li>
+          </ul>
+        </div>
         </div>
         )
         }
