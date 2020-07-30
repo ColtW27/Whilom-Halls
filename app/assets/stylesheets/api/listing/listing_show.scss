@@ -9,10 +9,19 @@
         padding-top: 1%;
     }
     h2 {
-        padding: 2% 0% 2% 12%;
+        padding: 2% 0% 1% 12%;
         font-size:25px;
         font-weight: 600;
-
+    }
+    h3 {
+        padding-left: 12%;
+        padding-bottom: 2%;
+        font-weight: 300;
+    }
+    h4 {
+        font-size: 25px;
+        font-size: 600;
+        padding-bottom: 2%;
     }
 }
 .listing-show-photo-container{
@@ -46,16 +55,34 @@
     img {
         width: 19vw;
         height: 26vh;
-        // padding-left: 1%;
-        // margin-top: 3%;
     }
 }
 .bottom-content {
-    ul li {
-        border-top: 1px solid gray;
-        border-bottom: 1px solid gray;
-        width: 60vw;
-        padding: 2% 0% 2% 12%;
-       
+    >ul>li {
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        width: 44vw;
+        padding: 2% 0% 2% 0%;
+        margin-left: 12%;
+    }
+    .policy-box li {
+        // padding-top: 2%;
+    }
+    .bold  {
+        font-weight: 400;
+        font-size: 18px;
+        padding-top: 4%;
+    }
+    .regular {
+        font-weight: 200;
+        font-size: 16px;
+        color: gray;
+        padding-top: 2%;
+    }
+    .description {
+        line-height: 1.5em;
+        font-size: 18px;
+        font-weight: 300;
     }
 }
+
