@@ -18,21 +18,23 @@ class ListingShowPage extends React.Component {
     }
     
     render(){
-        for (i = 0; i < 4; i++){
-            listing.photoUrls.map(photo => {
-            <li><img src={photo} alt="listing"/></li>
-        })}
         const listing = this.state.listing
-        if (!listing){
-            return <div>Loading...</div>
-        } else {
+    
+    if (!listing){
+        return <div>Loading...</div>
+    } else {
+        let listingPhotosArr = [];
+        for (let i = 0; i < 4; i++){
+           let photo = listing.photoUrls[i]
+            listingPhotosArr.push(<li key={i}><img src={photo} alt="listing" /></li>)
+        }
         return(
-        <div className="outer-listing-show-container">
+            <div className="outer-listing-show-container">
          <h1>{listing.name}</h1>
         <img className="first-listing-photo" src={listing.photoUrls[1]} alt="listing"/>
         <div>
-            <ul>
-                {listingPhotos}
+            <ul className="listing-show-page-4-main-photos">
+                {listingPhotosArr}
             </ul>
         </div>
          {listing.description}
