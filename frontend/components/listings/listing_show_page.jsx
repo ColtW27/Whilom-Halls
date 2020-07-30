@@ -18,18 +18,21 @@ class ListingShowPage extends React.Component {
     }
     
     render(){
+        for (i = 0; i < 4; i++){
+            listing.photoUrls.map(photo => {
+            <li><img src={photo} alt="listing"/></li>
+        })}
         const listing = this.state.listing
         if (!listing){
             return <div>Loading...</div>
         } else {
         return(
-        <div>
+        <div className="outer-listing-show-container">
          <h1>{listing.name}</h1>
         <img className="first-listing-photo" src={listing.photoUrls[1]} alt="listing"/>
         <div>
-            <ul>{listing.photoUrls.forEach(photo => {
-            <li><img src={photo} alt="listing"/></li>
-        })}
+            <ul>
+                {listingPhotos}
             </ul>
         </div>
          {listing.description}
@@ -37,5 +40,5 @@ class ListingShowPage extends React.Component {
         )
         }
     }
-}
+};
 export default withRouter (ListingShowPage);
