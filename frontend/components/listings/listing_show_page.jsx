@@ -31,11 +31,13 @@ class ListingShowPage extends React.Component {
         return(
             <div className="outer-listing-show-container">
          <h1>{listing.name}</h1>
-        <img className="first-listing-photo" src={listing.photoUrls[1]} alt="listing"/>
-        <div>
-            <ul className="listing-show-page-4-main-photos">
-                {listingPhotosArr}
-            </ul>
+         <div className="listing-show-photo-container"> 
+          <img className="first-listing-photo" src={listing.photoUrls[1]} alt="listing"/>
+          <div className="listing-show-page-4-main-photos">
+              <ul className="">
+                  {listingPhotosArr}
+              </ul>
+          </div>
         </div>
          {listing.description}
         </div>
