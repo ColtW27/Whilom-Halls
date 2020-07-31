@@ -2214,18 +2214,45 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(ListingSample);
 
-  function ListingSample() {
+  function ListingSample(props) {
+    var _this;
+
     _classCallCheck(this, ListingSample);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {
+      listings: _this.props.listings
+    };
+    return _this;
   }
 
   _createClass(ListingSample, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchListing(1);
+      this.props.fetchListing(2);
+      this.props.fetchListing(3);
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "you-dont-have-to-go-far"
-      }, "You Don't Have to Go Very Far..."));
+      var _this2 = this;
+
+      if (!listings) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading Destinations...");
+      } else {
+        var _listings = this.state.listings.map(function (listing) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListingsIndexItem, {
+            listing: listing,
+            key: listing.id,
+            fetchListings: _this2.props.fetchListings
+          });
+        });
+
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "you-dont-have-to-go-far"
+        }, "You Don't Have to Go Very Far..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, _listings));
+      }
     }
   }]);
 

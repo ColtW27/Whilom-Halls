@@ -3,7 +3,7 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import ListingsIndexItem from './listings_index_item';
 import SearchBar from "../destination_search_bar/destination_searchbar"
-
+ 
 class ListingsIndex extends React.Component {
 
   constructor(props){
