@@ -25,9 +25,9 @@ const App = () => (
       </header>
       {/* <DestinationSearchBarContainer /> */}
       <Switch>
-
+      {/* <Route path="/" component={SplashPageBanner} /> */}
        <Route path="/listings/:id" component={ListingShowContainer}/>
-      <Route path="/" component={ListingsIndexContainer} />
+      <Route path="/listings" component={ListingsIndexContainer} />
         {/* <ListingsIndexContainer /> */}
       </Switch>
       <Route path="/" component={FutureDestinationsContainer } />
