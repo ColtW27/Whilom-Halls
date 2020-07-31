@@ -26,7 +26,7 @@ const App = () => (
       </header>
       {/* <DestinationSearchBarContainer /> */}
       <Switch>
-      <Route path="/" component={ListingSample} />
+      <Route exact path="/" component={ListingSample} />
        <Route path="/listings/:id" component={ListingShowContainer}/>
       <Route path="/listings" component={ListingsIndexContainer} />
         {/* <ListingsIndexContainer /> */}
