@@ -2223,7 +2223,9 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
   _createClass(ListingSample, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "you-dont-have-to-go-far"
+      }, "You Don't Have to Go Very Far..."));
     }
   }]);
 
