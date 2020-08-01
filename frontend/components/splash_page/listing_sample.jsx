@@ -10,14 +10,14 @@ class ListingSample extends React.Component{
             listings: this.props.listings
         }
     }
-    // componentDidMount(){
+    componentDidMount(){
     //     // this.props.fetchListing(1);
     //     // this.props.fetchListing(2);
     //     // this.props.fetchListing(3);
     //     this.props.fetchListings();
-    // }
+    // debugger
+    }
     render(){
-        
         // let listings = this.state.listings
         //     if (!listings){
         //         return <div>Loading Destinations...</div>

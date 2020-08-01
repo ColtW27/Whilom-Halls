@@ -9,7 +9,7 @@ import FutureDestinationsContainer from "./future_dests_bar/future_destinations_
 // import DestinationSearchBarContainer from "./destination_search_bar/destination_searchbar_container"
 import ListingsIndexContainer from './listings/listing_index_container';
 import ListingShowContainer from './listings/listing_show_container';
-import ListingSample from "./splash_page/listing_sample";
+import ListingSampleContainer from "./splash_page/listings_sample_container";
 
 const App = () => (
   <div>
@@ -26,7 +26,7 @@ const App = () => (
       </header>
       {/* <DestinationSearchBarContainer /> */}
       <Switch>
-      <Route exact path="/" component={ListingSample} />
+      <Route exact path="/" component={ListingSampleContainer} />
        <Route path="/listings/:id" component={ListingShowContainer}/>
       <Route path="/listings" component={ListingsIndexContainer} />
         {/* <ListingsIndexContainer /> */}

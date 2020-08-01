@@ -251,7 +251,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _future_dests_bar_future_destinations_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./future_dests_bar/future_destinations_container */ "./frontend/components/future_dests_bar/future_destinations_container.jsx");
 /* harmony import */ var _listings_listing_index_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./listings/listing_index_container */ "./frontend/components/listings/listing_index_container.js");
 /* harmony import */ var _listings_listing_show_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./listings/listing_show_container */ "./frontend/components/listings/listing_show_container.js");
-/* harmony import */ var _splash_page_listing_sample__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./splash_page/listing_sample */ "./frontend/components/splash_page/listing_sample.jsx");
+/* harmony import */ var _splash_page_listings_sample_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./splash_page/listings_sample_container */ "./frontend/components/splash_page/listings_sample_container.js");
 
  // import HeaderMessage from './header/header_message'
 
@@ -278,7 +278,7 @@ var App = function App() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
-    component: _splash_page_listing_sample__WEBPACK_IMPORTED_MODULE_9__["default"]
+    component: _splash_page_listings_sample_container__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/listings/:id",
     component: _listings_listing_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
@@ -2226,15 +2226,17 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
       listings: _this.props.listings
     };
     return _this;
-  } // componentDidMount(){
-  //     // this.props.fetchListing(1);
-  //     // this.props.fetchListing(2);
-  //     // this.props.fetchListing(3);
-  //     this.props.fetchListings();
-  // }
-
+  }
 
   _createClass(ListingSample, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {//     // this.props.fetchListing(1);
+      //     // this.props.fetchListing(2);
+      //     // this.props.fetchListing(3);
+      //     this.props.fetchListings();
+      // debugger
+    }
+  }, {
     key: "render",
     value: function render() {
       // let listings = this.state.listings
@@ -2257,6 +2259,44 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ListingSample));
+
+/***/ }),
+
+/***/ "./frontend/components/splash_page/listings_sample_container.js":
+/*!**********************************************************************!*\
+  !*** ./frontend/components/splash_page/listings_sample_container.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _listing_sample__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listing_sample */ "./frontend/components/splash_page/listing_sample.jsx");
+/* harmony import */ var _actions_listings_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/listings_actions */ "./frontend/actions/listings_actions.js");
+
+
+
+
+var mSTP = function mSTP(state) {
+  debugger;
+  return {
+    listings: Object.values(state.entities.listings)
+  };
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {
+    fetchListing: function fetchListing(id) {
+      return dispatch(Object(_actions_listings_actions__WEBPACK_IMPORTED_MODULE_2__["fetchListing"])(id));
+    },
+    fetchListings: function fetchListings() {
+      return dispatch(Object(_actions_listings_actions__WEBPACK_IMPORTED_MODULE_2__["fetchListings"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_listing_sample__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
