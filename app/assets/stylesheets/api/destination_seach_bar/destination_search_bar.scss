@@ -1,3 +1,10 @@
+* {  //removes blue boxes from elements on focus
+    outline: none;
+    text-decoration: none;
+    a:link, a:visited {
+    color: black;
+}
+}
 .destination-search-bar-container{
     display: flex;
     justify-content: center;
@@ -8,6 +15,7 @@
     height: 20px;
     padding: 0px;
     border: none;
+    
    
 } 
 .destination-search-bar-form-button{
@@ -87,11 +95,13 @@
     font-size: 10px;
     font-weight: 500;
     margin: 5px;
+    text-decoration: none;
 }
 .dest-search-center-inner-div-2{
     display: flex;
     justify-content: start;
     margin-left: 5px;
+    text-decoration: none;
 }
 .dest-search-right-inner-div-1{
     display: flex;
@@ -99,14 +109,17 @@
     font-size: 10px;
     font-weight: 500;
     margin: 5px;
+    text-decoration: none;
 }
 .dest-search-right-inner-div-2{
     display: flex;
     justify-content: start;
     margin-left: 5px;
+    text-decoration: none;
 }
 .dest-search-left-inner-div-1{
     font-size: 10px;
     font-weight: 500;
     margin: 5px;    
+    text-decoration: none;
 }
