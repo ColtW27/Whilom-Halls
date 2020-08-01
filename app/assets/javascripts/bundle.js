@@ -2183,6 +2183,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../destination_search_bar/false_searchbar */ "./frontend/components/destination_search_bar/false_searchbar.jsx");
+/* harmony import */ var _listings_listings_index_item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../listings/listings_index_item */ "./frontend/components/listings/listings_index_item.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2209,6 +2210,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var ListingSample = /*#__PURE__*/function (_React$Component) {
   _inherits(ListingSample, _React$Component);
 
@@ -2224,35 +2226,30 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
       listings: _this.props.listings
     };
     return _this;
-  }
+  } // componentDidMount(){
+  //     // this.props.fetchListing(1);
+  //     // this.props.fetchListing(2);
+  //     // this.props.fetchListing(3);
+  //     this.props.fetchListings();
+  // }
+
 
   _createClass(ListingSample, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.fetchListing(1);
-      this.props.fetchListing(2);
-      this.props.fetchListing(3);
-    }
-  }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
-      if (!listings) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading Destinations...");
-      } else {
-        var _listings = this.state.listings.map(function (listing) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListingsIndexItem, {
-            listing: listing,
-            key: listing.id,
-            fetchListings: _this2.props.fetchListings
-          });
-        });
-
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "you-dont-have-to-go-far"
-        }, "You Don't Have to Go Very Far..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, _listings));
-      }
+      // let listings = this.state.listings
+      //     if (!listings){
+      //         return <div>Loading Destinations...</div>
+      //     } else {
+      //          listings = this.state.listings.map(listing =>
+      //             < ListingsIndexItem
+      //                 listing={listing}
+      //                 key={listing.id}
+      //                 fetchListings={this.props.fetchListings}
+      //             />)
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "you-dont-have-to-go-far"
+      }, "You Don't Have to Go Very Far..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)); // }
     }
   }]);
 

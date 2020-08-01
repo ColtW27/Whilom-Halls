@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import FalseDestinationSearchBar from '../destination_search_bar/false_searchbar';
-
+import ListingsIndexItem from '../listings/listings_index_item';
 
 class ListingSample extends React.Component{
     constructor(props){
@@ -10,35 +10,37 @@ class ListingSample extends React.Component{
             listings: this.props.listings
         }
     }
-    componentDidMount(){
-        this.props.fetchListing(1);
-        this.props.fetchListing(2);
-        this.props.fetchListing(3);
-    }
+    // componentDidMount(){
+    //     // this.props.fetchListing(1);
+    //     // this.props.fetchListing(2);
+    //     // this.props.fetchListing(3);
+    //     this.props.fetchListings();
+    // }
     render(){
         
-        if (!listings){
-            return <div>Loading Destinations...</div>
-        } else {
-            const listings = this.state.listings.map(listing =>
-                < ListingsIndexItem
-                    listing={listing}
-                    key={listing.id}
-                    fetchListings={this.props.fetchListings}
-                />)
-
-        return(
+        // let listings = this.state.listings
+        //     if (!listings){
+        //         return <div>Loading Destinations...</div>
+        //     } else {
+        //          listings = this.state.listings.map(listing =>
+        //             < ListingsIndexItem
+        //                 listing={listing}
+        //                 key={listing.id}
+        //                 fetchListings={this.props.fetchListings}
+        //             />)
+                
+                return(
           <div>
             < FalseDestinationSearchBar />
             <div className="you-dont-have-to-go-far">
               You Don't Have to Go Very Far...
             </div>
             <div>
-              {listings}
+              {/* {listings} */}
             </div>
           </div>
       )
-        }
+        // }
     }
 }
 
