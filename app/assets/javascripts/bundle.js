@@ -1008,6 +1008,72 @@ var mDTP = function mDTP(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/components/listings/listing_sample_item.jsx":
+/*!**************************************************************!*\
+  !*** ./frontend/components/listings/listing_sample_item.jsx ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var ListingSampleItem = function ListingSampleItem(_ref) {
+  var listing = _ref.listing;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "listings/".concat(listing.id)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "listing-sample-item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slider sample-item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slide",
+    id: "one"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: listing.photoUrls[0],
+    alt: "listing num 0"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slide",
+    id: "two"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: listing.photoUrls[1],
+    alt: "listing num 1"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slide",
+    id: "three"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: listing.photoUrls[2],
+    alt: "listing num 2"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slide",
+    id: "four"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: listing.photoUrls[3],
+    alt: "listing num 3"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slide",
+    id: "five"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: listing.photoUrls[4],
+    alt: "listing num 4"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: ""
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "title"
+  }, listing.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "listing-sample-details"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.max_num_guests, "  guests"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.bedrooms, "  bedrooms"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.bathrooms, "  baths"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "$", listing.pricing, "  per night")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ListingSampleItem);
+
+/***/ }),
+
 /***/ "./frontend/components/listings/listing_show_container.js":
 /*!****************************************************************!*\
   !*** ./frontend/components/listings/listing_show_container.js ***!
@@ -2183,7 +2249,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../destination_search_bar/false_searchbar */ "./frontend/components/destination_search_bar/false_searchbar.jsx");
-/* harmony import */ var _listings_listings_index_item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../listings/listings_index_item */ "./frontend/components/listings/listings_index_item.jsx");
+/* harmony import */ var _listings_listing_sample_item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../listings/listing_sample_item */ "./frontend/components/listings/listing_sample_item.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2252,13 +2318,11 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
       } else {
         var _listings = [];
         var that = this;
-        debugger;
 
         for (var i = 1; i < 4; i++) {
-          // console.log(this.props)
           var listing = that.state.listings[i];
           console.log(that);
-          var listingIndexItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_listings_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          var listingIndexItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_listing_sample_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
             listing: listing,
             key: listing.id,
             fetchListings: that.props.fetchListings
@@ -2269,7 +2333,9 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
 
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "you-dont-have-to-go-far"
-        }, "You Don't Have to Go Very Far..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, _listings));
+        }, "You Don't Have to Go Very Far..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "listing-sample-container"
+        }, _listings));
       }
     }
   }]);

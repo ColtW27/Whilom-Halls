@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import FalseDestinationSearchBar from '../destination_search_bar/false_searchbar';
-import ListingsIndexItem from '../listings/listings_index_item';
+import ListingSampleItem from '../listings/listing_sample_item';
 
 class ListingSample extends React.Component{
     constructor(props){
@@ -30,13 +30,11 @@ class ListingSample extends React.Component{
             
             let listings = []
             let that = this
-            debugger
             for(let i = 1; i < 4; i++){
-                // console.log(this.props)
                 let listing = that.state.listings[i]
                 console.log(that)
                 let listingIndexItem = (
-                   < ListingsIndexItem
+                   < ListingSampleItem
                        listing={listing}
                        key={listing.id}
                        fetchListings={that.props.fetchListings}
@@ -49,7 +47,7 @@ class ListingSample extends React.Component{
             <div className="you-dont-have-to-go-far">
               You Don't Have to Go Very Far...
             </div>
-            <div>
+            <div className="listing-sample-container"> 
               {listings}
             </div>
           </div>

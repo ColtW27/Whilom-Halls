@@ -1,7 +1,13 @@
 .you-dont-have-to-go-far {
     font-size: 60px;
-    padding-left: 6%;
-    padding-top: 2%;
+    // padding-left: 6%;
+    // padding-top: 5%;
+    padding: 6%;
     color: rgb(218, 45, 88);
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
 }
+.listing-sample-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
