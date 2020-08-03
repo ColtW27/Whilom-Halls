@@ -2230,28 +2230,35 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
 
   _createClass(ListingSample, [{
     key: "componentDidMount",
-    value: function componentDidMount() {//     // this.props.fetchListing(1);
-      //     // this.props.fetchListing(2);
-      //     // this.props.fetchListing(3);
-      //     this.props.fetchListings();
-      // debugger
+    value: function componentDidMount() {
+      // this.props.fetchListing(1);
+      // this.props.fetchListing(2);
+      // this.props.fetchListing(3);
+      this.props.fetchListings(); // debugger
     }
   }, {
     key: "render",
     value: function render() {
-      // let listings = this.state.listings
-      //     if (!listings){
-      //         return <div>Loading Destinations...</div>
-      //     } else {
-      //          listings = this.state.listings.map(listing =>
-      //             < ListingsIndexItem
-      //                 listing={listing}
-      //                 key={listing.id}
-      //                 fetchListings={this.props.fetchListings}
-      //             />)
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "you-dont-have-to-go-far"
-      }, "You Don't Have to Go Very Far..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)); // }
+      var listings = [];
+      var that = this;
+
+      for (var i = 0; i < 3; i++) {
+        var listing = that.state.listings[i];
+        var listingIndexItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_listings_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          listing: listing,
+          key: listing.id,
+          fetchListings: that.props.fetchListings
+        });
+        listings.push(listingIndexItem);
+      }
+
+      if (!listings) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading Destinations...");
+      } else {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "you-dont-have-to-go-far"
+        }, "You Don't Have to Go Very Far..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listings));
+      }
     }
   }]);
 
@@ -2279,7 +2286,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state) {
-  debugger;
+  // debugger
   return {
     listings: Object.values(state.entities.listings)
   };

@@ -11,23 +11,28 @@ class ListingSample extends React.Component{
         }
     }
     componentDidMount(){
-    //     // this.props.fetchListing(1);
-    //     // this.props.fetchListing(2);
-    //     // this.props.fetchListing(3);
-    //     this.props.fetchListings();
+        // this.props.fetchListing(1);
+        // this.props.fetchListing(2);
+        // this.props.fetchListing(3);
+        this.props.fetchListings();
     // debugger
     }
     render(){
-        // let listings = this.state.listings
-        //     if (!listings){
-        //         return <div>Loading Destinations...</div>
-        //     } else {
-        //          listings = this.state.listings.map(listing =>
-        //             < ListingsIndexItem
-        //                 listing={listing}
-        //                 key={listing.id}
-        //                 fetchListings={this.props.fetchListings}
-        //             />)
+        let listings = []
+        let that = this
+        for(let i = 0; i < 3; i++){
+            let listing = that.state.listings[i]
+            let listingIndexItem = (
+               < ListingsIndexItem
+                   listing={listing}
+                   key={listing.id}
+                   fetchListings={that.props.fetchListings}
+               />)
+               listings.push(listingIndexItem)
+        }
+            if (!listings){
+                return <div>Loading Destinations...</div>
+            } else {
                 
                 return(
           <div>
@@ -36,11 +41,11 @@ class ListingSample extends React.Component{
               You Don't Have to Go Very Far...
             </div>
             <div>
-              {/* {listings} */}
+              {listings}
             </div>
           </div>
       )
-        // }
+        }
     }
 }
 
