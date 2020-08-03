@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 const ListingSampleItem = ({ listing }) => {
     return (
         <Link to={`listings/${
@@ -30,8 +30,6 @@ const ListingSampleItem = ({ listing }) => {
                         <p>{listing.bathrooms}  baths</p>
                         <p>${listing.pricing}  per night</p>
                     </div>
-                    {/* <div className="">
-                    </div> */}
                 </div>
             </li>
         </Link>

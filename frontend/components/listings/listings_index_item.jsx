@@ -5,24 +5,20 @@ const ListingsIndexItem = ({listing}) => {
     <Link to ={`listings/${
       listing.id}`}>
       <li className= "listing-index-item">
-        
-
+      
           <div className="slider">
               <div className="slide" id="one"><img src={listing.photoUrls[0]} alt="" />
                   {/* <a href="#five">⬅️</a>
                   <a href="#two">➡️</a> */}
-             
               </div>
 
               <div className="slide" id="two"><img src={listing.photoUrls[1]} alt="" />
                   {/* <a href="#one">⬅️</a>
                   <a href="#three">➡️</a> */}
-               
               </div>
               <div className="slide" id="three"><img src={listing.photoUrls[2]} alt="" />
                   {/* <a href="#two">⬅️</a>
                   <a href="#four">➡️</a> */}
-             
               </div>
               <div className="slide" id="four"><img src={listing.photoUrls[3]} alt="" />
                   {/* <a href="#three">⬅️</a>
@@ -35,6 +31,7 @@ const ListingsIndexItem = ({listing}) => {
               </div>
           </div>
           <div className="listing-text">
+          <p className="">Entire Home</p>
           <p className="title">{listing.name}</p>
             <div className = "inner-index-item-div">
               <p>{listing.max_num_guests}  guests</p>
@@ -43,7 +40,7 @@ const ListingsIndexItem = ({listing}) => {
               {/* <p>{listing.description}</p> */}
             </div>
             <div className="inner-index-item-div-price">
-              <p>${listing.pricing}  per night</p>
+              <p>${listing.pricing} / night</p>
             </div>
           </div>
           {/* <img src={listing.photoUrl} alt="listing-pictures"/> */}
@@ -51,7 +48,6 @@ const ListingsIndexItem = ({listing}) => {
     </Link>
   )
 }
-
 
 export default ListingsIndexItem;
 
