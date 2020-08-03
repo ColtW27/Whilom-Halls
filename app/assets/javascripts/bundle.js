@@ -2238,7 +2238,7 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
       // this.props.fetchListing(2);
       this.props.fetchListings().then(function (listings) {
         _this2.setState({
-          listings: listings
+          listings: listings.listings
         });
       }); // debugger
     }
@@ -2250,17 +2250,18 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
       if (listings.length === 0) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading Destinations...");
       } else {
-        var _listings = []; // let that = this
-
+        var _listings = [];
+        var that = this;
         debugger;
 
         for (var i = 1; i < 4; i++) {
           // console.log(this.props)
-          var listing = this.state.listings.values[i];
+          var listing = that.state.listings[i];
+          console.log(that);
           var listingIndexItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_listings_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
             listing: listing,
             key: listing.id,
-            fetchListings: this.props.fetchListings
+            fetchListings: that.props.fetchListings
           });
 
           _listings.push(listingIndexItem);

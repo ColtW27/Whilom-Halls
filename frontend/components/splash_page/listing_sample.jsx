@@ -17,7 +17,7 @@ class ListingSample extends React.Component{
         this.props.fetchListings()
         .then(listings => {
             this.setState({ listings:
-            listings})
+            listings.listings})
         })
     // debugger
     }
@@ -29,16 +29,17 @@ class ListingSample extends React.Component{
         } else {
             
             let listings = []
-            // let that = this
+            let that = this
             debugger
             for(let i = 1; i < 4; i++){
                 // console.log(this.props)
-                let listing = this.state.listings.values[i]
+                let listing = that.state.listings[i]
+                console.log(that)
                 let listingIndexItem = (
                    < ListingsIndexItem
                        listing={listing}
                        key={listing.id}
-                       fetchListings={this.props.fetchListings}
+                       fetchListings={that.props.fetchListings}
                    />)
                    listings.push(listingIndexItem)
             }
