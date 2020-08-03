@@ -2231,33 +2231,44 @@ var ListingSample = /*#__PURE__*/function (_React$Component) {
   _createClass(ListingSample, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
+      // this.props.fetchListing(0);
       // this.props.fetchListing(1);
       // this.props.fetchListing(2);
-      // this.props.fetchListing(3);
-      this.props.fetchListings(); // debugger
+      this.props.fetchListings().then(function (listings) {
+        _this2.setState({
+          listings: listings
+        });
+      }); // debugger
     }
   }, {
     key: "render",
     value: function render() {
-      var listings = [];
-      var that = this;
+      var listings = this.state.listings; // console.log(listings)
 
-      for (var i = 0; i < 3; i++) {
-        var listing = that.state.listings[i];
-        var listingIndexItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_listings_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          listing: listing,
-          key: listing.id,
-          fetchListings: that.props.fetchListings
-        });
-        listings.push(listingIndexItem);
-      }
-
-      if (!listings) {
+      if (listings.length === 0) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading Destinations...");
       } else {
+        var _listings = []; // let that = this
+
+        debugger;
+
+        for (var i = 1; i < 4; i++) {
+          // console.log(this.props)
+          var listing = this.state.listings.values[i];
+          var listingIndexItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listings_listings_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            listing: listing,
+            key: listing.id,
+            fetchListings: this.props.fetchListings
+          });
+
+          _listings.push(listingIndexItem);
+        }
+
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_destination_search_bar_false_searchbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "you-dont-have-to-go-far"
-        }, "You Don't Have to Go Very Far..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listings));
+        }, "You Don't Have to Go Very Far..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, _listings));
       }
     }
   }]);

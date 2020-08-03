@@ -11,29 +11,37 @@ class ListingSample extends React.Component{
         }
     }
     componentDidMount(){
+        // this.props.fetchListing(0);
         // this.props.fetchListing(1);
         // this.props.fetchListing(2);
-        // this.props.fetchListing(3);
-        this.props.fetchListings();
+        this.props.fetchListings()
+        .then(listings => {
+            this.setState({ listings:
+            listings})
+        })
     // debugger
     }
     render(){
-        let listings = []
-        let that = this
-        for(let i = 0; i < 3; i++){
-            let listing = that.state.listings[i]
-            let listingIndexItem = (
-               < ListingsIndexItem
-                   listing={listing}
-                   key={listing.id}
-                   fetchListings={that.props.fetchListings}
-               />)
-               listings.push(listingIndexItem)
-        }
-            if (!listings){
-                return <div>Loading Destinations...</div>
-            } else {
-                
+        let listings = this.state.listings
+        // console.log(listings)
+        if (listings.length === 0){
+            return <div>Loading Destinations...</div>
+        } else {
+            
+            let listings = []
+            // let that = this
+            debugger
+            for(let i = 1; i < 4; i++){
+                // console.log(this.props)
+                let listing = this.state.listings.values[i]
+                let listingIndexItem = (
+                   < ListingsIndexItem
+                       listing={listing}
+                       key={listing.id}
+                       fetchListings={this.props.fetchListings}
+                   />)
+                   listings.push(listingIndexItem)
+            }
                 return(
           <div>
             < FalseDestinationSearchBar />
