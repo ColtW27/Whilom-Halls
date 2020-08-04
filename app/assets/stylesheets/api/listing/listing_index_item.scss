@@ -1,8 +1,7 @@
 .listing-index-item {
     display: flex;
-    // margin-top: 15px;
     padding: 20px 20px 0px 20px;
-    width: 792px;
+    width: 602px;
     height: 228px;
     border-bottom: 1px solid rgb(199, 196, 196);
     // border-bottom: 7px dotted rgb(134, 9, 9);
@@ -10,12 +9,7 @@
 }
 .inner-index-item-div{
     display: flex;
-    // flex-wrap: wrap;
 }
-// .inner-index-item-div p {
-//     // width: 150px;
-//     // height: 20px;
-// }
 
 .inner-index-item-div-price {
     display: flex;

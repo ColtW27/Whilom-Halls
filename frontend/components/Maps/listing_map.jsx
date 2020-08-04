@@ -21,7 +21,7 @@ class ListingMap extends React.Component {
 
 // export default ListingMap;
 export default GoogleApiWrapper({
-//   apiKey: MAPS_API_KEY
+  //   apiKey: MAPS_API_KEY
   //   apiKey: `${MAPS_API_KEY}`/
-    
+
 })(ListingMap);
