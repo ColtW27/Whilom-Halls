@@ -1,5 +1,20 @@
-#map-container {
+// #map-container {
+//     width: 600px;
+//     height: 706px;
+// }
+.listings-index-map {
+    // width: 60%;
+    // height: 70%;
     width: 600px;
-    height: 706px;
+    height: 710px;
+    display: flex;
+    position: fixed;
+    // height: 600px;
+    // width: 706px;
+    left: 60%;
+    top: 23%;
+    // position: -webkit-sticky;
+    //  position: sticky;
+    //  top: 10rem;
+    //  justify-content: flex-start;
 }
-

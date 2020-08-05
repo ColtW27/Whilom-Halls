@@ -1,6 +1,6 @@
 import React from 'react';
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
-
+const MAPS_API_KEY = ENV["MAPS_API_KEY"];
 function statusChecker(input) {
 
   return (
@@ -26,6 +26,7 @@ class ListingMap extends React.Component {
       const {listing, listings} = this.props;
       return (
         <Map
+        
           google={this.props.google}
           zoom={9}
           initialCenter={
@@ -57,7 +58,9 @@ class ListingMap extends React.Component {
 
 // export default ListingMap;
 export default GoogleApiWrapper({
-  //   apiKey: MAPS_API_KEY
-  //   apiKey: `${MAPS_API_KEY}`/
-  
+    apiKey: MAPS_API_KEY
+    // apiKey: `${ENV["API_KEY"]}`
+    // apiKey: `${MAPS_API_KEY}`
+    // apiKey: `${ENV['MAPS_API_KEY']}`
+//   
 })(ListingMap);

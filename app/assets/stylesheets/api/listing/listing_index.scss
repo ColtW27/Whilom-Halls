@@ -5,11 +5,14 @@
 }
 .listing-and-map-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
 }
 .listings-index-map {
     // display: flex;
-    // position: relative;
+    // position: fixed;
+    // height: 600px;
+    // width: 706px;
+    // left: 45%;
     // position: -webkit-sticky;
     //  position: sticky;
     //  top: 10rem;

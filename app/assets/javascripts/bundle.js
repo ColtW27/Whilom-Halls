@@ -338,6 +338,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+var MAPS_API_KEY = ENV["MAPS_API_KEY"];
 
 function statusChecker(input) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
@@ -404,8 +405,12 @@ var ListingMap = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // export default ListingMap;
 
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["GoogleApiWrapper"])({//   apiKey: MAPS_API_KEY
-  //   apiKey: `${MAPS_API_KEY}`/
+/* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["GoogleApiWrapper"])({
+  apiKey: MAPS_API_KEY // apiKey: `${ENV["API_KEY"]}`
+  // apiKey: `${MAPS_API_KEY}`
+  // apiKey: `${ENV['MAPS_API_KEY']}`
+  //   
+
 })(ListingMap));
 
 /***/ }),
