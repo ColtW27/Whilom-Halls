@@ -86,7 +86,7 @@ class ListingsIndex extends React.Component {
            {listings}
           </div>
             <map className="listings-index-map">
-              <ListingMap /></map>
+              <ListingMap listings={this.state.listings}/></map>
             
           </div>
         </div>

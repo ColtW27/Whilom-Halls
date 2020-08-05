@@ -339,6 +339,17 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+function statusChecker(input) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
+    title: input.name,
+    key: input.id,
+    position: {
+      lat: input.latitude,
+      lng: input.longitude
+    }
+  });
+}
+
 var ListingMap = /*#__PURE__*/function (_React$Component) {
   _inherits(ListingMap, _React$Component);
 
@@ -351,28 +362,41 @@ var ListingMap = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(ListingMap, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var mapOptions = {
-        center: {
-          lat: 44.225507,
-          lng: -68.324317
-        },
-        zoom: 13
-      };
-      this.map = new google.maps.Map(this.mapNode, mapOptions);
-    }
-  }, {
     key: "render",
+    // componentDidMount() {
+    //     const mapOptions = {
+    //         center: { lat: 44.225507, lng: -68.324317 },
+    //         zoom: 13
+    //     };
+    //     this.map = new google.maps.Map(this.mapNode, mapOptions);
+    // }
     value: function render() {
-      var _this = this;
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "map-container",
-        ref: function ref(map) {
-          return _this.mapNode = map;
+      var _this$props = this.props,
+          listing = _this$props.listing,
+          listings = _this$props.listings;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Map"], {
+        google: this.props.google,
+        zoom: 9,
+        initialCenter: !!listing ? {
+          lat: listing[0].latitude,
+          lng: listing[0].longitude
+        } : {
+          lat: 40.7128,
+          lng: -73.935242
         }
-      });
+      }, listing !== undefined ? statusChecker(listing) : listings.map(function (data) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
+          title: data.name,
+          key: data.id,
+          position: {
+            lat: data.latitude,
+            lng: data.longitude
+          }
+        });
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
+        onClick: this.onMapClick,
+        name: "Current location"
+      }));
     }
   }]);
 
@@ -1481,7 +1505,9 @@ var ListingsIndex = /*#__PURE__*/function (_React$Component) {
         className: "listing-and-map-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listings), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("map", {
         className: "listings-index-map"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Maps_listing_map__WEBPACK_IMPORTED_MODULE_4__["default"], null))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Maps_listing_map__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        listings: this.state.listings
+      }))));
     }
   }]);
 
