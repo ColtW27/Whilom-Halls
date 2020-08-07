@@ -3,6 +3,7 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import ListingsIndexItem from './listings_index_item';
 import SearchBar from "../destination_search_bar/destination_searchbar"
+import ListingMap from '../Maps/listing_map';
  
 class ListingsIndex extends React.Component {
 
@@ -79,11 +80,14 @@ class ListingsIndex extends React.Component {
           </div>
           <div className="results-for">
             {this.resultsFor(this.state.searchTerm, listings)}
-           
-            
           </div>
+          <div className="listing-and-map-container">
           <div>
            {listings}
+          </div>
+            <map className="listings-index-map">
+              <ListingMap listings={this.state.listings}/></map>
+            
           </div>
         </div>
         )

@@ -12,6 +12,7 @@
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
+    "google-maps-react": "^2.0.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-datepicker": "^3.0.0",
