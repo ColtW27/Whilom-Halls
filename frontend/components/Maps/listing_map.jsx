@@ -64,5 +64,5 @@ export default GoogleApiWrapper({
   // apiKey: `${ENV["API_KEY"]}`
   // apiKey: `${MAPS_API_KEY}`
   // apiKey: `${ENV['MAPS_API_KEY']}`
-
+  apiKey: "AIzaSyCmqIzLYQ56sj-4ad6pJA7rhj6GmjWSbJA"
 })(ListingMap);

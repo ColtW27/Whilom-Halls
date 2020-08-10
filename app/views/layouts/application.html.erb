@@ -4,7 +4,11 @@
     <title>WhilomHalls</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta property="og:title" content="Whilom Halls">
+<meta property="og:description" content="Book the stay of your dreams in a place of the past.">
+<meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+<meta property="og:url" content="https://whilom-halls.herokuapp.com/">
+<meta name="twitter:card" content="whilom_Halls_image">
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
       <%# <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
   type="text/javascript"></script> %>
