@@ -72,10 +72,10 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
           <li>
          {introduction(currentUser, logout)}
           </li>
-          <li>{messages()}</li>
+          {/* <li>{messages()}</li>
           <li>{trips()}</li>
           <li>{saved()}</li>
-          <li>{manageListings()}</li>
+          <li>{manageListings()}</li> */}
 
         </ul>
       </div>
@@ -113,12 +113,12 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
         return(
             <div
             className="main-page-header-button-container">
-                <li 
+                {/* <li 
                 >
                   {globeCurrency()}</li>
                 <li>{switchToHosting()}</li>
                 <li>{hostAnExperience() }</li>
-                <li>{help()}</li>
+                <li>{help()}</li> */}
                 <li className="outer-li-profile">{profileButton()}</li>
                 {/* <li>{introduction(currentUser, logout)}</li> */}
             </div>
@@ -127,10 +127,10 @@ const NavBar = ({currentUser, modalOpen, logout}) => {
            return(
                <div
                className="main-page-header-button-container">
-                  <li>{globeCurrency()}</li>
+                  {/* <li>{globeCurrency()}</li>
                   <li>{hostYourHome()}</li>
                   <li>{hostAnExperience()}</li>
-                  <li>{help()}</li>
+                  <li>{help()}</li> */}
                   <li>{mainPageSignupButton()}</li>
                   <li>{mainPageLoginButton()}</li>
                </div>
