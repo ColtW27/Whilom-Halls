@@ -12,6 +12,21 @@
 #### View Whilom Halls here:
 https://whilom-halls.herokuapp.com/?#/
 
+#### Splash Page
+<img width="1440" alt="Screen Shot 2020-08-10 at 5 30 23 PM" src="https://user-images.githubusercontent.com/35855017/89833615-54bf7200-db2f-11ea-8fe1-75da9fbacbfe.png">
+
+#### Listing's Index
+<img width="1440" alt="Screen Shot 2020-08-10 at 5 30 34 PM" src="https://user-images.githubusercontent.com/35855017/89833661-6b65c900-db2f-11ea-9c2c-66f5c7dabd2a.png">
+
+#### Listing's Show Page
+<img width="1438" alt="Screen Shot 2020-08-10 at 5 30 02 PM" src="https://user-images.githubusercontent.com/35855017/89833728-86383d80-db2f-11ea-8ad0-f36eb2899f18.png">
+
+#### Signup Modal
+<img width="1440" alt="Screen Shot 2020-08-10 at 5 40 53 PM" src="https://user-images.githubusercontent.com/35855017/89834371-b92f0100-db30-11ea-8461-6111c410494a.png">
+
+#### Login Modal
+<img width="1440" alt="Screen Shot 2020-08-10 at 5 41 07 PM" src="https://user-images.githubusercontent.com/35855017/89834456-dfed3780-db30-11ea-971f-ceab2eed6498.png">
+
 ### Technologies
 #### Whilom Halls was built with technology used in many popular large scale applications.
 
