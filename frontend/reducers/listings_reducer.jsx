@@ -9,7 +9,7 @@ export default (state = {}, action ) => {
             return action.listings
         case RECEIVE_LISTING:
             nextState[action.listing.id] = action.listing
-            return action.listing
+            return nextState
         default:
             return state;
     }
