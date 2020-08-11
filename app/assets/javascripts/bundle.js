@@ -2660,7 +2660,7 @@ __webpack_require__.r(__webpack_exports__);
 
     case _actions_listings_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_LISTING"]:
       nextState[action.listing.id] = action.listing;
-      return action.listing;
+      return nextState;
 
     default:
       return state;
