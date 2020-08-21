@@ -104,9 +104,9 @@ class LoginForm extends React.Component {
             </button>
          
             <br/>
-              <Link 
+              {/* <Link 
               to="/" 
-              className="base-link">Forgot Password?</Link>
+              className="base-link">Forgot Password?</Link> */}
             <br/>
             <br/>
               <a
