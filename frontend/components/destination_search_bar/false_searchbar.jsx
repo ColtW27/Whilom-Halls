@@ -41,7 +41,7 @@ class FalseDestinationSearchBar extends React.Component {
               </button>
             </div>
           </form>
-      </Link>
+        </Link>
       </div>
     )
   }
