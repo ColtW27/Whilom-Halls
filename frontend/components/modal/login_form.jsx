@@ -92,9 +92,6 @@ class LoginForm extends React.Component {
             <div 
             className="login-form-errors">
               {this.showErrors()}
-           
-          
-            
             </div>
             <button
             className="login-form-main-login-button"

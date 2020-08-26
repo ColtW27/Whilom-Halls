@@ -2485,7 +2485,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state) {
-  // debugger
   return {
     listings: Object.values(state.entities.listings)
   };
