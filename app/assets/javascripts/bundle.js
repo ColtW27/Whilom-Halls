@@ -591,7 +591,7 @@ var FalseDestinationSearchBar = /*#__PURE__*/function (_React$Component) {
         className: "destination-search left"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "dest-search-left-inner-div-1"
-      }, "LOCATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "LOCATION "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "search",
         placeholder: "Where are you going?"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -609,8 +609,8 @@ var FalseDestinationSearchBar = /*#__PURE__*/function (_React$Component) {
       }, "Add Guests")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "destination-search submit-background"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
         className: "destination-search-bar-form submit ",
+        type: "submit",
         value: "",
         form: "searchform"
       }, " \uD83D\uDD0D Search")))));
