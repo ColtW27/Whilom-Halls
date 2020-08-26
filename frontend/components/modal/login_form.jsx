@@ -74,8 +74,6 @@ class LoginForm extends React.Component {
               />
               </label>
             </div>
-
-
              
             <div className="field">
               <label>
