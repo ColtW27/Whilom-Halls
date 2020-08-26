@@ -64,10 +64,10 @@ class ListingShowPage extends React.Component {
               </ul>
             </li>
             <li className="description">{listing.description}</li>
-            <li>
-              <h4>Amenities</h4>
+            {/* <li> */}
+              {/* <h4>Amenities</h4> */}
               {/* {amenities, which will be defined later} */}
-            </li>
+            {/* </li> */}
             <li>{reviewsHeader}
               {reviewsArr}
             </li>

@@ -55,6 +55,7 @@
     img {
         width: 19vw;
         height: 26vh;
+        object-fit:cover
     }
 }
 .bottom-content {
@@ -65,9 +66,9 @@
         padding: 2% 0% 2% 0%;
         margin-left: 12%;
     }
-    .policy-box li {
-        // padding-top: 2%;
-    }
+    // .policy-box li {
+    //     // padding-top: 2%;
+    // }
     .bold  {
         font-weight: 400;
         font-size: 18px;
