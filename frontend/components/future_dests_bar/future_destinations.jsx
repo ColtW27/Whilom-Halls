@@ -17,8 +17,9 @@ const FutureDestinations = () => {
         </ul>
 
         <ul className="individual-dest" >
-            <li><Link to="/">Knoxville, Tennessee</Link></li>
-            {/* <li><Link to="/">Galena, Illinois</Link></li>
+          <li><Link to="/">Porlock Minehead, England</Link></li>
+            {/* <li><Link to="/">Knoxville, Tennessee</Link></li>
+            <li><Link to="/">Galena, Illinois</Link></li>
             <li><Link to="/">Eureka, California</Link></li> */}
         </ul>
 
