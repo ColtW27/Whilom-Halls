@@ -13,21 +13,19 @@ import ListingSampleContainer from "./splash_page/listings_sample_container";
 
 const App = () => (
   <div>
-      {/* <HeaderMessage /> */}
-      < Modal />
-      <header className= "header-in-app">
-          <Link to='/'
-                className="logo-link-home">
-              <h2 className='Logo'>〄 Whil𝕠m H𝕒lls  </h2>
-          </Link>
-      < NavBarContainer className="greeting-container"/>  
-      </header>
-      {/* <DestinationSearchBarContainer /> */}
+    {/* <HeaderMessage /> */}
+    <Modal />
+    <header className= "header-in-app">
+      <Link to='/'
+        className="logo-link-home">
+        <h2 className='Logo'>〄 Whil𝕠m H𝕒lls  </h2>
+      </Link>
+      <NavBarContainer className="greeting-container"/>  
+    </header>
       <Switch>
-      <Route exact path="/" component={ListingSampleContainer} />
-      <Route path="/listings/:id" component={ListingShowContainer}/>
-      <Route path="/listings" component={ListingsIndexContainer} />
-        {/* <ListingsIndexContainer /> */}
+        <Route exact path="/" component={ListingSampleContainer} />
+        <Route path="/listings/:id" component={ListingShowContainer}/>
+        <Route path="/listings" component={ListingsIndexContainer} />
       </Switch>
       <Route exact path="/" component={FutureDestinationsContainer } />
       <Route path="/" component={FooterContainer} />
