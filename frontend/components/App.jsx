@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Route, Switch} from 'react-router-dom';
 // import HeaderMessage from './header/header_message'
 import Modal from './modal/modal'
+import ScrollToTop from './scroll_restore/scroll_restoration'
 import NavBarContainer from './navbar/navbar_container';
 import FooterContainer from "./footer/footer_container";
 import FooterMessage from "./sub_footer/footer_message";
@@ -13,6 +14,7 @@ import ListingSampleContainer from "./splash_page/listings_sample_container";
 
 const App = () => (
   <div>
+    <ScrollToTop/>
     {/* <HeaderMessage /> */}
     <Modal />
     <header className= "header-in-app">
