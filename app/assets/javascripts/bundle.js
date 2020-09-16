@@ -2378,15 +2378,6 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-// import { useEffect } from "react";
-// import { useLocation } from "react-router-dom";
-// export default function ScrollToTop() {
-//   const { pathname } = useLocation();
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, [pathname]);
-//   return null;
-// }
 
 
 
