@@ -340,8 +340,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
- // const MAPS_API_KEY = ENV["MAPS_API_KEY"];
-// const MAPS_API_KEY = MAPS_API_KEY;
+
+var MAPS_API_KEY = ENV["MAPS_API_KEY"]; // const MAPS_API_KEY = MAPS_API_KEY;
 
 function statusChecker(input) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
@@ -409,11 +409,14 @@ var ListingMap = /*#__PURE__*/function (_React$Component) {
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["GoogleApiWrapper"])({
-  // apiKey: MAPS_API_KEY
+  apiKey: MAPS_API_KEY // apiKey: ENV["MAPS_API_KEY"]
+  // apiKey: (`${ENV["MAPS_API_KEY"]}`)
+  // apiKey: `${ENV["MAPS_API_KEY"]}`
   // apiKey: `${ENV["API_KEY"]}`
   // apiKey: `${MAPS_API_KEY}`
   // apiKey: `${ENV['MAPS_API_KEY']}`
-  apiKey: "AIzaSyCmqIzLYQ56sj-4ad6pJA7rhj6GmjWSbJA"
+  // apiKey: "AIzaSyC3f1VgyMMs3t3Ifz5EBdehs4AcqsuX2VU"
+
 })(ListingMap));
 
 /***/ }),
