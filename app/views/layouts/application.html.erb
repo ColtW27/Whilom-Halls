@@ -11,12 +11,10 @@
     <meta name="twitter:card" content="whilom_Halls_image">
     <link rel="icon" href="../../../public/favicon-32x32.png"/>
     <%= favicon_link_tag asset_path('favicon-32x32.png') %>
-    # <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
-      <%# <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-      type="text/javascript"></script> %>
-    <script type="text/javascript">
-      window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
-    </script>
+ 
+   <script type="text/javascript">
+  window.googleAPIKey = "<%= Rails.application.credentials.google[:maps_api_key] %>"
+</script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>

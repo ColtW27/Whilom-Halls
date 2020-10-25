@@ -60,7 +60,7 @@ class ListingMap extends React.Component {
 
 // export default ListingMap;
 export default GoogleApiWrapper({
-  apiKey: `${Rails.application.credentials.google[:api_key]}`
+  apiKey: `${window.googleAPIKey}`
   // apiKey: MAPS_API_KEY
   // apiKey: ENV["MAPS_API_KEY"]
   // apiKey: (`${ENV["MAPS_API_KEY"]}`)
