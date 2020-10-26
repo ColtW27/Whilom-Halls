@@ -409,11 +409,14 @@ var ListingMap = /*#__PURE__*/function (_React$Component) {
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["GoogleApiWrapper"])({
-  // apiKey: MAPS_API_KEY
+  apiKey: "".concat(window.googleAPIKey) // apiKey: MAPS_API_KEY
+  // apiKey: ENV["MAPS_API_KEY"]
+  // apiKey: (`${ENV["MAPS_API_KEY"]}`)
+  // apiKey: `${ENV["MAPS_API_KEY"]}`
   // apiKey: `${ENV["API_KEY"]}`
   // apiKey: `${MAPS_API_KEY}`
   // apiKey: `${ENV['MAPS_API_KEY']}`
-  apiKey: "AIzaSyCmqIzLYQ56sj-4ad6pJA7rhj6GmjWSbJA"
+
 })(ListingMap));
 
 /***/ }),
