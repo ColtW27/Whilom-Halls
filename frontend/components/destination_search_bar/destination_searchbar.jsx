@@ -12,7 +12,7 @@ class DestinationSearchBar extends React.Component {
   }
   updateSearch(key) {
     console.log(this.state);
-    // debugger
+    // debugger   
     return e => this.setState({
       [key]: e.target.value
     })

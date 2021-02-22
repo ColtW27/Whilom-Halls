@@ -474,7 +474,7 @@ var DestinationSearchBar = /*#__PURE__*/function (_React$Component) {
     value: function updateSearch(key) {
       var _this2 = this;
 
-      console.log(this.state); // debugger
+      console.log(this.state); // debugger   
 
       return function (e) {
         return _this2.setState(_defineProperty({}, key, e.target.value));
