@@ -58,7 +58,7 @@
         object-fit:cover
     }
 }
-.bottom-content {
+.bottom-left-content {
     >ul>li {
         border-top: 1px solid lightgray;
         border-bottom: 1px solid lightgray;
@@ -85,5 +85,12 @@
         font-size: 18px;
         font-weight: 300;
     }
+}
+.below-listing-area{
+  display: flex;
+  
+}
+.right-side-under-listing{
+  width: 50%;
 }
 

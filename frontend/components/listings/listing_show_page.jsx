@@ -50,32 +50,36 @@ class ListingShowPage extends React.Component {
             </div>
           </div>
           <div className="below-listing-area">
-
-            <h2>Entire Home</h2>
-                    <h3>{listing.max_num_guests} guests · House · {listing.bedrooms} beds · {listing.bathrooms} baths</h3>
-            <div className="bottom-content">
-              <ul>
-                <li>
-                  <ul className="policy-box">
-                    <li className="bold">⌂   Entire Home</li>
-                    <li className="regular">You will have the house to yourself.</li>
-                    <li className="bold">✩   Experienced Host</li>
-                    <li className="regular">This host has many reviews</li>
-                    <li className="bold">📆   Cancellation Policy</li>
-                    <li className="regular">As always, cancel within 3 days for a complete refund.</li>
-                  </ul>
-                </li>
-                <li className="description">{listing.description}</li>
-                {/* <li> */}
-                  {/* <h4>Amenities</h4> */}
-                  {/* {amenities, which will be defined later} */}
-                {/* </li> */}
-                <li>{reviewsHeader}
-                  {reviewsArr}
-                </li>
-              </ul>
+            <div className='left-side-under-listing'>
+              <h2>Entire Home</h2>
+                      <h3>{listing.max_num_guests} guests · House · {listing.bedrooms} beds · {listing.bathrooms} baths</h3>
+              <div className="bottom-left-content">
+                <ul>
+                  <li>
+                    <ul className="policy-box">
+                      <li className="bold">⌂   Entire Home</li>
+                      <li className="regular">You will have the house to yourself.</li>
+                      <li className="bold">✩   Experienced Host</li>
+                      <li className="regular">This host has many reviews</li>
+                      <li className="bold">📆   Cancellation Policy</li>
+                      <li className="regular">As always, cancel within 3 days for a complete refund.</li>
+                    </ul>
+                  </li>
+                  <li className="description">{listing.description}</li>
+                  {/* <li> */}
+                    {/* <h4>Amenities</h4> */}
+                    {/* {amenities, which will be defined later} */}
+                  {/* </li> */}
+                  <li>{reviewsHeader}
+                    {reviewsArr}
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+            <div className="right-side-under-listing">
+              can you see me
+            </div>
+          </div> 
         </div>
         )
         }
