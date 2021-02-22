@@ -1,9 +1,15 @@
 import React from 'react';
+import GuestContainer from './guest_container';
+import CheckinContainer from "checkin_container";
 
-const Booking = () => (
-  <div className = 'booking-container'>
+const Booking = () => {
+  return (
+    <div className = 'booking-container'>
+        <CheckinContainer />
+        <GuestContainer />
+    </div>
+  )
 
-  </div>
-);
+};
 
 export default Booking;
