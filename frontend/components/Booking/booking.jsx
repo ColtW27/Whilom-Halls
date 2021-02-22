@@ -2,17 +2,21 @@ import React from 'react';
 import CheckInContainer from "./check_in_container";
 import GuestContainer from './guest_container';
 
-const Booking = () => {
-  return (
-    <div className = 'booking-container'>
-      I am the booking component from here
-        <CheckInContainer />
-        <GuestContainer />
-
-      to here
-    </div>
-  )
-
+class Booking extends React.Component {
+  constructor(props){
+    super(props)
+    // pricing = props.pricing;
+  }
+  render(){
+    return (
+      <div className = 'booking-container'>
+        {/* <h3>{props.pricing}/ night</h3> */}
+          <CheckInContainer />
+          <GuestContainer />
+        to here
+      </div>
+    )
+    };
 };
 
 export default Booking;
