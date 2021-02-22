@@ -1,11 +1,11 @@
 import React from 'react';
+import CheckInContainer from "check_in_container";
 import GuestContainer from './guest_container';
-import CheckinContainer from "checkin_container";
 
 const Booking = () => {
   return (
     <div className = 'booking-container'>
-        <CheckinContainer />
+        <CheckInContainer />
         <GuestContainer />
     </div>
   )
