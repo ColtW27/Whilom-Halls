@@ -265,7 +265,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+ // import BookingsContainer from './Booking/booking_container';
 
 var App = function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scroll_restore_scroll_restoration__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
@@ -1318,7 +1318,9 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
           className: "listing-show-page-4-main-photos"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: ""
-        }, listingPhotosArr))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Entire Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, listing.max_num_guests, " guests \xB7 House \xB7 ", listing.bedrooms, " beds \xB7 ", listing.bathrooms, " baths"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, listingPhotosArr))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "below-listing-area"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Entire Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, listing.max_num_guests, " guests \xB7 House \xB7 ", listing.bedrooms, " beds \xB7 ", listing.bathrooms, " baths"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "bottom-content"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "policy-box"
@@ -1336,7 +1338,7 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
           className: "regular"
         }, "As always, cancel within 3 days for a complete refund."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "description"
-        }, listing.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, reviewsHeader, reviewsArr))));
+        }, listing.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, reviewsHeader, reviewsArr)))));
       }
     }
   }]);
@@ -1344,7 +1346,8 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
   return ListingShowPage;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-;
+; //  <Route path="/listings" component={BookingsContainer} />
+
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ListingShowPage));
 
 /***/ }),

@@ -11,6 +11,7 @@ import FutureDestinationsContainer from "./future_dests_bar/future_destinations_
 import ListingsIndexContainer from './listings/listing_index_container';
 import ListingShowContainer from './listings/listing_show_container';
 import ListingSampleContainer from "./splash_page/listings_sample_container";
+// import BookingsContainer from './Booking/booking_container';
 
 const App = () => (
   <div>
