@@ -78,7 +78,7 @@ class ListingShowPage extends React.Component {
               </div>
             </div>
             <div className="right-side-under-listing">
-              <Booking props={listing}/>
+              <Booking {...listing}/>
             </div>
           </div> 
         </div>
