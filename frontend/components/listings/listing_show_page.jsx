@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import Booking from "../Booking/booking_container";
  
 class ListingShowPage extends React.Component {
     constructor(props) {
@@ -77,7 +78,8 @@ class ListingShowPage extends React.Component {
               </div>
             </div>
             <div className="right-side-under-listing">
-              can you see me
+              
+              <Booking />
             </div>
           </div> 
         </div>

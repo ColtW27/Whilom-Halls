@@ -304,6 +304,162 @@ var App = function App() {
 
 /***/ }),
 
+/***/ "./frontend/components/Booking/booking.jsx":
+/*!*************************************************!*\
+  !*** ./frontend/components/Booking/booking.jsx ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _check_in_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./check_in_container */ "./frontend/components/Booking/check_in_container.jsx");
+/* harmony import */ var _guest_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./guest_container */ "./frontend/components/Booking/guest_container.jsx");
+
+
+
+
+var Booking = function Booking() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "booking-container"
+  }, "I am the booking component from here", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_check_in_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_guest_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), "to here");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Booking);
+
+/***/ }),
+
+/***/ "./frontend/components/Booking/booking_container.jsx":
+/*!***********************************************************!*\
+  !*** ./frontend/components/Booking/booking_container.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _booking__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./booking */ "./frontend/components/Booking/booking.jsx");
+
+
+
+
+var mSTP = function mSTP(state) {
+  return {};
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_booking__WEBPACK_IMPORTED_MODULE_2__["default"])); // export default BookingsContainer;
+
+/***/ }),
+
+/***/ "./frontend/components/Booking/check_in.jsx":
+/*!**************************************************!*\
+  !*** ./frontend/components/Booking/check_in.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var CheckIn = function CheckIn() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I am the Check In container!");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CheckIn);
+
+/***/ }),
+
+/***/ "./frontend/components/Booking/check_in_container.jsx":
+/*!************************************************************!*\
+  !*** ./frontend/components/Booking/check_in_container.jsx ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _check_in__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./check_in */ "./frontend/components/Booking/check_in.jsx");
+
+
+
+
+var mSTP = function mSTP(state) {
+  return {};
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_check_in__WEBPACK_IMPORTED_MODULE_2__["default"])); // export default FooterContainer;
+
+/***/ }),
+
+/***/ "./frontend/components/Booking/guest.jsx":
+/*!***********************************************!*\
+  !*** ./frontend/components/Booking/guest.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Guest = function Guest() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I am the Guest Container!");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Guest);
+
+/***/ }),
+
+/***/ "./frontend/components/Booking/guest_container.jsx":
+/*!*********************************************************!*\
+  !*** ./frontend/components/Booking/guest_container.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _guest__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./guest */ "./frontend/components/Booking/guest.jsx");
+
+
+
+
+var mSTP = function mSTP(state) {
+  return {};
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_guest__WEBPACK_IMPORTED_MODULE_2__["default"])); // export default FooterContainer;
+
+/***/ }),
+
 /***/ "./frontend/components/Maps/listing_map.jsx":
 /*!**************************************************!*\
   !*** ./frontend/components/Maps/listing_map.jsx ***!
@@ -1219,6 +1375,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Booking_booking_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Booking/booking_container */ "./frontend/components/Booking/booking_container.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1240,6 +1397,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -1342,7 +1500,7 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
           className: "description"
         }, listing.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, reviewsHeader, reviewsArr)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "right-side-under-listing"
-        }, "can you see me")));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Booking_booking_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
       }
     }
   }]);

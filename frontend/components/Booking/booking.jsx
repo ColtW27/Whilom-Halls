@@ -1,13 +1,15 @@
 import React from 'react';
-import CheckInContainer from "check_in_container";
+import CheckInContainer from "./check_in_container";
 import GuestContainer from './guest_container';
 
 const Booking = () => {
   return (
     <div className = 'booking-container'>
-      can you see me at all?
+      I am the booking component from here
         <CheckInContainer />
         <GuestContainer />
+
+      to here
     </div>
   )
 
