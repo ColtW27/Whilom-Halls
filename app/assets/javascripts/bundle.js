@@ -351,7 +351,7 @@ var Booking = /*#__PURE__*/function (_React$Component) {
   function Booking(props) {
     _classCallCheck(this, Booking);
 
-    return _super.call(this, props); // pricing = props.pricing;
+    return _super.call(this, props);
   }
 
   _createClass(Booking, [{

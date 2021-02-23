@@ -6,7 +6,7 @@ class Api::ListingsController < ApplicationController
         if @listing.save
         
         else
-            render json: @listing.errors.full_messages, status: 422
+          render json: @listing.errors.full_messages, status: 422
         end
     end
 

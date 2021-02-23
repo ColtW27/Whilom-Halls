@@ -5,7 +5,6 @@ import GuestContainer from './guest_container';
 class Booking extends React.Component {
   constructor(props){
     super(props)
-    // pricing = props.pricing;
   }
   render(){
     return (
