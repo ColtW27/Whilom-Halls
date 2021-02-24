@@ -359,7 +359,9 @@ var Booking = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "booking-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.pricing, "/ night"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_check_in_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_guest_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), "to here");
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.pricing, "/ night"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_check_in_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_guest_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "destination-search-bar-form submit"
+      }, "Check Availability"));
     }
   }]);
 
@@ -390,7 +392,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state) {
   return {};
-};
+}; // const mSTP = (state, ownProps) => {
+//     return {
+//        listing: state.entities.listings[ownProps.match.params.id] 
+//     }
+// };
+
 
 var mDTP = function mDTP(dispatch) {
   return {};
@@ -464,7 +471,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Guest = function Guest() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I am the Guest Container!");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Guests"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Guest);
@@ -1495,7 +1502,9 @@ var ListingShowPage = /*#__PURE__*/function (_React$Component) {
         var reviewsArr = null;
 
         if (reviewsArr === null) {
-          reviewsHeader.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "No Reviews (yet)"));
+          reviewsHeader.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+            key: 1
+          }, "No Reviews (yet)"));
         } else {
           listing.reviews.map(function (review) {
             reviewsArr.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {

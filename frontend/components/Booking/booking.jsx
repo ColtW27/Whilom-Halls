@@ -12,7 +12,7 @@ class Booking extends React.Component {
         <h3>{this.props.pricing}/ night</h3>
           <CheckInContainer />
           <GuestContainer />
-        to here
+        <button className="destination-search-bar-form submit">Check Availability</button>
       </div>
     )
     };

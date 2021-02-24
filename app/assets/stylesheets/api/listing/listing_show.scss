@@ -88,10 +88,13 @@
 }
 .below-listing-area{
   display: flex;
+  // align-items: center;
+  justify-content: space-around;
   
 }
 .right-side-under-listing{
-  width: 50%;
+  width: 25vw;
+  height: 35vh;
   border: 1px solid purple;
 }
 

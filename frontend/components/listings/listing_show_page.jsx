@@ -32,7 +32,7 @@ class ListingShowPage extends React.Component {
         const reviewsHeader = [];
         const reviewsArr = null;
         if (reviewsArr === null ) {
-            reviewsHeader.push(<h4>No Reviews (yet)</h4>);
+            reviewsHeader.push(<h4 key={1}>No Reviews (yet)</h4>);
             
         } else {
             listing.reviews.map(review => {

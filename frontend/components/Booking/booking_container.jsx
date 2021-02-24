@@ -4,9 +4,14 @@ import Booking from "./booking"
 
 
 const mSTP = state => ({
-   
+ 
 });
 
+// const mSTP = (state, ownProps) => {
+//     return {
+//        listing: state.entities.listings[ownProps.match.params.id] 
+//     }
+// };
 const mDTP = dispatch => ({
     
 });
