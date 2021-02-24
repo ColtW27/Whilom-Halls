@@ -8,7 +8,7 @@ class Booking extends React.Component {
   }
   render(){
     return (
-      <div className = 'booking-container'>
+      <div className='booking-container'>
         <h3>{this.props.pricing}/ night</h3>
           <CheckInContainer />
           <GuestContainer />
