@@ -7,7 +7,8 @@ class Booking extends React.Component {
     super(props)
   }
 
-  handleSubmit = () => {
+  handleSubmit(e){
+    e.preventDefault();
 
   };
   render(){
