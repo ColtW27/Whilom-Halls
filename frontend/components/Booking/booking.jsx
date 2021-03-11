@@ -14,7 +14,10 @@ class Booking extends React.Component {
   render(){
     return (
       <form className='booking-container' onSubmit={this.handleSubmit}>
+        <div className="booking-price-rating-header">
         <h3>{this.props.pricing}/ night</h3>
+        <h4>4.5</h4>
+        </div>
           <CheckInContainer /> {/* this needs to open a field and dropdown for calendars*/}
           <GuestContainer />
         <button >Check Availability</button>
