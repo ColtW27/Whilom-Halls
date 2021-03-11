@@ -22,7 +22,7 @@ class Booking extends React.Component {
           <CheckInContainer /> {/* this needs to open a field and dropdown for calendars*/}
           <GuestContainer />
         </div>
-          <button >Check Availability</button>
+          <button className="availability-button-booking">Check Availability</button>
       </form>
     )
     };
