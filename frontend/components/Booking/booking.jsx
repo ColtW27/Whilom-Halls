@@ -18,9 +18,11 @@ class Booking extends React.Component {
         <h3>{this.props.pricing}/ night</h3>
         <h4>4.5</h4>
         </div>
+        <div className="check_in_out_guest_border_box">
           <CheckInContainer /> {/* this needs to open a field and dropdown for calendars*/}
           <GuestContainer />
-        <button >Check Availability</button>
+        </div>
+          <button >Check Availability</button>
       </form>
     )
     };
