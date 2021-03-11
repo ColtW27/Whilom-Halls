@@ -14,17 +14,21 @@
   .booking-price-rating-header{
     display: flex;
     justify-content: space-around;
-    margin-top: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     width: 90%;
   }
-  // .check_in_out_guest_border_box {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  // }
+  .check_in_out_guest_border_box {
+    border: solid 1px lightgray;
+    border-radius: 8px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+  }
   .availability-button-booking {
     width: 90%;
     padding: 5%;
     border-radius: 4px;
+    margin-top: 5%;
   }
 }

@@ -3,12 +3,11 @@
   justify-content: space-between;
 
   button {
-  // margin: 5%;
-    width: 175px;
+    width: 120%;
     background: none;
     border: none;
   }
   .check_in_out_border_box{
-    border: solid 1px lightgray;
+    border-right: 1px solid  lightgray;
   }
 }

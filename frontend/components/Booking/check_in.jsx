@@ -7,7 +7,7 @@ const CheckIn = props => (
       <button>Check-In</button>
       Add Date
     </div>
-    <div className="check_in_out_border_box">
+    <div>
       <button>Checkout</button>
       Add Date
     </div>
