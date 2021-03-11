@@ -17,7 +17,7 @@ class Booking extends React.Component {
         <h3>{this.props.pricing}/ night</h3>
           <CheckInContainer /> {/* this needs to open a field and dropdown for calendars*/}
           <GuestContainer />
-        <button className="destination-search-bar-form submit">Check Availability</button>
+        <button >Check Availability</button>
       </form>
     )
     };

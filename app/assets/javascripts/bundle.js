@@ -365,9 +365,7 @@ var Booking = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "booking-container",
         onSubmit: this.handleSubmit
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.pricing, "/ night"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_check_in_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_guest_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "destination-search-bar-form submit"
-      }, "Check Availability"));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.pricing, "/ night"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_check_in_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_guest_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Check Availability"));
     }
   }]);
 
