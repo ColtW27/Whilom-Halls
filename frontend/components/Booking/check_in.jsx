@@ -3,14 +3,14 @@ import React from 'react';
 const CheckIn = props => (
   <div className="check_in_box">
     {/* I am the Check In container! */}
-    <div className="check_in_out_border_box">
-      <button>Check-In</button>
+    <button className="check_in_out_border_box">
+      <div>Check-in</div>
       Add Date
-    </div>
-    <div>
-      <button>Checkout</button>
+    </button>
+    <button>
+      <div>Checkout</div>
       Add Date
-    </div>
+    </button>
   </div>
 );
 

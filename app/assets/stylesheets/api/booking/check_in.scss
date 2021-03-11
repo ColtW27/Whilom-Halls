@@ -1,9 +1,10 @@
 .check_in_box {
   display: flex;
   justify-content: space-between;
-
+  height: 70%;
+  // width: 130%;
   button {
-    width: 120%;
+    width: 160px;
     background: none;
     border: none;
   }
