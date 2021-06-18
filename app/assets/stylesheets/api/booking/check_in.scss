@@ -1,0 +1,14 @@
+.check_in_box {
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+  button {
+    width: 160px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid  lightgray;
+  }
+  .check_in_out_border_box{
+    border-right: 1px solid  lightgray;
+  }
+}
